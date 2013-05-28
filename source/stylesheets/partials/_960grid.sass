@@ -212,11 +212,10 @@
 					background-color: $acqua
 	#update-body
 		+span-columns(12,12)
-		padding-top: 27px
 		ul#info-project
 			+span-columns(3,12)
 			+no-bullets
-			margin-top: 0
+			margin-top: 27px
 			padding: 0
 			font-family: "miso"
 			text-transform: uppercase
@@ -283,6 +282,8 @@
 							+float-left
 							position: relative
 							display: inline
+		.single-update
+			margin-top: 27px
 		.single-update-header
 			+span-columns(8 omega,12)
 			margin-bottom: 45px
@@ -395,8 +396,18 @@
 					left: 24px
 					margin: 0
 		.single-update-body
-			+span-columns(7,12)
-			+pre(1)
+			+span-columns(7 omega,12)
+			+post(1)
+			.generic
+				margin-bottom: 45px
+				p
+					margin: 0
+					margin-bottom: 15px
+					font-family: "source sans pro"
+					font-size: px-to-em(16px,16px)
+					line-height: px-to-em(20px,16px)
+					font-weight: 400
+					text-indent: px-to-em(30px)
 			.qa
 				margin-bottom: 45px
 				p
@@ -415,9 +426,55 @@
 						font-style: normal
 						padding: 0 6px
 						margin-left: -6px
+			.quote
+				+span-columns(6 omega,7)
+				p.qname
+				p.quote
+					+span-columns(6,6)
 			ul.list
+				+span-columns(5,7)
 				margin-bottom: 45px
+				margin-top: 0
+				+no-bullets
+				padding: 0
+				li
+					position: relative
+					+clearfix
+					margin-bottom: 15px
+					&:last-child
+						margin-bottom: 0
+				.arrow
+					position: absolute
+					z-index: 2
+					+assign-sprite-background($assets)
+					+sprite($assets, "arrow_link", true)
+					margin-top: 14px
 
+				p, a
+					position: relative
+					+float-left
+					display: inline
+					padding-left: 20px
+					font-family: "miso"
+					font-weight: 200
+					font-size: px-to-em(40px,16px)
+					line-height: px-to-em(40px,40px)
+					text-transform: uppercase
+					margin: 0
+					color: $black
+				a
+					background-color: $yellow
+					padding-right: 20px
+					text-decoration: underline
+					&:hover
+						color: $purple
+						background-color: $acqua
+		hr.update
+			+span-columns(8 omega,12)
+			border: none
+			border-top: 1px solid $rose
+			margin-top: 0
+			margin-bottom: 0
 
 	.button_container
 		margin-top: 10px
