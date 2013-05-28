@@ -1,7 +1,8 @@
 
-+at-breakpoint(16)
++at-breakpoint($break)
 	section.page
 		+susy-grid-background
+
 		
 	#test
 		background-color: blue
@@ -68,7 +69,245 @@
 				i
 					@include assign-sprite-background($assets)
 					@include replace-with-sprite($assets,"exclamation")
-	
+
+	#project-update-header
+		padding-top: 15px
+		margin-top: 55px
+		margin-bottom: 32px
+		+span-columns(12)
+		border-top: 1px solid $rose
+	#support
+		margin-top: 4px 
+		position: relative
+		+span-columns(3,12)
+		font-family: "miso"
+		.share
+			position: absolute
+			top: 0
+			left: 115px
+			h4
+				text-transform: uppercase
+				letter-spacing: px-to-em(2px)
+				font-size: px-to-em(14px,16px)
+				line-height: px-to-em(14px,14px)
+				font-weight: 400
+				color: $blue
+				margin: 0
+	#publisher-container
+		+span-columns(3,3)
+		position: relative
+		+float-left
+		margin-bottom: 6px
+		a.name
+			margin-top: -7px 
+			+span-columns(2,3)
+			font-size: px-to-em(14px,16px)
+			line-height: px-to-em(17px,14px)
+			font-weight: 200
+			text-decoration: underline
+			color: $black
+			background-color: $yellow
+			letter-spacing: px-to-em(2px)
+			padding: 0 2px 2px 2px
+			&:hover
+				color: $purple
+				background-color: $acqua
+	#project-headline
+		font-family: "miso"
+		text-transform: uppercase
+		+span-columns(6,12)
+		+pre(1)
+		h1.title
+			color: $rose
+			font-weight: 400
+			font-size: px-to-em(67px,16px)
+			line-height: px-to-em(50px,67px)
+			margin: 0
+			margin-bottom: 15px
+		.icon-where
+			+assign-sprite-background($assets)
+			+sprite($assets, "small_icon_where", true)
+			+float-left
+			margin: 5px 7px 0 0
+		h2.subtitle
+			color: $purple
+			font-weight: 400
+			font-size: px-to-em(36px,16px)
+			line-height: px-to-em(31px,36px)
+			margin: 0
+	.tags-container
+		+span-columns(2 omega,12)
+		font-family: "miso"
+		text-transform: uppercase
+		h4
+			font-weight: 400
+			color: $rose
+			font-size: px-to-em(27px,16px)
+			margin: 0
+		ul
+			padding: 0
+			list-style-type: none
+			margin: 0
+			margin-top: 8px
+			+pretty-bullets("assets/bullet-tags.png")
+			li
+				line-height: px-to-em(16px,16px) !important
+				margin-bottom: 0 !important
+				margin-left: -5px
+				&:hover
+					opacity: 0.6
+			a
+				letter-spacing: px-to-em(2px)
+				color: white
+				font-size: px-to-em(14px,16px)
+				background-color: $black
+				padding: 0 5px 0 3px
+				text-decoration: none
+				font-weight: 600
+				margin-left: -5px
+	#project-update-tab
+		+span-columns(12,12)
+		hr.tab-line
+			+span-columns(12,12)
+			border: none
+			border-bottom: 1px solid $rose
+			margin: 0
+			margin-top: -1px
+			position: relative
+			z-index: 1
+		ul.tab
+			+horizontal-list
+			font-family: "miso"
+			font-weight: 200
+			font-size: px-to-em(14px,16px)
+			text-transform: uppercase
+			position: relative
+			z-index: 2
+			letter-spacing: px-to-em(2px)
+
+			li
+				position: relative
+				height: 15px
+				border: 1px solid $rose
+				line-height: px-to-em(14px) !important
+				padding: 0
+				padding-top: 4px
+				margin-right: 14px
+				opacity: 0.6
+				border-top-left-radius: 2px
+				border-top-right-radius: 2px
+				&:first-child
+					+pre(4)
+			li.active
+				opacity: 1
+				border-bottom: 1px solid white
+			a
+				color: $black
+				text-decoration: none
+				background-color: $yellow
+				padding: 0 4px
+				margin: 0 8px 0 8px 
+				&:hover
+					color: $purple
+					background-color: $acqua
+	#update-body
+		+span-columns(12,12)
+		padding-top: 27px
+		ul#info-project
+			+span-columns(3,12)
+			+no-bullets
+			margin-top: 0
+			padding: 0
+			font-family: "miso"
+			text-transform: uppercase
+			li
+				margin-bottom: 12px 
+			h2, h3
+				margin: 0
+				font-weight: 400
+			h2
+				font-size: px-to-em(60px,16px)
+				line-height: px-to-em(46px,60px)
+				color: $acqua
+				
+			h3
+				font-size: px-to-em(14px,16px)
+				color: $purple
+				letter-spacing: px-to-em(2px)
+				span.total
+					font-size: px-to-em(18px,14px)
+					font-weight: 600
+					color: $acqua
+					background-color: $purple
+					padding-left: 6px
+					padding-right: 6px
+			li.achieved
+				margin-top: 60px
+		ul#project-step
+			font-size: px-to-em(14px,14px) 
+			line-height: px-to-em(14px,14px)
+			font-weight: 400
+			+span-columns(3,3)
+			padding: 0
+			li
+				+span-columns(3,3)
+				margin-bottom: 30px
+				hr.step
+					height: 1px
+					+span-columns(3,3)
+					$image: image-url("textures/hr_step.png")
+					background: $image repeat left top
+					margin: 0
+					border: none
+				.main-container
+					+span-columns(2 omega,3)
+					margin-top: 2px
+					h4.number
+						color: $rose
+						font-weight: 600
+						position: absolute
+						margin: 0
+					.step-container
+						position: relative
+						+float-left
+						padding-left: 18px
+						h3.step
+							margin-bottom: 5px
+						h3.money
+							font-size: px-to-em(18px)
+							font-weight: 600
+							color: $acqua
+							background-color: $purple
+							padding: 2px 6px
+							letter-spacing: 1 !important
+							+float-left
+							position: relative
+							display: inline
+		.single-update
+			+span-columns(8 omega,12)
+			.date
+				+span-columns(3 omega,8)
+				h3
+					font-family: "miso"
+					color: $rose
+					text-transform: uppercase
+					font-weight: 400
+					font-size: px-to-em(60px,16px)
+					margin: 0
+				h3.month
+					border: 2px solid white
+					outline: 2px solid $rose
+					height: 56px
+					position: relative
+					+float-left
+					display: inline
+					padding: 33px 2px 0 2px
+					$image: image-url("textures/dash_red.png")
+					background: $image repeat left top
+				h3.day, h3.year
+					clear: both
+
+
 	.button_container
 		margin-top: 10px
 	

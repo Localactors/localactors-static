@@ -1,13 +1,13 @@
 $base-font-size: 16px
 $base-line-height: 24px
 
-$total-columns: 7 
-$column-width: 2.5em
+$total-columns: 6 
+$column-width: 3.75em
 $gutter-width: 1.25em
 $grid-padding: 0.625em
 $container-style: magic
 
-$break: 16
+$break: 12
 
 body
 	-webkit-font-smoothing: antialiased
@@ -60,7 +60,7 @@ i
 	height: 175px
 	margin-top: -25px
 	.banner-call
-		+span-columns(5,7)
+		+span-columns(5,6)
 		+pre(1)
 		position: relative
 		padding: 16px
@@ -109,7 +109,7 @@ i
 			top: -31px
 			right: 0
 		a
-			+span-columns(5,7)
+			+span-columns(5,6)
 			font-family: "miso"
 			color: $black
 			background-color: $yellow
@@ -128,7 +128,7 @@ i
 
 .call
 	overflow: visible
-	+span-columns(7,7)
+	+span-columns(6,6)
 	margin-top: 10px
 	margin-bottom: 10px
 	padding-top: 0
@@ -200,7 +200,7 @@ i
 		margin-top: 8px
 .guidelines-container
 
-	+span-columns(12,7)
+	+span-columns(12,6)
 	border-top: 1px dashed $blue
 	background: $light-yellow
 	.first
@@ -431,7 +431,7 @@ div.success
 	$image: image-url("textures/dash_green.png")
 	background: $image repeat left top
 	margin: 20px 0
-	+span-columns(5 omega,7)
+	+span-columns(5 omega,6)
 	margin-left: 30%
 	div.box
 		border: 3px solid $green
@@ -460,7 +460,7 @@ div.error
 	$image: image-url("textures/dash_red.png")
 	background: $image repeat left top
 	margin: 20px 0
-	+span-columns(5 omega,7)
+	+span-columns(5 omega,6)
 	margin-left: 30%
 	div.box
 		border: 3px solid $rose
@@ -489,7 +489,7 @@ div.notice
 	$image: image-url("textures/dash_red.png")
 	background: $image repeat left top
 	margin: 20px 0
-	+span-columns(5 omega,7)
+	+span-columns(5 omega,6)
 	margin-left: 30%
 	div.box
 		border: 3px solid $rose
@@ -528,7 +528,7 @@ section.page
 			display: none
 		#logo
 			margin-bottom: 12px
-			+span-columns(7,7)
+			+span-columns(6,6)
 			@include logo($assets,"mobile")
 			.logo_text
 				margin: 0 !important
@@ -651,7 +651,7 @@ section.page
 	#arrow_right
 		+span-columns(1 omega)
 	#text
-		+span-columns(5,7)
+		+span-columns(5,6)
 		+clearfix
 		margin-top: 18px
 		ul
@@ -753,13 +753,13 @@ section.page
 	padding-top: 10px
 	ul.publisher-list
 		@include clearfix
-		+span-columns(7)
+		+span-columns(6)
 		margin: 0
 		margin-bottom: 10px
 		padding: 0
 		list-style-type: none
 		li.publisher
-			+span-columns(2,7)
+			+span-columns(2,6)
 			min-height: 145px
 			img.photo-publisher
 				width: 100px
@@ -1119,7 +1119,7 @@ footer
 				margin-bottom: 10px
 		.border-dashed
 			height: 1px
-			+span-columns(7,7)
+			+span-columns(6,6)
 			overflow: visible
 			border-top: 1px dashed $blue
 			margin-top: 40px
@@ -1189,9 +1189,9 @@ footer
 		
 		
 #projects, #single_project	
-	+span-columns(7,7)
+	+span-columns(6,6)
 	hr.spine
-		+span-columns(7,7)
+		+span-columns(6,6)
 		position: relative
 		z-index: 2
 		height: 5px
@@ -1203,7 +1203,7 @@ footer
 		margin: 10px 0 25px 0
 		border-top: 1px $blue dashed
 		@extend .wide !optional
-		+span-columns(7,7)
+		+span-columns(6,6)
 	.top
 		margin-top: 30px
 	img
@@ -1211,13 +1211,13 @@ footer
 		height: auto
 	ul.container-team
 		@include clearfix
-		+span-columns(7,7)
+		+span-columns(6,6)
 		margin: 0
 		margin-bottom: 10px
 		padding: 0
 		list-style-type: none
 		li.team-member
-			+span-columns(2,7)
+			+span-columns(2,6)
 			min-height: 110px
 			img.photo-team
 				width: 60px
@@ -1237,7 +1237,7 @@ footer
 				@extend .hover !optional
 				cursor: pointer
 	.container-main, .block-main
-		+span-columns(7,7)
+		+span-columns(6,6)
 		.photo-container
 			@include clearfix
 			margin-bottom: 10px
@@ -1363,7 +1363,7 @@ footer
 	list-style-type: none
 	padding: 0
 	.block-header
-		+span-columns(7,7)
+		+span-columns(6,6)
 		position: relative
 		margin-bottom: 20px
 		background: $light-yellow
@@ -1373,7 +1373,7 @@ footer
 			border-bottom: none
 			padding-bottom: 0
 		.container-publisher
-			+span-columns(4,7)
+			+span-columns(4,6)
 			margin-bottom: 10px
 			min-height: px-to-em(66px)
 			img.photo-publisher
@@ -1398,7 +1398,7 @@ footer
 				line-height: px-to-em(17px,20px)
 				padding-top: 5px
 		.container-costs
-			+span-columns(3 omega,7)
+			+span-columns(3 omega,6)
 			position: absolute
 			top: 17px
 			right: 0
@@ -1425,9 +1425,9 @@ footer
 				padding: 0 5px 0 2px
 				margin-top: 5px
 	.block-main
-		+span-columns(7,7)
+		+span-columns(6,6)
 		.container-title
-			+span-columns(7,7)
+			+span-columns(6,6)
 			h1.title
 				margin-top: 0
 				font-size: px-to-em(40px)
@@ -1443,15 +1443,15 @@ footer
 		ul.description
 			padding: 0
 			padding-top: 4px
-			+span-columns(7,7)
+			+span-columns(6,6)
 			clear: none
 			li.mono
 				p 
-					+span-columns(7,7)
+					+span-columns(6,6)
 			li 
-				+span-columns(7,7)
+				+span-columns(6,6)
 				.number-list
-					+span-columns(1,7)
+					+span-columns(1,6)
 					margin-bottom: 5px
 					p
 						margin: 0
@@ -1459,7 +1459,7 @@ footer
 						line-height: px-to-em(35px,42px)
 						text-align: right
 				p 
-					+span-columns(6 omega,7)
+					+span-columns(5 omega,6)
 					font-family: "miso"
 					font-size: px-to-em(14px)
 					line-height: px-to-em(17px,14px)
@@ -1470,7 +1470,7 @@ footer
 					margin-bottom: 10px
 #test
 	background-color: blue
-	+span-columns(7,7)
+	+span-columns(6,6)
 	position: relative
 	float: left
 	
