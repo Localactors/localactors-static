@@ -228,7 +228,7 @@
 			h2
 				font-size: px-to-em(60px,16px)
 				line-height: px-to-em(46px,60px)
-				color: $acqua
+				color: #45FFC1
 				
 			h3
 				font-size: px-to-em(14px,16px)
@@ -279,14 +279,16 @@
 							color: $acqua
 							background-color: $purple
 							padding: 2px 6px
-							letter-spacing: 1 !important
+							letter-spacing: px-to-em(2px) !important
 							+float-left
 							position: relative
 							display: inline
-		.single-update
+		.single-update-header
 			+span-columns(8 omega,12)
+			margin-bottom: 45px
 			.date
 				+span-columns(3 omega,8)
+				margin-top: 10px
 				h3
 					font-family: "miso"
 					color: $rose
@@ -304,8 +306,117 @@
 					padding: 33px 2px 0 2px
 					$image: image-url("textures/dash_red.png")
 					background: $image repeat left top
+					background-color: white
+					margin-top: -15px
+					margin-bottom: -15px
 				h3.day, h3.year
 					clear: both
+					position: relative
+					z-index: 2
+			.comments-container
+				+span-columns(2,8)
+				background-color: $acqua
+				position: relative
+				top: -25px
+				left: -30px
+				margin-top: 82px
+				.comments, .share
+					line-height: px-to-em(16px,14px)
+					position: relative
+					top: 25px
+					left: 30px
+				.arrow
+					+assign-sprite-background($assets)
+					+sprite($assets, "arrow_link", true)
+					position: absolute
+					margin-top: 5px
+				a
+					padding-left: 18px
+					font-family: "miso"
+					font-weight: 400
+					font-size: px-to-em(14px,16px)
+					line-height: px-to-em(16px,14px)
+					text-transform: uppercase
+					color: $rose
+					letter-spacing: px-to-em(2px)
+					&:hover
+						color: $blue
+			.update-headline-container
+				+span-columns(8,8)
+				font-family: "miso"
+				text-transform: uppercase
+				background-color: $acqua
+				position: relative
+				top: -26px
+				left: 24px
+				z-index: -1
+				.main-container
+					position: relative
+					top: 26px
+					left: -24px
+				p.info-project-track
+					letter-spacing: px-to-em(2px)
+					font-weight: 400
+					color: $acqua
+					font-size: px-to-em(14px,16px)
+					line-height: px-to-em(14px,14px)
+					padding: 2px 6px
+					background-color: $purple
+					position: relative
+					+float-left
+					display: inline
+					margin: 0
+					margin-top: 20px
+					span.number
+						color: white
+				h1.title-update
+					font-weight: 400
+					color: $purple
+					font-size: px-to-em(86px,16px)
+					line-height: px-to-em(80px,86px)
+					margin: 0
+					margin-top: 15px
+
+			.intro-update-container
+				+span-columns(7,8)
+				background-color: $acqua
+				position: relative
+				top: -24px
+				left: -24px
+				z-index: -2
+				p.intro
+					padding-top: 30px
+					font-family: "source sans pro"
+					font-weight: 400
+					font-size: px-to-em(22px,16px)
+					line-height: px-to-em(26px,22px)
+					position: relative
+					top: 24px
+					left: 24px
+					margin: 0
+		.single-update-body
+			+span-columns(7,12)
+			+pre(1)
+			.qa
+				margin-bottom: 45px
+				p
+					font-family: "source sans pro"
+					font-weight: 400
+					font-style: italic
+					font-size: px-to-em(16px,16px)
+					line-height: px-to-em(20px,16px)
+					color: $purple
+					margin: 0
+					margin-bottom: 15px
+					span.question
+						text-transform: uppercase
+						font-weight: 600
+						background-color: $acqua
+						font-style: normal
+						padding: 0 6px
+						margin-left: -6px
+			ul.list
+				margin-bottom: 45px
 
 
 	.button_container
@@ -1051,7 +1162,7 @@
 									display: inline
 									font-size: 24px
 									text-transform: uppercase
-									letter-spacing: 2px
+									letter-spacing: px-to-em(2px)
 									background: white
 								
 								p
