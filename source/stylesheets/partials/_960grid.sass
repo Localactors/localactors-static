@@ -319,13 +319,13 @@
 				background-color: $acqua
 				position: relative
 				top: -25px
-				left: -30px
+				left: -35px
 				margin-top: 82px
 				.comments, .share
 					line-height: px-to-em(16px,14px)
 					position: relative
 					top: 25px
-					left: 30px
+					left: 35px
 				.arrow
 					+assign-sprite-background($assets)
 					+sprite($assets, "arrow_link", true)
@@ -383,7 +383,7 @@
 				background-color: $acqua
 				position: relative
 				top: -24px
-				left: -24px
+				left: -22px
 				z-index: -2
 				p.intro
 					padding-top: 30px
@@ -393,13 +393,14 @@
 					line-height: px-to-em(26px,22px)
 					position: relative
 					top: 24px
-					left: 24px
+					left: 22px
 					margin: 0
 		.single-update-body
 			+span-columns(7 omega,12)
 			+post(1)
-			.generic
+			.generic, .photo, .qa, .quote, ul.list
 				margin-bottom: 45px
+			.generic
 				p
 					margin: 0
 					margin-bottom: 15px
@@ -408,8 +409,12 @@
 					line-height: px-to-em(20px,16px)
 					font-weight: 400
 					text-indent: px-to-em(30px)
+			.photo
+				+span-columns(8,7)
+				img.photo-update
+					max-width: 100%
+					margin-bottom: -7px
 			.qa
-				margin-bottom: 45px
 				p
 					font-family: "source sans pro"
 					font-weight: 400
@@ -428,12 +433,37 @@
 						margin-left: -6px
 			.quote
 				+span-columns(6 omega,7)
-				p.qname
+				font-family: "miso"
+				text-transform: uppercase
+				p.name
+					letter-spacing: px-to-em(2px)
+					font-weight: 400
+					color: $acqua
+					font-size: px-to-em(14px,16px)
+					line-height: px-to-em(14px,14px)
+					padding: 2px 6px
+					background-color: $purple
+					position: relative
+					+float-left
+					display: inline
+					margin-top: 0
+					margin-bottom: 10px
 				p.quote
 					+span-columns(6,6)
+					font-size: px-to-em(35px,16px)
+					line-height: px-to-em(43px,35px)
+					font-weight: 400
+					color: $purple
+					letter-spacing: px-to-em(2px)
+					margin-top: 0
+					margin-bottom: 0
+					span.quotation
+						position: relative
+						left: -5px
+						margin-left: -20px
+
 			ul.list
 				+span-columns(5,7)
-				margin-bottom: 45px
 				margin-top: 0
 				+no-bullets
 				padding: 0
