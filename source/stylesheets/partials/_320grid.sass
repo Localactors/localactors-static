@@ -56,6 +56,189 @@ i
 	@include float-left
 	margin-right: 15px
 
+
+
+
+#project-update-header
+	border-top: 1px solid $rose
+	+span-columns(6)
+	padding-top: 15px
+	margin-top: 55px
+	margin-bottom: 32px
+#support
+	font-family: "miso"
+	margin-bottom: 15px
+	+span-columns(6,6)
+	.donate
+		+span-columns(2 omega,6)
+	.share
+		+span-columns(2 omega,6)
+		margin-bottom: 10px
+		h4
+			text-transform: uppercase
+			letter-spacing: px-to-em(2px)
+			font-size: px-to-em(14px,16px)
+			line-height: px-to-em(14px,14px)
+			font-weight: 400
+			color: $blue
+			margin: 0
+#publisher-container
+	+span-columns(4,6)
+	img.photo-publisher
+		+span-columns(1,4)
+	a.name
+		+span-columns(4,4)
+		position: relative
+		+float-left
+		display: inline
+		font-weight: 200
+		text-decoration: underline
+		color: $black
+		background-color: $yellow
+		font-size: px-to-em(14px,16px)
+		line-height: px-to-em(15px,14px)
+		letter-spacing: px-to-em(2px)
+		padding: 0 2px 2px 2px
+		&:hover
+			color: $purple
+			background-color: $acqua
+#project-headline
+	+span-columns(4,6)
+	font-family: "miso"
+	text-transform: uppercase
+	h1.title
+		font-size: px-to-em(50px,16px)
+		line-height: px-to-em(40px,50px)
+		margin: 0
+		margin-bottom: 10px
+		color: $rose
+		font-weight: 400
+	.icon-where
+		+assign-sprite-background($assets)
+		+sprite($assets, "small_icon_where", true)
+		+float-left
+		margin: 1px 4px 0 0
+	h2.subtitle
+		color: $purple
+		font-weight: 400
+		margin: 0
+		font-size: px-to-em(27px,16px)
+		line-height: px-to-em(21px,25px)
+.tags-container
+	+span-columns(2 omega,6)
+	font-family: "miso"
+	text-transform: uppercase
+	h4
+		font-weight: 400
+		color: $rose
+		font-size: px-to-em(27px,16px)
+		margin: 0
+	ul
+		padding: 0
+		list-style-type: none
+		+pretty-bullets("assets/bullet-tags.png")
+		margin: 0
+		margin-top: 8px
+		li
+			line-height: px-to-em(16px,16px) !important
+			margin-bottom: 0 !important
+			margin-left: -5px
+			&:hover
+				opacity: 0.6
+		a
+			letter-spacing: px-to-em(2px)
+			color: white
+			font-size: px-to-em(14px,16px)
+			background-color: $black
+			padding: 0 5px 0 3px
+			text-decoration: none
+			font-weight: 600
+			margin-left: -5px
+#project-update-tab
+	+span-columns(6,6)
+	hr.tab-line
+		+span-columns(6,6)
+		border: none
+		border-bottom: 1px solid $rose
+		margin: 0
+		margin-top: -1px
+		position: relative
+		z-index: 1
+	ul.tab
+		+horizontal-list
+		font-family: "miso"
+		font-weight: 200
+		font-size: px-to-em(14px,16px)
+		text-transform: uppercase
+		position: relative
+		z-index: 2
+		letter-spacing: px-to-em(2px)
+		padding-left: 3px
+		li
+			position: relative
+			height: 15px
+			border: 1px solid $rose
+			line-height: px-to-em(14px) !important
+			padding: 0
+			padding-top: 4px
+			margin-right: 5px
+			opacity: 0.6
+			border-top-left-radius: 2px
+			border-top-right-radius: 2px
+		li.active
+			opacity: 1
+			border-bottom: 1px solid white
+		a
+			color: $black
+			text-decoration: none
+			background-color: $yellow
+			padding: 0 1px
+			margin: 0 8px 0 8px 
+			&:hover
+				color: $purple
+				background-color: $acqua
+#update-body
+	+span-columns(6,6)
+	ul#info-project
+		+span-columns(6,6)
+		font-family: "miso"
+		text-transform: uppercase
+		+no-bullets
+		padding: 0
+		h2, h3
+			margin: 0
+			font-weight: 400
+		h2
+			color: #45FFC1
+			font-size: px-to-em(40px,16px)
+			line-height: px-to-em(40px,40px)
+		h3
+			color: $purple
+			letter-spacing: px-to-em(2px)
+			font-size: px-to-em(14px,16px)
+			line-height: px-to-em(17px,14px)
+			span.total
+				font-weight: 600
+				color: $acqua
+				background-color: $purple
+				font-size: px-to-em(18px,14px)
+				padding-left: 6px
+				padding-right: 6px
+		li
+			+span-columns(2,6)
+		li.money
+			+span-columns(2 omega,6)
+		li.achieved
+			+span-columns(6,6)
+
+
+
+
+
+
+
+
+
 .banner-container
 	height: 175px
 	margin-top: -25px

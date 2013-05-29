@@ -73,174 +73,70 @@
 	#project-update-header
 		padding-top: 15px
 		margin-top: 55px
-		margin-bottom: 32px
-		+span-columns(12)
-		border-top: 1px solid $rose
+		margin-bottom: 10px
+		+span-columns(12)		
 	#support
-		margin-top: 4px 
+		margin-top: 4px
+		margin-bottom: 0
 		position: relative
 		+span-columns(3,12)
-		font-family: "miso"
+		.donate
+			+span-columns(3,3)
 		.share
-			position: absolute
-			top: 0
-			left: 115px
-			h4
-				text-transform: uppercase
-				letter-spacing: px-to-em(2px)
-				font-size: px-to-em(14px,16px)
-				line-height: px-to-em(14px,14px)
-				font-weight: 400
-				color: $blue
-				margin: 0
+			+span-columns(3,3)
+			position: relative
+			margin-top: 15px
 	#publisher-container
 		+span-columns(3,3)
 		position: relative
 		+float-left
 		margin-bottom: 6px
+		img.photo-publisher
+			+span-columns(2,3)
 		a.name
 			margin-top: -7px 
-			+span-columns(2,3)
-			font-size: px-to-em(14px,16px)
-			line-height: px-to-em(17px,14px)
-			font-weight: 200
-			text-decoration: underline
-			color: $black
-			background-color: $yellow
-			letter-spacing: px-to-em(2px)
-			padding: 0 2px 2px 2px
-			&:hover
-				color: $purple
-				background-color: $acqua
-	#project-headline
-		font-family: "miso"
-		text-transform: uppercase
+			+span-columns(2,3)			
+	#project-headline		
 		+span-columns(6,12)
 		+pre(1)
 		h1.title
-			color: $rose
-			font-weight: 400
 			font-size: px-to-em(67px,16px)
-			line-height: px-to-em(50px,67px)
-			margin: 0
+			line-height: px-to-em(50px,67px)			
 			margin-bottom: 15px
 		.icon-where
-			+assign-sprite-background($assets)
-			+sprite($assets, "small_icon_where", true)
-			+float-left
 			margin: 5px 7px 0 0
 		h2.subtitle
-			color: $purple
-			font-weight: 400
 			font-size: px-to-em(36px,16px)
 			line-height: px-to-em(31px,36px)
-			margin: 0
 	.tags-container
+		position: relative
 		+span-columns(2 omega,12)
-		font-family: "miso"
-		text-transform: uppercase
-		h4
-			font-weight: 400
-			color: $rose
-			font-size: px-to-em(27px,16px)
-			margin: 0
-		ul
-			padding: 0
-			list-style-type: none
-			margin: 0
-			margin-top: 8px
-			+pretty-bullets("assets/bullet-tags.png")
-			li
-				line-height: px-to-em(16px,16px) !important
-				margin-bottom: 0 !important
-				margin-left: -5px
-				&:hover
-					opacity: 0.6
-			a
-				letter-spacing: px-to-em(2px)
-				color: white
-				font-size: px-to-em(14px,16px)
-				background-color: $black
-				padding: 0 5px 0 3px
-				text-decoration: none
-				font-weight: 600
-				margin-left: -5px
 	#project-update-tab
 		+span-columns(12,12)
 		hr.tab-line
 			+span-columns(12,12)
-			border: none
-			border-bottom: 1px solid $rose
-			margin: 0
-			margin-top: -1px
-			position: relative
-			z-index: 1
 		ul.tab
-			+horizontal-list
-			font-family: "miso"
-			font-weight: 200
-			font-size: px-to-em(14px,16px)
-			text-transform: uppercase
-			position: relative
-			z-index: 2
-			letter-spacing: px-to-em(2px)
-
+			padding-left: 0
 			li
-				position: relative
-				height: 15px
-				border: 1px solid $rose
-				line-height: px-to-em(14px) !important
-				padding: 0
-				padding-top: 4px
 				margin-right: 14px
-				opacity: 0.6
-				border-top-left-radius: 2px
-				border-top-right-radius: 2px
 				&:first-child
 					+pre(4)
-			li.active
-				opacity: 1
-				border-bottom: 1px solid white
 			a
-				color: $black
-				text-decoration: none
-				background-color: $yellow
 				padding: 0 4px
-				margin: 0 8px 0 8px 
-				&:hover
-					color: $purple
-					background-color: $acqua
+			
 	#update-body
 		+span-columns(12,12)
 		ul#info-project
 			+span-columns(3,12)
-			+no-bullets
 			margin-top: 27px
-			padding: 0
-			font-family: "miso"
-			text-transform: uppercase
-			li
+			li, li.money
+				+span-columns(3,3)
 				margin-bottom: 12px 
-			h2, h3
-				margin: 0
-				font-weight: 400
 			h2
 				font-size: px-to-em(60px,16px)
 				line-height: px-to-em(46px,60px)
-				color: #45FFC1
-				
-			h3
-				font-size: px-to-em(14px,16px)
-				color: $purple
-				letter-spacing: px-to-em(2px)
-				span.total
-					font-size: px-to-em(18px,14px)
-					font-weight: 600
-					color: $acqua
-					background-color: $purple
-					padding-left: 6px
-					padding-right: 6px
 			li.achieved
+				+span-columns(3,3)
 				margin-top: 60px
 		ul#project-step
 			font-size: px-to-em(14px,14px) 
@@ -398,7 +294,7 @@
 		.single-update-body
 			+span-columns(7 omega,12)
 			+post(1)
-			.generic, .photo, .qa, .quote, ul.list
+			.generic, .photo, .qa, .quote, ul.list, .interview
 				margin-bottom: 45px
 			.generic
 				p
@@ -409,11 +305,74 @@
 					line-height: px-to-em(20px,16px)
 					font-weight: 400
 					text-indent: px-to-em(30px)
+			.interview
+				+span-columns(6 omega,7)
+				position: relative
+				.name
+					background-color: $acqua
+					position: absolute
+					left: -70px
+					width: 28px
+					height: 37px
+					h4
+						font-family: "miso"
+						font-weight: 400
+						font-size: px-to-em(42px,16px)
+						color: $purple
+						text-transform: uppercase
+						position: relative
+						+float-left
+						display: inline
+						margin-top: 0
+						margin-bottom: 0
+						top: 7px
+						left: 17px
+				p
+					font-family: "source sans pro"
+					font-weight: 400
+					font-size: px-to-em(16px,16px)
+					line-height: px-to-em(20px,16px)
+					margin: 0
+					margin-bottom: 15px
+				.question, .answer
+					padding-left: 12px
+					position: relative
+					left: -12px
+					margin-bottom: 30px
+				.question
+					border-left: 1px solid $purple
+					p
+						color: $purple
+				.answer
+					border-left: 1px solid $black
+					p
+						font-style: italic
 			.photo
 				+span-columns(8,7)
 				img.photo-update
 					max-width: 100%
 					margin-bottom: -7px
+				.description
+					+span-columns(5,7)
+					margin-top: 10px
+					margin-bottom: 35px
+					.arrow
+						+assign-sprite-background($assets)
+						+sprite($assets, "arrow_link", true)
+						position: absolute
+						margin-top: 3px
+					p
+						font-family: "miso"
+						font-size: px-to-em(14px,16px)
+						line-height: px-to-em(17px,14px)
+						font-weight: 400
+						color: $purple
+						letter-spacing: px-to-em(2px)
+						text-transform: uppercase
+						margin: 0
+						position: relative
+						+float-left
+						padding-left: 22px
 			.qa
 				p
 					font-family: "source sans pro"
@@ -799,12 +758,12 @@
 			
 			#logo
 				+logo($assets,"web")
-				+span-columns(6,16)
+				+span-columns(4,12)
 			nav.navigation
 				clear: none
 				top: 25px
 				display: inline
-				+span-columns(3,16)
+				+span-columns(3,12)
 				ul
 					float: none
 					+span-columns(3 omega,3)
@@ -826,13 +785,13 @@
 				margin-top: 0
 			.banner-container
 				display: block
-				+span-columns(7 omega,16)
+				+span-columns(5 omega,12)
 				margin-top: -10px
 				.banner-call
 					position: relative
 					padding: 16px
 					margin-top: 40px
-					+span-columns(7,7)
+					+span-columns(5,5)
 					margin-left: 20px
 					display: inline
 					.border1, .border2
@@ -874,7 +833,7 @@
 					ul
 						+no-bullets
 					a
-						+span-columns(4,7)
+						+span-columns(3,5)
 						font-family: "miso"
 						color: $black
 						background-color: $yellow
