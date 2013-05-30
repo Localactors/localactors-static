@@ -77,8 +77,8 @@ i
 		h4
 			text-transform: uppercase
 			letter-spacing: px-to-em(2px)
-			font-size: px-to-em(14px,16px)
-			line-height: px-to-em(14px,14px)
+			font-size: px-to-em(12px,16px)
+			line-height: px-to-em(13px,12px)
 			font-weight: 400
 			color: $blue
 			margin: 0
@@ -95,8 +95,8 @@ i
 		text-decoration: underline
 		color: $black
 		background-color: $yellow
-		font-size: px-to-em(14px,16px)
-		line-height: px-to-em(15px,14px)
+		font-size: px-to-em(12px,16px)
+		line-height: px-to-em(13px,12px)
 		letter-spacing: px-to-em(2px)
 		padding: 0 2px 2px 2px
 		&:hover
@@ -133,14 +133,15 @@ i
 	h4
 		font-weight: 400
 		color: $rose
-		font-size: px-to-em(27px,16px)
+		font-size: px-to-em(21px,16px)
+		line-height: px-to-em(21px,21px)
 		margin: 0
 	ul
 		padding: 0
 		list-style-type: none
 		+pretty-bullets("assets/bullet-tags.png")
 		margin: 0
-		margin-top: 8px
+		margin-top: 5px
 		li
 			line-height: px-to-em(16px,16px) !important
 			margin-bottom: 0 !important
@@ -150,12 +151,14 @@ i
 		a
 			letter-spacing: px-to-em(2px)
 			color: white
-			font-size: px-to-em(14px,16px)
+			font-size: px-to-em(12px,16px)
 			background-color: $black
-			padding: 0 5px 0 3px
+			padding: 0 5px 1px 3px
 			text-decoration: none
 			font-weight: 600
 			margin-left: -5px
+			position: relative
+			top: -1px
 #project-update-tab
 	+span-columns(6,6)
 	hr.tab-line
@@ -170,7 +173,7 @@ i
 		+horizontal-list
 		font-family: "miso"
 		font-weight: 200
-		font-size: px-to-em(14px,16px)
+		font-size: px-to-em(12px,16px)
 		text-transform: uppercase
 		position: relative
 		z-index: 2
@@ -195,7 +198,9 @@ i
 			text-decoration: none
 			background-color: $yellow
 			padding: 0 1px
-			margin: 0 8px 0 8px 
+			margin: 0 8px 0 8px
+			position: relative
+			top: 1px
 			&:hover
 				color: $purple
 				background-color: $acqua
@@ -207,6 +212,13 @@ i
 		text-transform: uppercase
 		+no-bullets
 		padding: 0
+		hr.info-spacer
+			+span-columns(6,6)
+			margin: 0
+			border: none
+			height: 1px
+			$image: image-url("textures/hr_step.png")
+			background: $image repeat left top
 		h2, h3
 			margin: 0
 			font-weight: 400
@@ -215,24 +227,190 @@ i
 			font-size: px-to-em(40px,16px)
 			line-height: px-to-em(40px,40px)
 			margin-bottom: 5px
+			span.euro
+				font-size: px-to-em(30px,40px)
 		h3
 			color: $purple
 			letter-spacing: px-to-em(2px)
-			font-size: px-to-em(14px,16px)
-			line-height: px-to-em(17px,14px)
+			font-size: px-to-em(12px,16px)
+			line-height: px-to-em(15px,12px)
 			span.total
 				font-weight: 600
 				color: $acqua
 				background-color: $purple
-				font-size: px-to-em(18px,14px)
+				font-size: px-to-em(16px,12px)
 				padding-left: 6px
 				padding-right: 6px
 		li
 			+span-columns(2,6)
 		li.money
 			+span-columns(2 omega,6)
+			h3
+				margin-top: -5px
 		li.achieved
 			+span-columns(6,6)
+			margin-top: 20px
+			.worm
+				position: absolute
+				z-index: -1
+				margin-top: 5px
+				+assign-sprite-background($assets)
+				+sprite($assets, "step_worm_horizontal", true)
+	ul#project-step
+		+span-columns(6,6)
+		font-size: px-to-em(12px,12px) 
+		line-height: px-to-em(12px,12px)
+		font-weight: 400
+		padding: 0
+		position: relative
+		li
+			&:last-child
+				+span-columns(2 omega,6)
+			+span-columns(2,6)
+			hr.step
+				width: 1px
+				height: 100px
+				border: none
+				margin: 0
+				$image: image-url("textures/hr_step_vertical.png")
+				background: $image repeat left top
+			.main-container
+				h4.number
+					position: absolute
+					margin: 0
+					color: $rose
+					font-weight: 600
+				.step-container
+					position: relative
+					+float-left
+					padding-left: 18px
+					h3.step
+						margin-bottom: 5px
+					h3.money
+						font-weight: 600
+						color: $acqua
+						background-color: $purple
+						padding: 2px 6px
+						letter-spacing: px-to-em(2px) !important
+						+float-left
+						position: relative
+						display: inline
+						font-size: px-to-em(16px,16px)
+						line-height: px-to-em(14px,16px)
+	.single-update
+		margin-top: 27px
+	.single-update-header
+		+span-columns(6,6)
+		margin-bottom: 30px
+		.date
+			+span-columns(4,6)
+			margin-bottom: 15px
+			h3
+				font-family: "miso"
+				color: $rose
+				text-transform: uppercase
+				font-weight: 400
+				margin: 0
+				font-size: px-to-em(27px,16px)
+			h3.month
+				border: 2px solid white
+				outline: 1px solid $rose
+				position: relative
+				+float-left
+				display: inline
+				$image: image-url("textures/dash_red.png")
+				background: $image repeat left top
+				background-color: white
+				height: 31px
+				padding: 7px 4px 0 4px
+				margin-top: -11px
+				margin-bottom: -11px
+			h3.day, h3.year
+				clear: both
+				position: relative
+				z-index: 2
+				padding-left: 4px
+		.comments-container
+			+span-columns(2 omega,6)
+			background-color: $acqua
+			position: relative
+			margin-top: 23px
+			top: -11px
+			left: -20px
+			.comments, .share
+				position: relative
+				line-height: px-to-em(14px,14px)
+				top: 11px
+				left: 20px
+			.arrow
+				+assign-sprite-background($assets)
+				+sprite($assets, "arrow_link", true)
+				position: absolute
+				margin-top: 5px
+			a
+				font-family: "miso"
+				padding-left: 16px
+				font-weight: 400
+				font-size: px-to-em(12px,16px)
+				line-height: px-to-em(14px,12px)
+				text-transform: uppercase
+				color: $rose
+				letter-spacing: px-to-em(2px)
+				&:hover
+					color: $blue
+		.update-headline-container
+			margin-top: 5px
+			+span-columns(6,6)
+			font-family: "miso"
+			text-transform: uppercase
+			background-color: $acqua
+			position: relative
+			z-index: -1
+			top: -40px
+			padding-bottom: 20px
+			.main-container
+				position: relative
+				top: 40px
+			p.info-project-track
+				letter-spacing: px-to-em(2px)
+				font-size: px-to-em(12px,16px)
+				line-height: px-to-em(12px,12px)
+				font-weight: 400
+				color: $acqua
+				background-color: $purple
+				position: relative
+				padding: 4px 6px 2px 6px
+				+float-left
+				display: inline
+				margin: 0
+				span.number
+					color: white
+			h1.title-update
+				font-weight: 400
+				color: $purple
+				margin: 0
+				font-size: px-to-em(50px,16px)
+				line-height: px-to-em(42px,50px)
+				margin-top: 10px
+		.intro-update-container
+			+span-columns(5,6)
+			background-color: $acqua
+			position: relative
+			z-index: -2
+			left: 20px
+			top: -38px
+			p.intro
+				padding-top: 35px
+				font-family: "source sans pro"
+				font-weight: 400
+				position: relative
+				margin: 0
+				font-size: px-to-em(16px,16px)
+				line-height: px-to-em(20px,16px)
+				left: -20px
+				top: 10px
+
+
 
 
 

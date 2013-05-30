@@ -86,6 +86,9 @@
 			+span-columns(3,3)
 			position: relative
 			margin-top: 15px
+			h4
+				font-size: px-to-em(14px,16px)
+				line-height: px-to-em(14px,14px)
 	#publisher-container
 		+span-columns(3,3)
 		position: relative
@@ -95,7 +98,9 @@
 			+span-columns(2,3)
 		a.name
 			margin-top: -7px 
-			+span-columns(2,3)			
+			+span-columns(2,3)
+			font-size: px-to-em(14px,16px)
+			line-height: px-to-em(15px,14px)		
 	#project-headline		
 		+span-columns(6,12)
 		+pre(1)
@@ -111,73 +116,84 @@
 	.tags-container
 		position: relative
 		+span-columns(2 omega,12)
+		h4
+			font-size: px-to-em(27px,16px)
+			line-height: px-to-em(27px,27px)
+		ul
+			margin-top: 8px
+			li
+				line-height: px-to-em(16px,16px) !important
+			a
+				font-size: px-to-em(14px,16px)
+				padding: 0 5px 0 3px
+				top: 0
 	#project-update-tab
 		+span-columns(12,12)
 		hr.tab-line
 			+span-columns(12,12)
 		ul.tab
 			padding-left: 0
+			font-size: px-to-em(14px,16px)
 			li
 				margin-right: 14px
 				&:first-child
 					+pre(4)
 			a
 				padding: 0 4px
-			
+				top: 0
+
 	#update-body
 		+span-columns(12,12)
 		ul#info-project
 			+span-columns(3,12)
 			margin-top: 27px
+			hr.info-spacer
+				display: none
 			li, li.money
 				+span-columns(3,3)
-				margin-bottom: 12px 
+				margin-bottom: 12px
+			li.money
+				h3
+					margin-top: 0
 			h2
 				font-size: px-to-em(60px,16px)
 				line-height: px-to-em(48px,60px)
+				span.euro
+					font-size: px-to-em(45px,60px)
+			h3
+				font-size: px-to-em(14px,16px)
+				line-height: px-to-em(17px,14px)
+				span.total
+					font-size: px-to-em(18px,14px)
 			li.achieved
 				+span-columns(3,3)
 				margin-top: 60px
+				.worm
+					margin-top: 0
+					+assign-sprite-background($assets)
+					+sprite($assets, "step_worm", true)
 		ul#project-step
 			font-size: px-to-em(14px,14px) 
 			line-height: px-to-em(14px,14px)
-			font-weight: 400
 			+span-columns(3,3)
-			padding: 0
 			li
+				&:last-child
+					+span-columns(3,3)
 				+span-columns(3,3)
 				margin-bottom: 30px
 				hr.step
+					width: auto
 					height: 1px
 					+span-columns(3,3)
 					$image: image-url("textures/hr_step.png")
 					background: $image repeat left top
-					margin: 0
-					border: none
 				.main-container
 					+span-columns(2 omega,3)
 					margin-top: 2px
-					h4.number
-						color: $rose
-						font-weight: 600
-						position: absolute
-						margin: 0
 					.step-container
-						position: relative
-						+float-left
-						padding-left: 18px
-						h3.step
-							margin-bottom: 5px
 						h3.money
-							font-size: px-to-em(18px)
-							font-weight: 600
-							color: $acqua
-							background-color: $purple
-							padding: 2px 6px
-							letter-spacing: px-to-em(2px) !important
-							+float-left
-							position: relative
-							display: inline
+							font-size: px-to-em(18px,16px)
+							line-height: px-to-em(16px,18px)
 		.single-update
 			margin-top: 27px
 		.single-update-header
@@ -186,111 +202,60 @@
 			.date
 				+span-columns(3 omega,8)
 				margin-top: 10px
+				margin-bottom: 0
 				h3
-					font-family: "miso"
-					color: $rose
-					text-transform: uppercase
-					font-weight: 400
 					font-size: px-to-em(60px,16px)
-					margin: 0
 				h3.month
 					border: 2px solid white
 					outline: 2px solid $rose
 					height: 56px
-					position: relative
-					+float-left
-					display: inline
 					padding: 33px 2px 0 2px
-					$image: image-url("textures/dash_red.png")
-					background: $image repeat left top
-					background-color: white
 					margin-top: -15px
 					margin-bottom: -15px
 				h3.day, h3.year
-					clear: both
-					position: relative
-					z-index: 2
+					padding-left: 0
 			.comments-container
 				+span-columns(2,8)
-				background-color: $acqua
-				position: relative
 				top: -25px
 				left: -35px
 				margin-top: 82px
 				.comments, .share
 					line-height: px-to-em(16px,14px)
-					position: relative
 					top: 25px
 					left: 35px
-				.arrow
-					+assign-sprite-background($assets)
-					+sprite($assets, "arrow_link", true)
-					position: absolute
-					margin-top: 5px
 				a
 					padding-left: 18px
-					font-family: "miso"
-					font-weight: 400
 					font-size: px-to-em(14px,16px)
 					line-height: px-to-em(16px,14px)
-					text-transform: uppercase
-					color: $rose
-					letter-spacing: px-to-em(2px)
-					&:hover
-						color: $blue
 			.update-headline-container
 				+span-columns(8,8)
-				font-family: "miso"
-				text-transform: uppercase
-				background-color: $acqua
-				position: relative
 				top: -26px
 				left: 24px
-				z-index: -1
+				padding-bottom: 0
+				margin-top: 0
 				.main-container
-					position: relative
 					top: 26px
 					left: -24px
 				p.info-project-track
-					letter-spacing: px-to-em(2px)
-					font-weight: 400
-					color: $acqua
 					font-size: px-to-em(14px,16px)
 					line-height: px-to-em(14px,14px)
 					padding: 2px 6px
-					background-color: $purple
-					position: relative
-					+float-left
-					display: inline
-					margin: 0
 					margin-top: 20px
-					span.number
-						color: white
 				h1.title-update
-					font-weight: 400
-					color: $purple
 					font-size: px-to-em(86px,16px)
 					line-height: px-to-em(80px,86px)
-					margin: 0
 					margin-top: 15px
 
 			.intro-update-container
 				+span-columns(7,8)
-				background-color: $acqua
-				position: relative
 				top: -24px
 				left: -22px
-				z-index: -2
 				p.intro
 					padding-top: 30px
-					font-family: "source sans pro"
-					font-weight: 400
 					font-size: px-to-em(22px,16px)
 					line-height: px-to-em(26px,22px)
-					position: relative
 					top: 24px
 					left: 22px
-					margin: 0
 		.single-update-body
 			+span-columns(7 omega,12)
 			+post(1)
