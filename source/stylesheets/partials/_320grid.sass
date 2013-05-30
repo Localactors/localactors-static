@@ -107,8 +107,8 @@ i
 	font-family: "miso"
 	text-transform: uppercase
 	h1.title
-		font-size: px-to-em(50px,16px)
-		line-height: px-to-em(40px,50px)
+		font-size: px-to-em(40px,16px)
+		line-height: px-to-em(30px,40px)
 		margin: 0
 		margin-bottom: 10px
 		color: $rose
@@ -117,13 +117,15 @@ i
 		+assign-sprite-background($assets)
 		+sprite($assets, "small_icon_where", true)
 		+float-left
-		margin: 1px 4px 0 0
+		margin-top: -1px
+		position: absolute
 	h2.subtitle
 		color: $purple
 		font-weight: 400
 		margin: 0
-		font-size: px-to-em(27px,16px)
-		line-height: px-to-em(21px,25px)
+		font-size: px-to-em(23px,16px)
+		line-height: px-to-em(19px,23px)
+		padding-left: 20px
 .tags-container
 	+span-columns(2 omega,6)
 	font-family: "miso"
@@ -212,6 +214,7 @@ i
 			color: #45FFC1
 			font-size: px-to-em(40px,16px)
 			line-height: px-to-em(40px,40px)
+			margin-bottom: 5px
 		h3
 			color: $purple
 			letter-spacing: px-to-em(2px)
