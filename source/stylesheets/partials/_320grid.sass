@@ -67,41 +67,51 @@ i
 	margin-bottom: 32px
 #support
 	font-family: "miso"
-	margin-bottom: 15px
+	margin-bottom: 5px
 	+span-columns(6,6)
 	.donate
 		+span-columns(2 omega,6)
+		.button_container
+			margin-top: 0
+			margin-bottom: 0
 	.share
 		+span-columns(2 omega,6)
 		margin-bottom: 10px
-		h4
-			text-transform: uppercase
-			letter-spacing: px-to-em(2px)
-			font-size: px-to-em(12px,16px)
-			line-height: px-to-em(13px,12px)
-			font-weight: 400
-			color: $blue
-			margin: 0
+		.facebook, .twitter, .googleplus
+			width: 33px
+			height: 33px
+			background-color: $blue
+			position: relative
+			margin-right: 3px
+			+float-left
 #publisher-container
 	+span-columns(4,6)
+	min-height: 80px
 	img.photo-publisher
-		+span-columns(1,4)
+		width: 80px
+		height: 80px
+		position: absolute
 	a.name
-		+span-columns(4,4)
+		+span-columns(2,4)
+		margin-left: 90px
 		position: relative
 		+float-left
 		display: inline
 		font-weight: 200
 		text-decoration: underline
 		color: $black
-		background-color: $yellow
-		font-size: px-to-em(12px,16px)
-		line-height: px-to-em(13px,12px)
+		font-size: px-to-em(18px,16px)
+		line-height: px-to-em(18px,18px)
 		letter-spacing: px-to-em(2px)
 		padding: 0 2px 2px 2px
 		&:hover
-			color: $purple
-			background-color: $acqua
+			background-color: $yellow
+hr.spacer-donate
+	margin: 0
+	height: 0
+	border: none
+	$image: image-url("textures/hr_step.png")
+	background: $image repeat left top
 #project-headline
 	+span-columns(4,6)
 	font-family: "miso"
@@ -190,6 +200,9 @@ i
 			opacity: 0.6
 			border-top-left-radius: 2px
 			border-top-right-radius: 2px
+			&:hover
+				border-bottom: 1px solid white
+				opacity: 1
 		li.active
 			opacity: 1
 			border-bottom: 1px solid white
@@ -301,7 +314,7 @@ i
 		margin-top: 27px
 	.single-update-header
 		+span-columns(6,6)
-		margin-bottom: 30px
+		margin-bottom: 10px
 		.date
 			+span-columns(4,6)
 			margin-bottom: 15px
@@ -407,6 +420,7 @@ i
 				margin: 0
 				font-size: px-to-em(16px,16px)
 				line-height: px-to-em(20px,16px)
+				color: $purple
 				left: -20px
 				top: 10px
 	.single-update-body
@@ -414,6 +428,7 @@ i
 		.generic, .photo, .qa, .quote, ul.list, .interview
 			margin-bottom: 30px
 		.generic
+			+span-columns(5,5)
 			p
 				margin: 0
 				font-family: "source sans pro"
@@ -425,6 +440,7 @@ i
 				&:last-child
 					margin-bottom: 0
 		.interview
+			+span-columns(5,5)
 			position: relative
 			.question, .answer
 				position: relative
@@ -498,35 +514,93 @@ i
 					+float-left
 					padding-left: 22px
 		.qa
+			+span-columns(5,5)
 			p
 				font-family: "source sans pro"
 				font-weight: 400
 				font-style: italic
 				font-size: px-to-em(13px,16px)
 				line-height: px-to-em(19px,13px)
-				color: $purple
+				color: $black
 				margin: 0
 				margin-bottom: 15px
 				span.question
 					text-transform: uppercase
 					font-weight: 600
 					background-color: $acqua
+					color: $purple
 					font-style: normal
 					padding: 0 6px
 					margin-left: -6px
 		.quote
 			font-family: "miso"
 			text-transform: uppercase
-			+span-columns(4 omega,5)
+			+span-columns(5,5)
 			p.name
 				letter-spacing: px-to-em(2px)
 				font-weight: 400
 				color: $acqua
 				font-size: px-to-em(12px,16px)
 				line-height: px-to-em(12px,12px)
-				padding: 2px 6px
+				padding: 4px 6px 2px 6px
 				background-color: $purple
 				position: relative
+				+float-left
+				display: inline
+				margin-top: 0
+				margin-bottom: 10px
+			p.quote
+				+span-columns(5,5)
+				font-size: px-to-em(25px,16px)
+				line-height: px-to-em(30px,25px)
+				font-weight: 400
+				color: $purple
+				letter-spacing: px-to-em(2px)
+				margin-top: 0
+				margin-bottom: 0
+		ul.list
+			+span-columns(4,5)
+			margin-top: 0
+			+no-bullets
+			padding: 0
+			li
+				position: relative
+				+clearfix
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 0
+			.arrow
+				position: absolute
+				z-index: 2
+				+assign-sprite-background($assets)
+				+sprite($assets, "arrow_link", true)
+				margin-top: 8px
+			p, a
+				position: relative
+				+float-left
+				font-family: "miso"
+				font-weight: 200
+				display: inline
+				text-transform: uppercase
+				margin: 0
+				color: $black
+				padding-left: 20px
+				font-size: px-to-em(25px,16px)
+				line-height: px-to-em(25px,25px)
+			a
+				text-decoration: underline
+				padding-right: 20px
+				&:hover
+					background-color: $yellow
+	hr.update
+		+span-columns(6,6)
+		border: none
+		border-top: 1px solid $rose
+		margin-top: 0
+		margin-bottom: 0
+
+
+
 
 
 
@@ -994,7 +1068,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	+susy-grid-background
+	//+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description

@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		+susy-grid-background
+		//+susy-grid-background
 
 		
 	#test
@@ -73,34 +73,44 @@
 	#project-update-header
 		padding-top: 15px
 		margin-top: 55px
-		margin-bottom: 10px
-		+span-columns(12)		
+		margin-bottom: 30px
+		+span-columns(12)
+		.clear
+			display: none		
 	#support
 		margin-top: 4px
-		margin-bottom: 0
 		position: relative
 		+span-columns(3,12)
 		.donate
 			+span-columns(3,3)
+			a
+				padding-left: 39px
+				padding-right: 39px
 		.share
 			+span-columns(3,3)
 			position: relative
-			margin-top: 15px
-			h4
-				font-size: px-to-em(14px,16px)
-				line-height: px-to-em(14px,14px)
+			margin-top: 7px
 	#publisher-container
 		+span-columns(3,3)
 		position: relative
 		+float-left
 		margin-bottom: 6px
 		img.photo-publisher
+			position: relative
+			width: auto
+			height: auto
 			+span-columns(2,3)
 		a.name
-			margin-top: -7px 
+			margin-top: 10px
 			+span-columns(2,3)
-			font-size: px-to-em(14px,16px)
-			line-height: px-to-em(15px,14px)		
+			margin-left: 0
+			font-size: px-to-em(20px,16px)
+			line-height: px-to-em(21px,20px)
+	hr.spacer-donate
+		+span-columns(2,3)
+		height: 1px
+		margin-top: 10px
+		margin-bottom: 10px
 	#project-headline		
 		+span-columns(6,12)
 		+pre(1)
@@ -262,6 +272,7 @@
 			.generic, .photo, .qa, .quote, ul.list, .interview
 				margin-bottom: 45px
 			.generic
+				+span-columns(7,7)
 				p
 					margin-bottom: 15px
 					font-size: px-to-em(16px,16px)
@@ -296,6 +307,7 @@
 						font-size: px-to-em(14px,16px)
 						line-height: px-to-em(17px,14px)
 			.qa
+				+span-columns(7,7)
 				p
 					font-size: px-to-em(16px,16px)
 					line-height: px-to-em(22px,16px)
@@ -308,19 +320,11 @@
 				p.name
 					font-size: px-to-em(14px,16px)
 					line-height: px-to-em(14px,14px)
-					+float-left
-					display: inline
-					margin-top: 0
-					margin-bottom: 10px
+					padding: 2px 6px
 				p.quote
 					+span-columns(6,6)
 					font-size: px-to-em(35px,16px)
 					line-height: px-to-em(43px,35px)
-					font-weight: 400
-					color: $purple
-					letter-spacing: px-to-em(2px)
-					margin-top: 0
-					margin-bottom: 0
 					span.quotation
 						position: relative
 						left: -5px
@@ -328,47 +332,20 @@
 
 			ul.list
 				+span-columns(5,7)
-				margin-top: 0
-				+no-bullets
-				padding: 0
 				li
-					position: relative
-					+clearfix
 					margin-bottom: 15px
-					&:last-child
-						margin-bottom: 0
 				.arrow
-					position: absolute
-					z-index: 2
-					+assign-sprite-background($assets)
-					+sprite($assets, "arrow_link", true)
 					margin-top: 14px
 
 				p, a
-					position: relative
-					+float-left
-					display: inline
 					padding-left: 20px
-					font-family: "miso"
-					font-weight: 200
 					font-size: px-to-em(40px,16px)
 					line-height: px-to-em(40px,40px)
-					text-transform: uppercase
-					margin: 0
-					color: $black
 				a
-					background-color: $yellow
 					padding-right: 20px
-					text-decoration: underline
-					&:hover
-						color: $purple
-						background-color: $acqua
+					
 		hr.update
 			+span-columns(8 omega,12)
-			border: none
-			border-top: 1px solid $rose
-			margin-top: 0
-			margin-bottom: 0
 
 	.button_container
 		margin-top: 10px
