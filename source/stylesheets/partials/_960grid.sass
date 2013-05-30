@@ -263,111 +263,51 @@
 				margin-bottom: 45px
 			.generic
 				p
-					margin: 0
 					margin-bottom: 15px
-					font-family: "source sans pro"
 					font-size: px-to-em(16px,16px)
-					line-height: px-to-em(20px,16px)
-					font-weight: 400
+					line-height: px-to-em(22px,16px)
 					text-indent: px-to-em(30px)
 			.interview
 				+span-columns(6 omega,7)
-				position: relative
-				.name
-					background-color: $acqua
-					position: absolute
-					left: -70px
-					width: 28px
-					height: 37px
-					h4
-						font-family: "miso"
-						font-weight: 400
-						font-size: px-to-em(42px,16px)
-						color: $purple
-						text-transform: uppercase
-						position: relative
-						+float-left
-						display: inline
-						margin-top: 0
-						margin-bottom: 0
-						top: 7px
-						left: 17px
-				p
-					font-family: "source sans pro"
-					font-weight: 400
-					font-size: px-to-em(16px,16px)
-					line-height: px-to-em(20px,16px)
-					margin: 0
-					margin-bottom: 15px
 				.question, .answer
-					padding-left: 12px
-					position: relative
-					left: -12px
-					margin-bottom: 30px
-				.question
-					border-left: 1px solid $purple
+					+span-columns(6,6)
+					overflow: visible
 					p
-						color: $purple
-				.answer
-					border-left: 1px solid $black
-					p
-						font-style: italic
+						&:last-child
+							margin-bottom: 25px
+					.name
+						position: absolute
+						left: -80px
+				p
+					+span-columns(7,7)
+					font-size: px-to-em(16px,16px)
+					line-height: px-to-em(22px,16px)
+					padding-bottom: 15px
+					padding-right: 10px
+					left: -10px
+
 			.photo
 				+span-columns(8,7)
-				img.photo-update
-					max-width: 100%
-					margin-bottom: -7px
 				.description
 					+span-columns(5,7)
 					margin-top: 10px
 					margin-bottom: 35px
-					.arrow
-						+assign-sprite-background($assets)
-						+sprite($assets, "arrow_link", true)
-						position: absolute
-						margin-top: 3px
 					p
-						font-family: "miso"
 						font-size: px-to-em(14px,16px)
 						line-height: px-to-em(17px,14px)
-						font-weight: 400
-						color: $purple
-						letter-spacing: px-to-em(2px)
-						text-transform: uppercase
-						margin: 0
-						position: relative
-						+float-left
-						padding-left: 22px
 			.qa
 				p
-					font-family: "source sans pro"
-					font-weight: 400
-					font-style: italic
 					font-size: px-to-em(16px,16px)
-					line-height: px-to-em(20px,16px)
-					color: $purple
-					margin: 0
+					line-height: px-to-em(22px,16px)
 					margin-bottom: 15px
 					span.question
-						text-transform: uppercase
-						font-weight: 600
-						background-color: $acqua
-						font-style: normal
 						padding: 0 6px
 						margin-left: -6px
 			.quote
 				+span-columns(6 omega,7)
-				font-family: "miso"
-				text-transform: uppercase
 				p.name
-					letter-spacing: px-to-em(2px)
-					font-weight: 400
-					color: $acqua
 					font-size: px-to-em(14px,16px)
 					line-height: px-to-em(14px,14px)
-					padding: 2px 6px
-					background-color: $purple
-					position: relative
 					+float-left
 					display: inline
 					margin-top: 0
