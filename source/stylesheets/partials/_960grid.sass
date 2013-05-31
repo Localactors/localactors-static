@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		//+susy-grid-background
+		+susy-grid-background
 
 		
 	#test
@@ -72,7 +72,7 @@
 
 	#project-update-header
 		padding-top: 15px
-		margin-top: 55px
+		margin-top: 35px
 		margin-bottom: 30px
 		+span-columns(12)
 		.clear
@@ -641,11 +641,14 @@
 			#logo
 				+logo($assets,"web")
 				+span-columns(4,12)
+				position: relative
+				margin-top: 18px
 			nav.navigation
 				clear: none
-				top: 25px
+				margin-top: 52px
 				display: inline
 				+span-columns(3,12)
+				position: relative
 				ul
 					float: none
 					+span-columns(3 omega,3)
@@ -661,6 +664,8 @@
 							font-size: px-to-em(14px)
 							line-height: px-to-em(17px,14px)
 							margin: 0 0 6px 0
+						a.call-for-projects
+							display: none
 							
 			#paper
 				display: block
@@ -668,6 +673,8 @@
 			.banner-container
 				display: block
 				+span-columns(5 omega,12)
+				position: relative
+				left: -16px
 				margin-top: -10px
 				.banner-call
 					position: relative
