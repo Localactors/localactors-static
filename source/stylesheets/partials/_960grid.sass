@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		+susy-grid-background
+		//+susy-grid-background
 
 		
 	#test
@@ -658,6 +658,8 @@
 						float: left
 						position: relative
 						clear: both
+						margin-bottom: 2px
+						line-height: px-to-em(17px)
 						a
 							+span-columns(3 omega,3)
 							display: inline-block
@@ -819,52 +821,60 @@
 			clear: both	
 
 		#map
+			+span-columns(12,12)
+			margin-bottom: 60px
 			.banner-container
 				.banner-call
 					display: none
+			#slides
+				+span-columns(12,12)
 		#explanation
-			+span-columns(11, $break)
-			margin-top: 10px
+			+span-columns(11,12)
+			+pre(1)
+			margin-top: 0
 			margin-bottom: 10px
 			padding-top: 0
 			ul.publisher-list
 				@include clearfix
 				+span-columns(11,11)
+				height: auto
 				margin: 0
 				margin-bottom: 10px
 				padding: 0
 				list-style-type: none
 				li.publisher
 					+span-columns(2,11)
-					img.photo-publisher
-						width: 100px
-						height: 100px
 					a
-						position: relative
-						display: inline-block
-						padding: 0 5px 0 2px
-						font-family: "miso"
-						font-weight: 200
-						font-size: px-to-em(14px,16px)
-						line-height: px-to-em(16px,14px)
-						color: black
-						text-decoration: underline
-						background: $yellow
-						@extend .hover !optional
-						cursor: pointer
+						img.photo-publisher
+							+span-columns(2,2)
+							width: auto
+							height: auto
+							position: relative
+						a
+							position: relative
+							display: inline-block
+							padding: 0 5px 0 2px
+							font-family: "miso"
+							font-weight: 200
+							font-size: px-to-em(14px,16px)
+							line-height: px-to-em(16px,14px)
+							color: black
+							text-decoration: underline
+							background: $yellow
+							@extend .hover !optional
+							cursor: pointer
 			ul
 				li
-					margin-top: px-to-em(15px)	
-					margin-bottom: px-to-em(15px)	
+					+span-columns(4,11)
+					margin-top: 0
+					margin-bottom: px-to-em(35px)	
 					h2
+						margin-top: 0
 						font-size: px-to-em(24px)
-						display: inline
-						text-decoration: underline
 						span
-							text-decoration: underline
 					p
-						display: inline
 						font-size: px-to-em(18px)
+						margin-bottom: 0
 						
 		#mailing-list
 			section
