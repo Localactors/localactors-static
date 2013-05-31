@@ -1174,7 +1174,7 @@ section.page
 	+span-columns(6,6)
 	margin-top: 40px
 	padding: 0 !important
-	margin-bottom: 20px
+	margin-bottom: 80px
 	.banner-container
 		margin-bottom: 30px
 	#slides
@@ -1310,7 +1310,7 @@ section.page
 		+span-columns(6,6)
 		height: 505px
 		margin: 0
-		margin-bottom: 20px
+		margin-bottom: 80px
 		padding: 0
 		list-style-type: none
 		li.publisher
@@ -1349,21 +1349,31 @@ section.page
 			h2
 				font-weight: 800
 				margin-top: 0 !important
-				margin-bottom: 10px
+				margin-bottom: 0
 			p
 				margin: 0
+				margin-top: 10px
+	hr.spacer-projects
+		+span-columns(6,6)
+		margin: 0
+		margin-bottom: 20px
+		height: 1px
+		border: none
+		$image: image-url("textures/hr_step.png")
+		background: $image repeat left top
 	.cover-projects
 		+clearfix
 		+span-columns(6,6)
-		border-bottom: 1px solid $rose
-		padding-bottom: 20px
-		margin-bottom: 10px
+		margin-bottom: 20px
 		p.info-project-track, h1.title, h2.subtitle
 			font-family: "miso"
 			text-transform: uppercase
 			font-weight: 400
 		.info-project
 			+span-columns(5,6)
+			background-color: white
+			padding-right: 20px
+			padding-bottom: 20px
 		a
 			text-decoration: underline
 			color: $rose
@@ -1388,7 +1398,6 @@ section.page
 			padding-left: 20px
 			margin-bottom: 20px
 		p.intro
-			+span-columns(5,5)
 			font-family: "source sans pro"
 			font-weight: 400
 			position: relative
@@ -1396,9 +1405,6 @@ section.page
 			font-size: px-to-em(13px,16px)
 			line-height: px-to-em(19px,13px)
 			color: $purple
-			background-color: white
-			padding-right: 20px
-			padding-bottom: 20px
 		p.info-project-track
 			letter-spacing: px-to-em(2px)
 			font-size: px-to-em(12px,16px)
