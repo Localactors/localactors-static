@@ -610,10 +610,12 @@ hr.spacer-donate
 
 
 .banner-container
+	+span-columns(6,6)
 	height: 175px
 	margin-top: -25px
+	margin-bottom: 45px !important
 	.banner-call
-		+span-columns(5,6)
+		+span-columns(4,6)
 		+pre(1)
 		position: relative
 		padding: 16px
@@ -626,7 +628,7 @@ hr.spacer-donate
 			li
 				display: none
 		.border1, .border2
-			width: 270px
+			width: 296px
 			height: 130px
 			border: 2px solid $blue
 			background: white
@@ -1068,7 +1070,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	//+susy-grid-background
+	+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
@@ -1178,26 +1180,35 @@ section.page
 	.banner-container
 		margin-bottom: 30px
 	#slides
+		margin-bottom: 15px
 		ul
 			li
 				+clearfix
+				border: none
 				img
 					position: relative
 					margin-left: -(0.5*image-width("world1-mobile.png"))
 					left: 50%
+					margin-top: px-to-em(5px)
 		
 #steps
 	height: 86px
 	margin: 0
+	margin-bottom: 10px !important
+	+span-columns(6,6)
+	position: relative
 	+clearfix
 	#arrow_left, #arrow_right
-		margin-top: 23px
+		margin-top: 12px
+		position: absolute
 	#arrow_left
-		+span-columns(1)
+		left: 0
 	#arrow_right
-		+span-columns(1 omega)
+		right: 0
+		margin-right: 10px
 	#text
-		+span-columns(5,6)
+		+span-columns(4,6)
+		+pre(1)
 		+clearfix
 		margin-top: 18px
 		ul
