@@ -1071,7 +1071,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	+susy-grid-background
+	//+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
@@ -1432,11 +1432,12 @@ section.page
 			margin-bottom: 10px
 			span.number
 				color: white
-		img.photo-cover
-			max-width: 100%
-			position: relative
-			margin-top: -90px
-			z-index: -1
+		.container-photo
+			img.photo-cover
+				max-width: 100%
+				position: relative
+				margin-top: -90px
+				z-index: -1
 
 footer
 	clear: both

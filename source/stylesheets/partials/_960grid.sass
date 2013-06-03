@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		+susy-grid-background
+		//+susy-grid-background
 
 		
 	#test
@@ -890,15 +890,23 @@
 					right: 0
 					top: 10px
 				.info-project
-					+span-columns(6,10)
+					+span-columns(5,10)
 					padding-bottom: 0
+					padding-right: 0
+					background-color: none
 					p.intro
 						font-size: px-to-em(16px,16px)
 						line-height: px-to-em(22px,16px)
-				img.photo-cover
-					max-width: 100%
-					position: absolute
+				.container-photo
+					+span-columns(4 omega,10)
 					right: 0
+					overflow: hidden
+					img.photo-cover
+						max-width: none
+						margin-left: -50%
+						margin-top: -25%
+
+						
 
 						
 		#mailing-list
