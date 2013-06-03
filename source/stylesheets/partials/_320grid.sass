@@ -618,7 +618,6 @@ hr.spacer-donate
 		+span-columns(4,6)
 		+pre(1)
 		position: relative
-		padding: 16px
 		margin-top: 60px
 		margin-bottom: 40px
 		ul
@@ -627,8 +626,10 @@ hr.spacer-donate
 			+no-bullets
 			li
 				display: none
+				padding-top: 10px !important
+				padding-left: 10px !important
 		.border1, .border2
-			width: 296px
+			+span-columns(4,4)
 			height: 130px
 			border: 2px solid $blue
 			background: white
@@ -662,7 +663,7 @@ hr.spacer-donate
 			position: absolute
 			z-index: 12
 			top: -31px
-			right: 0
+			right: -50px
 		a
 			+span-columns(5,6)
 			font-family: "miso"

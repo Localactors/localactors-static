@@ -20,6 +20,7 @@ page "/our_approach.html", :layout => :html5
 page "/projects.html", :layout => :html5
 page "/single_project.html", :layout => :html5
 page "/project_update.html", :layout => :html5
+page "/profile_bar.html", :layout => :html5
 page "/404.html", :layout => :html5
 
 
