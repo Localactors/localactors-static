@@ -27,13 +27,15 @@ page "/404.html", :layout => :html5
 require 'susy'
 
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'content/css'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'scripts'
 
-set :images_dir, 'images'
+set :images_dir, 'content/images'
 
-set :fonts_dir, 'fonts'
+
+set :fonts_dir, 'content/fonts'
+
 
 configure :development do
   activate :google_analytics do |ga|
