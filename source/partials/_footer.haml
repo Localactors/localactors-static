@@ -1,3 +1,4 @@
+.clear
 #prefooter
 	.box
 		%p we just started our project,if you think is cool share it
@@ -10,12 +11,17 @@
 			var addthis_config = {"data_track_addressbar":true};
 		%script{:type=>"text/javascript", :src=>"http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-504e04fd25d63caa"}
 	.local
+		%hr.spacer-prefooter
 		.spiegazione
 			%h2 HOW MANY LOCAL ACTORS IN OUR COMMUNITY?
 			%p help us grow, become a local actor!
-		.number
-			%a.logo{href: '/'}
-				%span
+		.join
+			.clear-box
+			.button_container			
+				.corner_left
+				%h4.buttons.yellow_button
+					%a{:href=>"#"} Join!
+				.corner_right
 			
 		
 	

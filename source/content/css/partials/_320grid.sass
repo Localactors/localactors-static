@@ -960,7 +960,6 @@ hr.spacer-donate
 			background: $yellow
 			border: 1px solid white
 			outline: 2px solid $blue
-			
 			color: $black
 			text-transform: uppercase !important
 			font-family: "miso"
@@ -1074,7 +1073,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	+susy-grid-background
+	//+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
@@ -1250,62 +1249,6 @@ section.page
 					line-height: px-to-em(17px,19px)
 					letter-spacing: px-to-em(1.6px)
 					margin-bottom: 3px
-	footer
-		clear: both
-		#prefooter
-			.box
-				margin: 10px 0
-				border: 1px $blue solid			
-				color: $blue
-				font-family: "miso"
-				text-transform: uppercase						
-				padding-right: 20px
-				padding-left: 20px
-			.local
-				@include clearfix
-				margin-bottom: 10px
-				.number
-					+clearfix
-					+float-right
-					margin-top: 20px
-					span
-						display: block
-						+replace-text-with-dimensions("giff_logo_footer.gif")		
-												
-				.spiegazione
-					+float-right
-					+span-columns(3)
-					font-family: "miso"
-					margin: 0
-					margin-top: 20px
-					padding: 0
-					h2
-						color: $rose
-						font-weight: 400
-						font-size: px-to-em(19px)
-						line-height: px-to-em(17px,19px)
-						margin-top: 0
-					p
-						+span-columns(5,5)
-						color: $blue
-						text-transform: uppercase
-						whitespace: nowrap
-						font-size: px-to-em(12px)
-						line-height: px-to-em(15px,12px)
-						letter-spacing: px-to-em(1.6px)
-						margin-top: 0
-						margin-bottom: 0
-						margin-right: 0
-						
-					h4
-						display: inline
-						color: $rose
-						text-transform: uppercase
-						font-weight: 400
-						font-size: px-to-em(19px)
-						line-height: px-to-em(17px,19px)
-						letter-spacing: px-to-em(1.6px)
-						margin-bottom: 3px
 			
 								
 	
@@ -1361,8 +1304,10 @@ section.page
 		li
 			+span-columns(4,6)
 			margin-bottom: 20px
+			h2, p
+				font-family: "source sans pro"
 			h2
-				font-weight: 800
+				font-weight: 800 !important
 				margin-top: 0 !important
 				margin-bottom: 0
 			p
@@ -1403,7 +1348,7 @@ section.page
 			+assign-sprite-background($assets)
 			+sprite($assets, "small_icon_where", true)
 			+float-left
-			margin-top: 2px
+			margin-top: -1px
 			position: absolute
 		h2.subtitle
 			color: $purple
@@ -1445,43 +1390,71 @@ section.page
 footer
 	clear: both
 	#prefooter
+		position: relative
+		margin-top: 40px
+		+span-columns(6,6)
 		.box
-			margin: 10px 0
-			border: 1px $blue solid			
+			+span-columns(3,6)
 			color: $blue
 			font-family: "miso"
-			text-transform: uppercase						
-			padding-right: 20px
-			padding-left: 20px
+			text-transform: uppercase
+			p
+				margin: 0
+				color: $rose
+				font-weight: 400
+				font-size: px-to-em(19px)
+				line-height: px-to-em(17px,19px)
+				margin-bottom: 15px					
 		.local
-			@include clearfix
+			+span-columns(3 omega,6)
+			position: relative
 			margin-bottom: 10px
-			.number
-				+clearfix
-				+float-right
-				margin-top: 20px
-				span
-					display: block
-					+replace-text-with-dimensions("giff_logo_footer.gif")		
+			hr.spacer-prefooter
+				width: 1px
+				height: 82px
+				border: none
+				$image: image-url("textures/hr_step_vertical.png")
+				background: $image repeat left top
+				position: absolute
+				top: 0
+				left: -12px
+				margin: 0
+			.join
+				position: absolute
+				right: 4px
+				top: 46px
 											
 			.spiegazione
-				+float-right
-				+span-columns(3)
+				+span-columns(3,3)
 				font-family: "miso"
 				h2
 					color: $rose
 					font-weight: 400
 					font-size: px-to-em(19px)
 					line-height: px-to-em(17px,19px)
+					margin-top: 0
+					margin-bottom: 18px
 				p
+					+span-columns(2,3)
 					color: $blue
 					text-transform: uppercase
-					font-family: "miso"
-					font-weight: 400       
-					color: $blue
+					whitespace: nowrap
 					font-size: px-to-em(12px)
 					line-height: px-to-em(15px,12px)
-					letter-spacing: px-to-em(2px)
+					letter-spacing: px-to-em(1.6px)
+					margin-top: 0
+					margin-bottom: 20px
+					margin-right: 0
+					
+				h4
+					display: inline
+					color: $rose
+					text-transform: uppercase
+					font-weight: 400
+					font-size: px-to-em(19px)
+					line-height: px-to-em(17px,19px)
+					letter-spacing: px-to-em(1.6px)
+					margin-bottom: 3px
 
 	.blue
 		@extend .full !optional
