@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		//+susy-grid-background
+		+susy-grid-background
 
 		
 	#test
@@ -84,8 +84,7 @@
 		.donate
 			+span-columns(3,3)
 			a
-				padding-left: 39px
-				padding-right: 39px
+				padding: 5px 39px 3px 39px
 		.share
 			+span-columns(3,3)
 			position: relative
@@ -135,8 +134,8 @@
 				line-height: px-to-em(16px,16px) !important
 			a
 				font-size: px-to-em(14px,16px)
-				padding: 0 5px 0 3px
-				top: 0
+				top: 1px
+				padding: 3px 5px 0 3px
 	#project-update-tab
 		+span-columns(12,12)
 		hr.tab-line
@@ -149,8 +148,8 @@
 				&:first-child
 					+pre(4)
 			a
-				padding: 0 4px
-				top: 0
+				padding: 2px 4px 0 4px
+				top: 1px
 
 	#update-body
 		+span-columns(12,12)
@@ -219,8 +218,8 @@
 					border: 2px solid white
 					outline: 2px solid $rose
 					height: 56px
-					padding: 33px 2px 0 2px
-					margin-top: -15px
+					padding: 36px 2px 0 2px
+					margin-top: -18px
 					margin-bottom: -15px
 				h3.day, h3.year
 					padding-left: 0
@@ -249,7 +248,7 @@
 				p.info-project-track
 					font-size: px-to-em(14px,16px)
 					line-height: px-to-em(14px,14px)
-					padding: 2px 6px
+					padding: 4px 6px 1px 6px
 					margin-top: 20px
 				h1.title-update
 					font-size: px-to-em(86px,16px)
@@ -320,7 +319,7 @@
 				p.name
 					font-size: px-to-em(14px,16px)
 					line-height: px-to-em(14px,14px)
-					padding: 2px 6px
+					padding: 4px 6px 1px 6px
 				p.quote
 					+span-columns(6,6)
 					font-size: px-to-em(35px,16px)
@@ -666,6 +665,7 @@
 							font-size: px-to-em(14px)
 							line-height: px-to-em(17px,14px)
 							margin: 0 0 6px 0
+							padding: 2px 1px 0 1px
 						a.call-for-projects
 							display: none
 							
