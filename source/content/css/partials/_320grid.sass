@@ -1411,7 +1411,7 @@ footer
 			margin-bottom: 10px
 			hr.spacer-prefooter
 				width: 1px
-				height: 82px
+				height: 111px
 				border: none
 				$image: image-url("textures/hr_step_vertical.png")
 				background: $image repeat left top
@@ -1455,12 +1455,16 @@ footer
 					line-height: px-to-em(17px,19px)
 					letter-spacing: px-to-em(1.6px)
 					margin-bottom: 3px
-
+	hr.spacer-footer
+		+span-columns(6,6)
+		height: 1px
+		border: none
+		$image: image-url("textures/hr_step.png")
+		background: $image repeat left top
+		margin: 0
 	.blue
-		@extend .full !optional
+		+span-columns(6,6)
 		clear: both
-		@extend .borded !optional
-		border-bottom: none
 		letter-spacing: px-to-em(1px)
 		
 		ul
