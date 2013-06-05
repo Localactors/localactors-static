@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		//+susy-grid-background
+		+susy-grid-background
 
 		
 	#test
@@ -516,8 +516,6 @@
 			+pre(0)
 
 	
-	.top
-		margin-top: 45px !important
 	.call
 		overflow: visible
 		+span-columns(11, $break)
@@ -584,7 +582,7 @@
 				font-size: px-to-em(30px)
 				line-height: px-to-em(28px,30px)
 				margin: 20px 0 40px 0
-				border-top: 1px dashed $blue
+				//border-top: 1px dashed $blue
 				padding-top: 5px
 				position: relative
 				z-index: 2
@@ -620,12 +618,12 @@
 					
 	
 	.last
-		border-bottom: 1px dashed $blue
+		//border-bottom: 1px dashed $blue
 		.icon-arrow-down
 			margin-top: 8px
 	.guidelines-container
 		+span-columns(13,16)
-		border-top: 1px dashed $blue
+		//border-top: 1px dashed $blue
 		background: $light-yellow
 		.first
 			height: 171px
@@ -652,7 +650,7 @@
 			z-index: 3
 			padding-right: 10px
 			margin-right: 10px
-			border-right: 1px dashed $blue
+			//border-right: 1px dashed $blue
 			.photo-publisher
 				width: 100px
 				height: 100px
@@ -734,8 +732,7 @@
 			position: relative
 			z-index: 2
 			float: left
-	
-			border-left: 1px dashed $blue
+			//border-left: 1px dashed $blue
 			h3,h4
 				font-family: "source sans pro"
 				font-weight: 800
@@ -940,12 +937,27 @@
 			
 			.blue
 				+span-columns(12,12)
-				margin-top: 15px
-				li.nline
-					float: none
-			
-		hr.footer
-			@extend .borded !optional
+				margin-top: 10px
+				p
+					+span-columns(4,12)
+					+pre(4)
+					font-size: px-to-em(14px,16px)
+					line-height: px-to-em(17px,14px)
+				hr.spacer-rights
+					+span-columns(4,12)
+					+pre(4)
+				.rights
+					+span-columns(4,12)
+					+pre(4)
+					.container
+						p, a
+							font-size: px-to-em(14px,12px)
+							line-height: px-to-em(17px,14px)
+					a.creative-commons
+					.container
+						+span-columns(4,4)
+						+pre(0)
+
 
 		#mailing-list, #think, #submit-project, #publish, #faq
 			h2
@@ -1404,7 +1416,7 @@
 					+span-columns(5,9)
 					@include clearfix
 					padding-right: 9px
-					border-right: 1px $blue dashed
+					//border-right: 1px $blue dashed
 					@extend .wide !optional
 					img
 						position: relative
@@ -1501,7 +1513,7 @@
 			+span-columns(13,13)
 			.last
 				padding-bottom: 15px
-				border-bottom: 1px dashed $blue
+				//border-bottom: 1px dashed $blue
 			.container-publisher
 				+span-columns(7,13)
 				h3.publisher
