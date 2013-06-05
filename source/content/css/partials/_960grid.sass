@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		+susy-grid-background
+		//+susy-grid-background
 
 		
 	#test
@@ -518,14 +518,14 @@
 	
 	.call
 		overflow: visible
-		+span-columns(11, $break)
+		+span-columns(8,12)
 		margin-top: 20px
 		margin-bottom: 20px
 		padding-top: 0
 		.button_container
 			margin: 0
 		.call-container
-			margin-bottom: 15px
+			margin-bottom: 30px
 			position: relative
 			
 			#icon-top
@@ -576,7 +576,6 @@
 			h1, h2
 				font-weight: 800
 				text-transform: uppercase
-				text-decoration: underline
 			h1
 				color: $blue
 				font-size: px-to-em(30px)

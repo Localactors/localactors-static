@@ -701,7 +701,7 @@ hr.spacer-donate
 	.button_container
 		margin: 0
 	.call-container
-		margin-bottom: 15px
+		margin-bottom: 20px
 		position: relative
 		.main-title
 		h1, h2, p
@@ -711,7 +711,6 @@ hr.spacer-donate
 		h1, h2
 			font-weight: 800
 			text-transform: uppercase
-			text-decoration: underline
 		h1
 			color: $blue
 			font-size: px-to-em(30px)
@@ -1080,7 +1079,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	+susy-grid-background
+	//+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
