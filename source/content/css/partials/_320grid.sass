@@ -1552,10 +1552,15 @@ hr.spacer-accordion
 #sections_accordion
 	+span-columns(6,6)
 	margin-top: 30px
+	section.mailing_list, section.submit, section.think, section.faq
+		+span-columns(4,6)
+		+pre(1)
 	#mailing-list, #think, #submit-project, #publish, #faq
 		.container-title
-			+span-columns(4 omega,6)
+			+span-columns(4,6)
+			+pre(1)
 			position: relative
+			left: -20px
 			font-family: "miso"
 			color: $black
 			text-transform: uppercase
@@ -1595,9 +1600,11 @@ hr.spacer-accordion
 		span.icon
 			+assign-sprite-background($assets)
 			margin: 0
+			margin-bottom: 10px
 			padding: 0
 			position: relative
-			left: 30px
+			left: px-to-em(-6px)
+			+pre(1)
 	#mailing-list
 		span.icon
 			+sprite($assets, "mobile_icon_subscribe", true)
@@ -1607,12 +1614,15 @@ hr.spacer-accordion
 	#think
 		span.icon
 			+sprite($assets, "mobile_icon_think", true)
+			left: px-to-em(-18px)
 	#submit-project
 		span.icon
 			+sprite($assets, "mobile_icon_submit", true)
 	#publish
 		span.icon
 			+sprite($assets, "mobile_icon_publish", true)
+			margin-bottom: 20px
+			left: px-to-em(-12px)
 
 				
 			
@@ -1635,9 +1645,6 @@ hr.spacer-accordion
 			margin-left: 25px
 			line-height: px-to-em(19px, 19px)
 	#spiegazione
-		+float-left
-		+span-columns(5)
-		+pre(2)
 		p
 			text-transform: uppercase
 			font-family: "miso"
@@ -1662,13 +1669,10 @@ hr.spacer-accordion
 		#icon
 			+assign-sprite-background($assets)
 			+sprite($assets, "subscribe-mobile", true)
-			+pre(2)
 			margin-bottom: 15px
 			margin-top: 5px
 		#spiegazione
 			+float-left
-			+span-columns(5)
-			+pre(2)
 			p
 				text-transform: uppercase
 				font-family: "miso"
@@ -1678,8 +1682,6 @@ hr.spacer-accordion
 				line-height: px-to-em(15px,12px)
 				letter-spacing: px-to-em(2px)
 	fieldset
-		+span-columns(5)
-		+pre(2)
 		border: none
 		padding: 0
 		margin-top: 10px
@@ -1705,11 +1707,8 @@ hr.spacer-accordion
 
 #faq
 	.button_container
-		+pre(2)
 	ul.questions
 		list-style: none
-		+pre(1)
-		+span-columns(5 omega)
 		li
 			h3
 				font-family: "source sans pro"
@@ -1751,8 +1750,6 @@ hr.spacer-accordion
 #think,#publish                                      	
 	#spiegazione
 		+float-left
-		+span-columns(5)
-		+pre(2)
 		p
 			text-transform: uppercase
 			font-family: "miso"
@@ -1774,8 +1771,6 @@ hr.spacer-accordion
 #submit-project
 	.submit
 		#spiegazione
-			+span-columns(5)
-			+pre(2)
 			margin-top: -35
 			p
 				text-transform: uppercase
