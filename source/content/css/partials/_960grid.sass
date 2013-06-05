@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		//+susy-grid-background
+		+susy-grid-background
 
 		
 	#test
@@ -231,7 +231,10 @@
 					span.number
 						font-weight: 600
 
-
+	#projects-container
+		margin-top: 0
+		+span-columns(11,12)
+		+pre(1)
 	#project-update-header
 		padding-top: 15px
 		margin-top: 0
@@ -901,7 +904,11 @@
 					a:hover
 						color: $purple
 						background-color: $acqua
-	
+		#sections_accordion
+			+span-columns(12,12)
+			margin-top: 0
+			
+
 		footer
 			#prefooter
 				+span-columns(12,12)
@@ -1040,30 +1047,29 @@
 						font-size: px-to-em(16px,16px)
 						line-height: px-to-em(22px,16px)
 						margin-bottom: 0
-		#explanation			
-			.cover-projects, hr.spacer-projects
-				+span-columns(10,11)
-				position: relative
-				p.info-project-track
-					position: absolute
-					right: 0
-					top: 10px
-				.info-project
-					+span-columns(5,10)
-					padding-bottom: 0
-					padding-right: 0
-					background-color: none
-					p.intro
-						font-size: px-to-em(16px,16px)
-						line-height: px-to-em(22px,16px)
-				.container-photo
-					+span-columns(4 omega,10)
-					right: 0
-					overflow: hidden
-					img.photo-cover
-						max-width: none
-						margin-left: -50%
-						margin-top: -25%
+		.cover-projects, hr.spacer-projects
+			+span-columns(10,11)
+			position: relative
+			p.info-project-track
+				position: absolute
+				right: 0
+				top: 10px
+			.info-project
+				+span-columns(5,10)
+				padding-bottom: 0
+				padding-right: 0
+				background-color: none
+				p.intro
+					font-size: px-to-em(16px,16px)
+					line-height: px-to-em(22px,16px)
+			.container-photo
+				+span-columns(4 omega,10)
+				right: 0
+				overflow: hidden
+				img.photo-cover
+					max-width: none
+					margin-left: -50%
+					margin-top: -25%
 
 						
 
@@ -1334,7 +1340,7 @@
 
 
 		#section
-			@extend .spined			
+			//@extend .spined			
 			+span-columns(13,16)
 			font-family: "miso"
 			

@@ -22,6 +22,7 @@ page "/single_project.html", :layout => :html5
 page "/project_update.html", :layout => :html5
 page "/profile_bar.html", :layout => :html5
 page "/profile_bar_open.html", :layout => :html5
+page "/how_to.html", :layout => :html5
 page "/404.html", :layout => :html5
 
 

@@ -1079,7 +1079,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	//+susy-grid-background
+	+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
@@ -1257,7 +1257,9 @@ section.page
 					margin-bottom: 3px
 			
 								
-	
+#projects-container
+	margin-top: 40px
+	+span-columns(6,6)	
 .spacer-home
 	width: 100%
 	margin: 0
@@ -1265,7 +1267,14 @@ section.page
 	border: none
 	$image: image-url("textures/hr_step.png")
 	background: $image repeat left top
-
+hr.spacer-projects
+	+span-columns(6,6)
+	margin: 0
+	margin-bottom: 20px
+	height: 1px
+	border: none
+	$image: image-url("textures/hr_step.png")
+	background: $image repeat left top
 .cover-projects
 	+clearfix
 	+span-columns(6,6)
@@ -1385,79 +1394,6 @@ section.page
 			p
 				margin: 0
 				margin-top: 10px
-	hr.spacer-projects
-		+span-columns(6,6)
-		margin: 0
-		margin-bottom: 20px
-		height: 1px
-		border: none
-		$image: image-url("textures/hr_step.png")
-		background: $image repeat left top
-	// .cover-projects
-	// 	+clearfix
-	// 	+span-columns(6,6)
-	// 	margin-bottom: 20px
-	// 	p.info-project-track, h1.title, h2.subtitle
-	// 		font-family: "miso"
-	// 		text-transform: uppercase
-	// 		font-weight: 400
-	// 	.info-project
-	// 		+span-columns(5,6)
-	// 		background-color: white
-	// 		padding-right: 20px
-	// 		padding-bottom: 20px
-	// 	a
-	// 		text-decoration: underline
-	// 		color: $rose
-	// 		&:hover
-	// 			color: $purple
-	// 	h1.title
-	// 		font-size: px-to-em(50px,16px) !important
-	// 		line-height: px-to-em(42px,50px)
-	// 		margin: 0
-	// 		margin-bottom: 10px
-	// 	.icon-where
-	// 		+assign-sprite-background($assets)
-	// 		+sprite($assets, "small_icon_where", true)
-	// 		+float-left
-	// 		margin-top: -1px
-	// 		position: absolute
-	// 	h2.subtitle
-	// 		color: $purple
-	// 		margin: 0
-	// 		font-size: px-to-em(30px,16px)
-	// 		line-height: px-to-em(25px,30px)
-	// 		padding-left: 20px
-	// 		margin-bottom: 20px
-	// 	p.intro
-	// 		font-family: "source sans pro"
-	// 		font-weight: 400
-	// 		position: relative
-	// 		margin: 0
-	// 		font-size: px-to-em(13px,16px)
-	// 		line-height: px-to-em(19px,13px)
-	// 		color: $purple
-	// 	p.info-project-track
-	// 		letter-spacing: px-to-em(2px)
-	// 		font-size: px-to-em(12px,16px)
-	// 		line-height: px-to-em(12px,12px)
-	// 		font-weight: 400
-	// 		color: $acqua
-	// 		background-color: $purple
-	// 		position: relative
-	// 		padding: 4px 6px 2px 6px
-	// 		+float-left
-	// 		display: inline
-	// 		margin: 0
-	// 		margin-bottom: 10px
-	// 		span.number
-	// 			color: white
-	// 	.container-photo
-	// 		img.photo-cover
-	// 			max-width: 100%
-	// 			position: relative
-	// 			margin-top: -90px
-	// 			z-index: -1
 
 footer
 	clear: both
@@ -1606,8 +1542,87 @@ footer
 					background-color: yellow
 					color: black
 					@extend .hover !optional
+
+hr.spacer-accordion
+	margin: 0
+	height: 1px
+	border: none
+	$image: image-url("textures/hr_step.png")
+	background: $image repeat left top
+#sections_accordion
+	+span-columns(6,6)
+	margin-top: 30px
+	#mailing-list, #think, #submit-project, #publish, #faq
+		.container-title
+			+span-columns(4 omega,6)
+			position: relative
+			font-family: "miso"
+			color: $black
+			text-transform: uppercase
+			margin-bottom: 30px
+			.arrow
+				+assign-sprite-background($assets)
+				+sprite($assets, "arrow_link", true)
+				position: absolute
+				z-index: 2
+				top: 9px
+				left: 0
+			h2, h3
+				letter-spacing: px-to-em(1px)
+				font-weight: 200
+				padding: 5px 5px 2px 20px
+				width: auto
+				height: auto
+				position: relative
+				+float-left
+				display: inline
+				margin: 0
+			h2
+				font-size: px-to-em(28px,16px)
+				line-height: px-to-em(25px,28px)
+				text-decoration: underline
+				background-color: $yellow
+				&:hover
+					background-color: $acqua
+					color: $purple
+			h3
+				clear: left
+				font-size: px-to-em(21px,16px)
+				line-height: px-to-em(19px,21px) !important
+				padding-top: 6px
+
+	#mailing-list, #think, #submit-project, #publish, #faq
+		span.icon
+			+assign-sprite-background($assets)
+			margin: 0
+			padding: 0
+			position: relative
+			left: 30px
+	#mailing-list
+		span.icon
+			+sprite($assets, "mobile_icon_subscribe", true)
+	#faq
+		span.icon
+			+sprite($assets, "mobile_icon_question", true)
+	#think
+		span.icon
+			+sprite($assets, "mobile_icon_think", true)
+	#submit-project
+		span.icon
+			+sprite($assets, "mobile_icon_submit", true)
+	#publish
+		span.icon
+			+sprite($assets, "mobile_icon_publish", true)
+
 				
 			
+
+
+
+
+
+
+
 #mailing-list, #think, #submit-project, #publish, #faq
 	h2
 		letter-spacing: px-to-em(1px)
@@ -1641,32 +1656,8 @@ footer
 				
 				
 #mailing-list
-	
-	#mail_submit
-		background-color: $yellow
-		border: none
-		padding: 4px 10px
-		border: 1px solid white
-		outline: 2px solid $blue
-		color: $black
-		text-transform: uppercase !important
-		font-family: "miso"
-		font-weight: 200 !important
-		text-decoration: none
-		font-size: px-to-em(21px) !important
-		line-height: px-to-em(19px,21px) !important
-		&:hover
-			text-decoration: underline
-		
-
-	a
-		span.icon
-			+assign-sprite-background($assets)
-			+sprite($assets, "mobile_icon_subscribe", true)
-	
 	#mail_form
 		overflow: visible
-	
 	.mailing_list
 		#icon
 			+assign-sprite-background($assets)
@@ -1674,8 +1665,6 @@ footer
 			+pre(2)
 			margin-bottom: 15px
 			margin-top: 5px
-			
-			
 		#spiegazione
 			+float-left
 			+span-columns(5)
@@ -1688,11 +1677,8 @@ footer
 				font-size: px-to-em(12px)
 				line-height: px-to-em(15px,12px)
 				letter-spacing: px-to-em(2px)
-				
-	
 	fieldset
 		+span-columns(5)
-		
 		+pre(2)
 		border: none
 		padding: 0
@@ -1720,10 +1706,6 @@ footer
 #faq
 	.button_container
 		+pre(2)
-	a
-		span.icon
-			+assign-sprite-background($assets)
-			+sprite($assets, "mobile_icon_question", true)
 	ul.questions
 		list-style: none
 		+pre(1)
@@ -1764,17 +1746,6 @@ footer
 				margin: 0
 
 				
-#think
-	a
-		span.icon
-			+assign-sprite-background($assets)
-			+sprite($assets, "mobile_icon_think", true)
-#publish
-	opacity: 0.4
-	a
-		span.icon
-			+assign-sprite-background($assets)
-			+sprite($assets, "mobile_icon_publish", true)
 				
 					
 #think,#publish                                      	
@@ -1801,10 +1772,6 @@ footer
 	
 						 
 #submit-project
-	a
-		span.icon
-			+assign-sprite-background($assets)
-			+sprite($assets, "mobile_icon_submit", true)
 	.submit
 		#spiegazione
 			+span-columns(5)
@@ -1885,8 +1852,6 @@ footer
 			
 			
 #mailing-list,#faq,#submit-project,#think,#publish
-	@extend .full !optional
-	@extend .spined !optional
 	+clearfix
 	header
 		@extend .pointer !optional
