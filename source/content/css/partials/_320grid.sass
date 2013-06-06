@@ -1104,7 +1104,7 @@ section.page
 			@include float-left
 			margin: 10px
 		nav.navigation
-			margin-top: 17px
+			margin-top: 19px
 			padding: 0
 			clear: both
 			display: block
@@ -1543,6 +1543,8 @@ footer
 					color: black
 					@extend .hover !optional
 
+
+
 hr.spacer-accordion
 	margin: 0
 	height: 1px
@@ -1555,6 +1557,44 @@ hr.spacer-accordion
 	section.mailing_list, section.submit, section.think, section.faq
 		+span-columns(4,6)
 		+pre(1)
+	section.mailing_list
+		#icon
+			+assign-sprite-background($assets)
+			+sprite($assets, "subscribe-mobile", true)
+			margin-bottom: 15px
+			margin-top: 5px
+		#spiegazione
+			p
+				text-transform: uppercase
+				font-family: "miso"
+				font-weight: 400       
+				color: $blue
+				font-size: px-to-em(12px)
+				line-height: px-to-em(15px,12px)
+				letter-spacing: px-to-em(2px)
+		fieldset
+		border: none
+		padding: 0
+		margin-top: 10px
+		margin-bottom: 0
+		p
+			margin: 0
+			padding: 0
+			label
+				display: none
+			input
+				font-weight: 400
+				font-style: italic
+				font-size: px-to-em(12px)
+				line-height: px-to-em(16px,12px) 
+				width: 93%
+				border: 2px solid $blue
+				padding: px-to-em(10px)
+				color: $blue
+				font-family: "source sans pro"
+			input::-webkit-input-placeholder
+				color: $blue
+				font-family: "source sans pro"
 	#mailing-list, #think, #submit-project, #publish, #faq
 		.container-title
 			+span-columns(4,6)
@@ -1626,85 +1666,6 @@ hr.spacer-accordion
 
 				
 			
-
-
-
-
-
-
-
-#mailing-list, #think, #submit-project, #publish, #faq
-	h2
-		letter-spacing: px-to-em(1px)
-		span.hl
-			line-height: px-to-em(27px, 21px) !important
-			span.ul
-				line-height: px-to-em(27px, 21px)
-		span.subtitle
-			display: inline-block
-			margin-left: 25px
-			line-height: px-to-em(19px, 19px)
-	#spiegazione
-		p
-			text-transform: uppercase
-			font-family: "miso"
-			font-weight: 400       
-			color: $blue
-			font-size: px-to-em(12px)
-			line-height: px-to-em(15px,12px)
-			letter-spacing: px-to-em(2px)
-			margin: 0 0 10px 0
-		p.i
-			margin: 0 0 20px 0 !important
-			letter-spacing: normal !important
-			font-style: italic
-			font-family: "source sans pro" !important
-			text-transform: none !important
-				
-				
-#mailing-list
-	#mail_form
-		overflow: visible
-	.mailing_list
-		#icon
-			+assign-sprite-background($assets)
-			+sprite($assets, "subscribe-mobile", true)
-			margin-bottom: 15px
-			margin-top: 5px
-		#spiegazione
-			+float-left
-			p
-				text-transform: uppercase
-				font-family: "miso"
-				font-weight: 400       
-				color: $blue
-				font-size: px-to-em(12px)
-				line-height: px-to-em(15px,12px)
-				letter-spacing: px-to-em(2px)
-	fieldset
-		border: none
-		padding: 0
-		margin-top: 10px
-		margin-bottom: 0
-		p
-			margin: 0
-			padding: 0
-			label
-				display: none
-			input
-				font-weight: 400
-				font-style: italic
-				font-size: px-to-em(12px)
-				line-height: px-to-em(16px,12px) 
-				width: 93%
-				border: 2px solid $blue
-				padding: px-to-em(10px)
-				color: $blue
-				font-family: "source sans pro"
-			input::-webkit-input-placeholder
-				color: $blue
-				font-family: "source sans pro"
-
 #faq
 	.button_container
 	ul.questions
