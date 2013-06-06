@@ -11,10 +11,6 @@ $break: 12
 
 body
 	-webkit-font-smoothing: antialiased
-.ul
-	text-decoration: underline
-.hl
-	background-color: $yellow
 	
 .section_title
 	font-family: "miso"
@@ -34,7 +30,6 @@ body
 	clear: both
 
 .borded
-
 	border: 1px $blue solid
 
 .hover
@@ -46,10 +41,6 @@ i
 	font-style: italic
 	font-family: "source sans pro"
 	text-transform: none
-	
-.spined
-	$image: image-url("textures/spined.png")
-	background: $image repeat-x left top
 	
 .arrow
 	@include assign-sprite-background($assets)
@@ -223,6 +214,8 @@ hr.spacer-donate
 #update-body
 	+span-columns(6,6)
 	ul#info-project
+		margin-top: 40px
+		margin-bottom: 20px
 		+span-columns(6,6)
 		font-family: "miso"
 		text-transform: uppercase
@@ -265,6 +258,7 @@ hr.spacer-donate
 		li.achieved
 			+span-columns(6,6)
 			margin-top: 20px
+			margin-bottom: 20px
 			.worm
 				position: absolute
 				z-index: -1
@@ -313,7 +307,9 @@ hr.spacer-donate
 						font-size: px-to-em(16px,16px)
 						line-height: px-to-em(14px,16px)
 	.single-update
-		margin-top: 27px
+		margin-top: 40px
+		margin-bottom: 20px
+		+span-columns(6,6)
 	.single-update-header
 		+span-columns(6,6)
 		margin-bottom: 10px
@@ -439,6 +435,7 @@ hr.spacer-donate
 				line-height: px-to-em(19px,13px)
 				text-indent: px-to-em(20px)
 				margin-bottom: 10px
+				color: $purple
 				&:last-child
 					margin-bottom: 0
 		.interview
@@ -483,12 +480,13 @@ hr.spacer-donate
 					padding-bottom: 0
 			.question
 				p
-					color: $purple
-					border-left: 1px solid $purple
+					color: $black
+					border-left: 1px solid $black
 			.answer
 				p
 					font-style: italic
-					border-left: 1px solid $black
+					color: $purple
+					border-left: 1px solid $purple
 		.photo
 			+span-columns(6,5)
 			img.photo-update
@@ -502,7 +500,7 @@ hr.spacer-donate
 					+assign-sprite-background($assets)
 					+sprite($assets, "arrow_link", true)
 					position: absolute
-					margin-top: 3px
+					margin-top: 1px
 				p
 					font-family: "miso"
 					font-size: px-to-em(12px,16px)
@@ -523,7 +521,7 @@ hr.spacer-donate
 				font-style: italic
 				font-size: px-to-em(13px,16px)
 				line-height: px-to-em(19px,13px)
-				color: $black
+				color: $purple
 				margin: 0
 				margin-bottom: 15px
 				span.question
@@ -1236,7 +1234,7 @@ section.page
 	
 				p
 					+span-columns(5,5)
-					color: $blue
+					color: $purple
 					text-transform: uppercase
 					whitespace: nowrap
 					font-size: px-to-em(12px)
@@ -1444,7 +1442,7 @@ footer
 					margin-bottom: 18px
 				p
 					+span-columns(2,3)
-					color: $blue
+					color: $purple
 					text-transform: uppercase
 					whitespace: nowrap
 					font-size: px-to-em(12px)
@@ -1482,7 +1480,7 @@ footer
 			+pre(1)
 			font-family: "miso"
 			font-weight: 400       
-			color: $blue
+			color: $purple
 			font-size: px-to-em(12px,16px)
 			line-height: px-to-em(18px,12px)
 			text-transform: uppercase
@@ -1516,7 +1514,7 @@ footer
 			clear: both
 			font-family: "miso"
 			font-weight: 400       
-			color: $blue
+			color: $purple
 			text-transform: uppercase
 			margin: 0
 			a.creative-commons
@@ -1554,24 +1552,29 @@ hr.spacer-accordion
 #sections_accordion
 	+span-columns(6,6)
 	margin-top: 30px
+	margin-bottom: 30px
 	section.mailing_list, section.submit, section.think, section.faq
 		+span-columns(4,6)
 		+pre(1)
+		margin-top: 0 !important
+		margin-bottom: 0 !important
 	section.mailing_list
 		#icon
 			+assign-sprite-background($assets)
 			+sprite($assets, "subscribe-mobile", true)
-			margin-bottom: 15px
-			margin-top: 5px
+			margin: 0
+			margin-bottom: 20px
 		#spiegazione
 			p
 				text-transform: uppercase
 				font-family: "miso"
 				font-weight: 400       
-				color: $blue
-				font-size: px-to-em(12px)
-				line-height: px-to-em(15px,12px)
+				color: $purple
+				font-size: px-to-em(12px,16px)
+				line-height: px-to-em(16px,12px)
 				letter-spacing: px-to-em(2px)
+				margin: 0
+				margin-bottom: 20px
 		fieldset
 		border: none
 		padding: 0
@@ -1585,7 +1588,7 @@ hr.spacer-accordion
 			input
 				font-weight: 400
 				font-style: italic
-				font-size: px-to-em(12px)
+				font-size: px-to-em(12px,16px)
 				line-height: px-to-em(16px,12px) 
 				width: 93%
 				border: 2px solid $blue
@@ -1604,7 +1607,7 @@ hr.spacer-accordion
 			font-family: "miso"
 			color: $black
 			text-transform: uppercase
-			margin-bottom: 30px
+			margin-bottom: 40px
 			.arrow
 				+assign-sprite-background($assets)
 				+sprite($assets, "arrow_link", true)
@@ -1627,6 +1630,7 @@ hr.spacer-accordion
 				line-height: px-to-em(25px,28px)
 				text-decoration: underline
 				background-color: $yellow
+				cursor: pointer
 				&:hover
 					background-color: $acqua
 					color: $purple
@@ -1637,9 +1641,11 @@ hr.spacer-accordion
 				padding-top: 6px
 
 	#mailing-list, #think, #submit-project, #publish, #faq
+		+clearfix
 		span.icon
 			+assign-sprite-background($assets)
 			margin: 0
+			margin-top: 13px
 			margin-bottom: 10px
 			padding: 0
 			position: relative
@@ -1668,22 +1674,32 @@ hr.spacer-accordion
 			
 #faq
 	.button_container
+		margin-top: 20px
 	ul.questions
+		margin-top: 0
+		margin-bottom: 0
 		list-style: none
+		padding: 0
 		li
+			&:first-child
+				h3
+					margin-top: 0
 			h3
 				font-family: "source sans pro"
 				font-weight: 600
-				font-size: px-to-em(16px)
+				font-size: px-to-em(16px,16px)
 				line-height: px-to-em(20px,16px)
-				color: $black
+				color: $blue
+				text-decoration: underline
 				margin: 20px 0
-				
+				cursor: pointer
+				&:hover
+					color: $rose
 				i
-					margin-top: 3px
+					margin-top: 1px
 					position: absolute
 					+float-left
-					margin-left: -(sprite-height($assets,"questionmark")+6px)
+					margin-left: -(sprite-height($assets,"questionmark")+2px)
 					+assign-sprite-background($assets)
 					+sprite($assets, "questionmark", true)
 				
@@ -1700,7 +1716,7 @@ hr.spacer-accordion
 				font-family: "source sans pro"
 				font-weight: 400
 				font-style: italic
-				font-size: px-to-em(12px)
+				font-size: px-to-em(12px,16px)
 				line-height: px-to-em(16px,12px)
 				color: $purple
 				margin: 0
@@ -1715,13 +1731,15 @@ hr.spacer-accordion
 			text-transform: uppercase
 			font-family: "miso"
 			font-weight: 400       
-			color: $blue
-			font-size: px-to-em(12px)
-			line-height: px-to-em(15px,12px)
+			color: $purple
+			font-size: px-to-em(12px,16px)
+			line-height: px-to-em(16px,12px)
 			letter-spacing: px-to-em(2px)
-			margin: 0 0 10px 0
+			margin: 0
+			margin-bottom: 20px
 		p.i
-			margin: 0 0 10px 0
+			margin: 0
+			margin-bottom: 20px
 			letter-spacing: normal
 			font-style: italic
 			font-family: "source sans pro"
@@ -1732,110 +1750,20 @@ hr.spacer-accordion
 #submit-project
 	.submit
 		#spiegazione
-			margin-top: -35
 			p
 				text-transform: uppercase
 				font-family: "miso"
 				font-weight: 400       
-				color: $blue
-				font-size: px-to-em(12px)
-				line-height: px-to-em(15px,12px)
+				color: $purple
+				font-size: px-to-em(12px,16px)
+				line-height: px-to-em(16px,12px)
 				letter-spacing: px-to-em(2px)
+				margin-top: 0
+				margin-bottom: 20px
 				i
 					letter-spacing: normal	
-			h4
-				display: inline
-				text-transform: uppercase
-				font-family: "miso"
-				font-weight: 400       
-				color: $rose
-				
-		
-			#icon-doc1
-				+assign-sprite-background($assets)	
-				+sprite($assets, "doc1-mobile", true)
-
-				margin-top: 10px
-
-			#icon-doc2
-				+assign-sprite-background($assets)	
-				+sprite($assets, "doc2-mobile", true)
-
-				margin-top: 10px
-				margin-bottom: 15px
-
-				
-		
-			#icon-doc3
-				+assign-sprite-background($assets)	
-				+sprite($assets, "doc3-mobile", true)
-
-				margin-top: 10px
-				margin-bottom: 10px
-		.border-dashed
-			height: 1px
-			+span-columns(6,6)
-			overflow: visible
-			//border-top: 1px dashed $blue
-			margin-top: 40px
-			margin-bottom: 30px
-			#icon-plus1
-				+assign-sprite-background($assets)	
-				+sprite($assets, "plus1-mobile", true)
-				+pre(3)
-				margin-top: -10px
-			#icon-plus2
-				+assign-sprite-background($assets)	
-				+sprite($assets, "plus2-mobile", true)
-				+pre(3)
-				margin-top: -10px	
-		#icon-number1
-			+assign-sprite-background($assets)	
-			+sprite($assets, "one-mobile", true)
-			+pre(1)
-			+span-columns(1)
-
-		#icon-number2
-			+assign-sprite-background($assets)	
-			+sprite($assets, "two-mobile", true)
-			+pre(1)
-			+span-columns(1)
-		#icon-number3
-			+assign-sprite-background($assets)	
-			+sprite($assets, "three-mobile", true)
-			+pre(1)
-			+span-columns(1)
 			
 			
-#mailing-list,#faq,#submit-project,#think,#publish
-	+clearfix
-	header
-		@extend .pointer !optional
-		padding-top: 10px
-		&.ui-state-hover, &.ui-accordion-header-active
-			h2
-				span
-					color: $purple
-					background-color: $acqua
-		
-	a span.icon
-		margin-left: 20px
-		+span-columns(2,$break)
-	h2
-		+span-columns(5 omega,$total-columns)
-		@extend .section_title !optional
-		margin-top: 0
-		span 
-			@extend .hover !optional
-
-	section
-		+span-columns($total-columns)
-		ul
-			@extend .noindent !optional
-			
-	hr.footer
-		border-top: 1px $blue solid
-		margin-top: 0px
 
 
 		
@@ -2121,11 +2049,4 @@ hr.spacer-accordion
 					letter-spacing: px-to-em(2px)
 					margin: 0
 					margin-bottom: 10px
-#test
-	background-color: blue
-	+span-columns(6,6)
-	position: relative
-	float: left
-	
-	&.blu
-		clear: both
+
