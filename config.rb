@@ -22,6 +22,7 @@ page "/header.html", :layout => :html5
 page "/footer.html", :layout => :html5
 
 page "/project_update.html", :layout => :html5
+page "/project_localactors.html", :layout => :html5
 page "/project_details.html", :layout => :html5
 page "/publisher_profile.html", :layout => :html5
 page "/profile_bar.html", :layout => :html5
