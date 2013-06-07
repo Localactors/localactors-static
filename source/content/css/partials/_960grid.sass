@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		//+susy-grid-background
+		+susy-grid-background
 
 		
 
@@ -65,7 +65,7 @@
 		+span-columns(12,12)
 		overflow: visible
 		height: 60px
-		background-color: #FFFFD7
+		background-color: $light-yellow
 		position: relative
 		#donor, #projects-supported, #updates, #logout
 			font-family: "miso"
@@ -143,7 +143,7 @@
 		padding-left: 0
 		margin-top: 0
 		margin-bottom: 0
-		background-color: #FFFFD7
+		background-color: $light-yellow
 		a.close
 			position: absolute
 			right: 13px
@@ -208,16 +208,25 @@
 					margin-top: 15px
 			.donation-money
 				+span-columns(2 omega,12)
-				h2
+				h2, h3.date
 					font-family: "miso"
 					text-transform: uppercase
+				h2
 					font-weight: 400
 					color: $purple
 					margin: 0
+					margin-bottom: 2px
 					font-size: px-to-em(30px,16px)
 					line-height: px-to-em(25px,30px)
 					span.number
 						font-weight: 600
+				h3.date
+					font-weight: 400
+					font-size: px-to-em(14px,16px)
+					line-height: px-to-em(17px,14px)
+					margin: 0
+					margin-bottom: 15px
+
 
 	#projects-container
 		margin-top: 0
@@ -557,12 +566,11 @@
 				color: $rose
 				font-size: px-to-em(24px)
 				line-height: px-to-em(21px,24px)
-				display: inline
+				margin-bottom: 15px
 			p
 				color: $purple
-				font-size: px-to-em(18px)
-				line-height: px-to-em(24px,18px)
-				margin-left: 5px
+				font-size: px-to-em(16px,16px)
+				line-height: px-to-em(22px,16px)
 			ul
 				list-style-type: circle
 				padding-left: px-to-em(35px)
@@ -571,8 +579,8 @@
 				li 
 					font-family: "source sans pro"
 					color: $purple
-					font-size: px-to-em(18px)
-					line-height: px-to-em(24px,18px)
+					font-size: px-to-em(16px,16px)
+					line-height: px-to-em(22px,16px)
 			ol
 				padding-left: px-to-em(35px)
 				margin: 0
@@ -580,8 +588,8 @@
 				li 
 					font-family: "source sans pro"
 					color: $purple
-					font-size: px-to-em(18px)
-					line-height: px-to-em(24px,18px)
+					font-size: px-to-em(16px,16px)
+					line-height: px-to-em(22px,16px)
 					
 	
 	.last
@@ -614,19 +622,15 @@
 			background: white
 			+span-columns(7,11)
 			position: relative
-			float: left
+			+float-left
 			z-index: 3
 			padding-right: 10px
 			margin-right: 10px
 			border-right: 1px dashed $blue
-			.photo-publisher
-				width: 100px
-				height: 100px
-				margin: 8px 8px 0 0
-				float: none
-			.publisher
-				float: none
-			img
+			.container-photo
+				+span-columns(1,7)
+				margin-top: 10px
+			img.project
 				max-width: columns(7,7)
 				margin: 0
 				margin-top: 25px
@@ -663,7 +667,7 @@
 			ul
 				list-style-type: none
 				padding: 0
-				padding-top: 10px
+				+clearfix
 				&:last-child
 					margin-bottom: 25px
 				li
@@ -679,11 +683,13 @@
 				color: $purple
 				font-size: px-to-em(36px)
 				line-height: px-to-em(35px,36px)
-			
 				span
 					text-transform: none
 					font-size: px-to-em(25px,36px)
 					line-height: px-to-em(28px,25px)
+			h1.publisher, h2.publisher
+				float: none !important
+				
 			p
 				+span-columns(6,7)
 				font-family: "source sans pro"

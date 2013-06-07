@@ -55,7 +55,7 @@ i
 	overflow: hidden
 	margin: 0
 #project-update-header
-	background-color: #FFFFD7
+	background-color: $light-yellow
 	border-top: 1px solid $rose
 	+span-columns(6)
 	margin-top: 35px
@@ -129,7 +129,7 @@ i
 		+assign-sprite-background($assets)
 		+sprite($assets, "small_icon_where", true)
 		+float-left
-		margin-top: -1px
+		margin-top: -3px
 		position: absolute
 	h2.subtitle
 		color: $purple
@@ -181,7 +181,7 @@ i
 				position: relative
 #project-update-tab
 	+span-columns(6,6)
-	background-color: #FFFFD7
+	background-color: $light-yellow
 	hr.tab-line
 		+span-columns(6,6)
 		border: none
@@ -731,7 +731,7 @@ i
 			color: $blue
 			font-size: px-to-em(30px)
 			line-height: px-to-em(28px,30px)
-			margin: 10px 0 20px 0
+			margin: 10px 0 30px 0
 			padding-top: 5px
 			position: relative
 			z-index: 2
@@ -740,7 +740,7 @@ i
 			font-size: px-to-em(20px)
 			line-height: px-to-em(18px,20px)
 			margin: 0
-			margin-bottom: 5px
+			margin-bottom: 10px
 		a 
 			text-decoration: underline
 			color: $purple
@@ -749,12 +749,12 @@ i
 				background-color: $yellow
 		p
 			color: $purple
-			font-size: px-to-em(12px)
-			line-height: px-to-em(16px,12px)
+			font-size: px-to-em(13px,16px)
+			line-height: px-to-em(19px,13px)
 			margin: 0
-			margin-bottom: 5px
+			margin-bottom: 10px
 			&:last-child
-				margin-bottom: 15px
+				margin-bottom: 20px
 		.highlight
 			font-weight: 600
 		ul
@@ -764,23 +764,22 @@ i
 			li 
 				font-family: "source sans pro"
 				color: $purple
-				font-size: px-to-em(12px)
-				line-height: px-to-em(16px,12px)
+				font-size: px-to-em(13px,16px)
+				line-height: px-to-em(19px,13px)
 		ol
 			padding-left: px-to-em(25px)
 			margin: 0
 			li 
 				font-family: "source sans pro"
 				color: $purple
-				font-size: px-to-em(12px)
-				line-height: px-to-em(16px,12px)
+				font-size: px-to-em(13px,16px)
+				line-height: px-to-em(19px,13px)
 
 .last
 	//border-bottom: 1px dashed $blue
 	.icon-arrow-down
 		margin-top: 8px
 .guidelines-container
-
 	+span-columns(12,6)
 	//border-top: 1px dashed $blue
 	background: $light-yellow
@@ -810,21 +809,22 @@ i
 		padding-right: 10px
 		margin-right: 10px
 		//border-right: 1px dashed $blue
-		img
+		img.project
 			max-width: columns(6,6)
 			margin: 0
 			margin-top: 20px
 			padding: 0
 			&:last-child
 				margin-bottom: 20px
-		.photo-publisher
+		.container-photo
 			+span-columns(1,6)
-			// width: 65px
-			// height: 65px
-			margin-top: 8px
-			padding: 0
+			height: 117px
+			overflow: hidden
 			position: relative
-			float: left
+			+float-left
+			.photo-publisher
+				width: 170%
+				height: auto
 		.publisher
 			position: relative
 			float: left
@@ -834,15 +834,16 @@ i
 			text-transform: uppercase
 			font-weight: 400
 		h1.title
-			margin-top: 8px
-			margin-bottom: 8px
-			font-size: px-to-em(32px)
+			margin-top: 0
+			margin-bottom: 10px
+			font-size: px-to-em(32px,16px)
 			line-height: px-to-em(28px,32px)
 			color: $rose
+
 		.icon-where, .icon-time, .icon-cost
 			float: left
 			position: relative
-			margin-top: -3px	
+			margin-top: -6px	
 			margin-right: 3px		
 		.icon-where
 			+assign-sprite-background($assets)
@@ -857,11 +858,12 @@ i
 			clear: both
 			list-style-type: none
 			padding: 0
-			padding-top: 10px
 			margin: 0
+			margin-bottom: 30px
+			margin-top: 30px
 			&:last-child
 				margin-bottom: 20px
-			li 
+			li
 				h2.subtitle
 					margin-bottom: 7px
 			li.cost
@@ -881,10 +883,11 @@ i
 			font-family: "source sans pro"
 			font-weight: 400
 			color: $purple
-			font-size: px-to-em(12px)
-			line-height: px-to-em(16px,12px)
+			font-size: px-to-em(13px,16px)
+			line-height: px-to-em(19px,13px)
 			margin-top: 0
-			margin-bottom: 5px
+			margin-bottom: 10px
+			text-indent: px-to-em(20px)
 			&:first-child
 				margin-top: 8px
 			&:last-child
@@ -939,6 +942,18 @@ i
 	+span-columns(6,6)
 	padding: 0
 	padding-top: 40px
+	margin-top: 0
+	margin-bottom: 40px
+
+	hr.spacer-details
+		width: 100%
+		margin: 0
+		margin-top: 20px
+		margin-bottom: 20px
+		height: 1px
+		border: none
+		$image: image-url("textures/hr_step.png")
+		background: $image repeat left top
 	img.cover-details
 		max-width: 100%
 		margin: 0
@@ -950,11 +965,15 @@ i
 		background-color: white
 		padding-right: px-to-em(20px)
 		padding-top: px-to-em(20px)
-		.photo-publisher
+		.container-photo
 			+span-columns(1,5)
-			padding: 0
+			height: 117px
+			overflow: hidden
 			position: relative
-			float: left
+			+float-left
+			.photo-publisher
+				width: 170%
+				height: auto
 		.publisher
 			+span-columns(4 omega,5)
 			position: relative
@@ -1180,7 +1199,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	//+susy-grid-background
+	+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
