@@ -501,6 +501,79 @@
 		#description-details, #publisher-details
 			+span-columns(7,8)
 			background-color: transparent
+			.container-photo
+				+span-columns(1,7)
+			h1.title, h2.subtitle
+				margin: 0
+				font-family: "miso"
+				text-transform: uppercase
+				font-weight: 400
+			h1.title
+				margin-top: 10px
+				margin-bottom: 8px
+				font-size: px-to-em(60px)
+				line-height: px-to-em(52px,60px)
+				color: $rose
+			.icon-where, .icon-time, .icon-cost
+				+float-left
+				position: relative
+				clear: left
+				margin-top: 6px	
+				margin-right: 7px			
+			.icon-where
+				+assign-sprite-background($assets)
+				+sprite($assets, "small_icon_where", true)
+			.icon-time
+				+assign-sprite-background($assets)
+				+sprite($assets, "small_icon_time", true)
+			.icon-cost
+				+assign-sprite-background($assets)
+				+sprite($assets, "small_icon_cost", true)
+			ul
+				+span-columns(7,7)
+				list-style-type: none
+				padding: 0
+				+clearfix
+				margin-top: 0
+				margin-bottom: 0
+				&:last-child
+					margin-bottom: 25px
+				li
+					+span-columns(7,7)
+				li 
+					h2.subtitle
+						margin-bottom: 7px
+				li.cost
+					.total
+						color: $rose
+			h2.subtitle
+				margin-bottom: 25px
+				color: $purple
+				font-size: px-to-em(36px)
+				line-height: px-to-em(35px,36px)
+				span
+					text-transform: none
+					font-size: px-to-em(25px,36px)
+					line-height: px-to-em(28px,25px)
+			h1.publisher, h2.publisher
+				+span-columns(6 omega,7)
+			h1.publisher
+				margin-top: 0
+				
+
+
+			p
+				+span-columns(7,7)
+				font-family: "source sans pro"
+				font-weight: 400
+				color: $purple
+				font-size: px-to-em(15px)
+				line-height: px-to-em(20px,15px)
+				margin: 0
+				margin-top: 8px
+				margin-bottom: 13px
+				&:last-child
+					margin-bottom: 25px
 
 	
 	.call
