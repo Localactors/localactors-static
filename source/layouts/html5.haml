@@ -55,10 +55,7 @@
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		%section.page
-			%header= partial "partials/header"
 			= yield
-
-			%footer= partial "partials/footer"
 		
 		%hr.footer
 		= google_analytics_tag

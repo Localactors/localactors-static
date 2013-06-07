@@ -18,12 +18,17 @@ page "/call_for_projects.html", :layout => :html5
 page "/guidelines.html", :layout => :html5
 page "/our_approach.html", :layout => :html5
 page "/projects.html", :layout => :html5
-page "/single_project.html", :layout => :html5
+page "/header.html", :layout => :html5
+page "/footer.html", :layout => :html5
+
 page "/project_update.html", :layout => :html5
 page "/project_details.html", :layout => :html5
 page "/profile_bar.html", :layout => :html5
 page "/profile_bar_open.html", :layout => :html5
 page "/how_to.html", :layout => :html5
+page "/update/project_update_tab.html", :layout => :html5
+page "/update/project_update_header.html", :layout => :html5
+page "/update/project_sidebar.html", :layout => :html5
 page "/404.html", :layout => :html5
 
 
