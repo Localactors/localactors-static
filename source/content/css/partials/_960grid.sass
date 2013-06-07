@@ -288,59 +288,58 @@
 			a
 				padding: 2px 4px 0 4px
 				top: 1px
-
+	ul#info-project
+		+span-columns(3,12)
+		margin-top: 27px
+		hr.info-spacer
+			display: none
+		li, li.money
+			+span-columns(3,3)
+			margin-bottom: 12px
+		li.money
+			h3
+				margin-top: 0
+		h2
+			font-size: px-to-em(60px,16px)
+			line-height: px-to-em(48px,60px)
+			span.euro
+				font-size: px-to-em(45px,60px)
+		h3
+			font-size: px-to-em(14px,16px)
+			line-height: px-to-em(17px,14px)
+			span.total
+				font-size: px-to-em(18px,14px)
+		li.achieved
+			+span-columns(3,3)
+			margin-top: 60px
+			.worm
+				margin-top: 0
+				+assign-sprite-background($assets)
+				+sprite($assets, "step_worm", true)
+	ul#project-step
+		font-size: px-to-em(14px,14px) 
+		line-height: px-to-em(14px,14px)
+		+span-columns(3,3)
+		li
+			&:last-child
+				+span-columns(3,3)
+			+span-columns(3,3)
+			margin-bottom: 30px
+			hr.step
+				width: auto
+				height: 1px
+				+span-columns(3,3)
+				$image: image-url("textures/hr_step.png")
+				background: $image repeat left top
+			.main-container
+				+span-columns(2 omega,3)
+				margin-top: 2px
+				.step-container
+					h3.money
+						font-size: px-to-em(18px,16px)
+						line-height: px-to-em(16px,18px)
 	#update-body
 		+span-columns(12,12)
-		ul#info-project
-			+span-columns(3,12)
-			margin-top: 27px
-			hr.info-spacer
-				display: none
-			li, li.money
-				+span-columns(3,3)
-				margin-bottom: 12px
-			li.money
-				h3
-					margin-top: 0
-			h2
-				font-size: px-to-em(60px,16px)
-				line-height: px-to-em(48px,60px)
-				span.euro
-					font-size: px-to-em(45px,60px)
-			h3
-				font-size: px-to-em(14px,16px)
-				line-height: px-to-em(17px,14px)
-				span.total
-					font-size: px-to-em(18px,14px)
-			li.achieved
-				+span-columns(3,3)
-				margin-top: 60px
-				.worm
-					margin-top: 0
-					+assign-sprite-background($assets)
-					+sprite($assets, "step_worm", true)
-		ul#project-step
-			font-size: px-to-em(14px,14px) 
-			line-height: px-to-em(14px,14px)
-			+span-columns(3,3)
-			li
-				&:last-child
-					+span-columns(3,3)
-				+span-columns(3,3)
-				margin-bottom: 30px
-				hr.step
-					width: auto
-					height: 1px
-					+span-columns(3,3)
-					$image: image-url("textures/hr_step.png")
-					background: $image repeat left top
-				.main-container
-					+span-columns(2 omega,3)
-					margin-top: 2px
-					.step-container
-						h3.money
-							font-size: px-to-em(18px,16px)
-							line-height: px-to-em(16px,18px)
 		.single-update
 			margin-top: 27px
 			+span-columns(8 omega,12)

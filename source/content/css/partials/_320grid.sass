@@ -229,101 +229,103 @@ i
 			&:hover
 				color: $purple
 				background-color: $acqua
+
+ul#info-project
+	margin-top: 40px
+	margin-bottom: 20px
+	+span-columns(6,6)
+	font-family: "miso"
+	text-transform: uppercase
+	+no-bullets
+	padding: 0
+	hr.info-spacer
+		+span-columns(6,6)
+		margin: 0
+		border: none
+		height: 1px
+		$image: image-url("textures/hr_step.png")
+		background: $image repeat left top
+	h2, h3
+		margin: 0
+		font-weight: 400
+	h2
+		color: #45FFC1
+		font-size: px-to-em(40px,16px)
+		line-height: px-to-em(40px,40px)
+		margin-bottom: 5px
+		span.euro
+			font-size: px-to-em(30px,40px)
+	h3
+		color: $purple
+		letter-spacing: px-to-em(2px)
+		font-size: px-to-em(12px,16px)
+		line-height: px-to-em(15px,12px)
+		span.total
+			font-weight: 600
+			color: $acqua
+			background-color: $purple
+			font-size: px-to-em(16px,12px)
+			padding: 4px 6px 1px 6px
+	li
+		+span-columns(2,6)
+	li.money
+		+span-columns(2 omega,6)
+		h3
+			margin-top: -5px
+	li.achieved
+		+span-columns(6,6)
+		margin-top: 20px
+		margin-bottom: 20px
+		.worm
+			position: absolute
+			z-index: -1
+			margin-top: 5px
+			+assign-sprite-background($assets)
+			+sprite($assets, "step_worm_horizontal", true)
+			
+ul#project-step
+	+span-columns(6,6)
+	font-size: px-to-em(12px,12px) 
+	line-height: px-to-em(12px,12px)
+	font-weight: 400
+	padding: 0
+	position: relative
+	li
+		&:last-child
+			+span-columns(2 omega,6)
+		+span-columns(2,6)
+		hr.step
+			width: 1px
+			height: 100px
+			border: none
+			margin: 0
+			$image: image-url("textures/hr_step_vertical.png")
+			background: $image repeat left top
+		.main-container
+			h4.number
+				position: absolute
+				margin: 0
+				color: $rose
+				font-weight: 600
+			.step-container
+				position: relative
+				+float-left
+				padding-left: 18px
+				h3.step
+					margin-bottom: 5px
+				h3.money
+					font-weight: 600
+					color: $acqua
+					background-color: $purple
+					padding: 4px 6px 1px 6px
+					letter-spacing: px-to-em(2px) !important
+					+float-left
+					position: relative
+					display: inline
+					font-size: px-to-em(16px,16px)
+					line-height: px-to-em(14px,16px)
 #update-body
 	+span-columns(6,6)
-	ul#info-project
-		margin-top: 40px
-		margin-bottom: 20px
-		+span-columns(6,6)
-		font-family: "miso"
-		text-transform: uppercase
-		+no-bullets
-		padding: 0
-		hr.info-spacer
-			+span-columns(6,6)
-			margin: 0
-			border: none
-			height: 1px
-			$image: image-url("textures/hr_step.png")
-			background: $image repeat left top
-		h2, h3
-			margin: 0
-			font-weight: 400
-		h2
-			color: #45FFC1
-			font-size: px-to-em(40px,16px)
-			line-height: px-to-em(40px,40px)
-			margin-bottom: 5px
-			span.euro
-				font-size: px-to-em(30px,40px)
-		h3
-			color: $purple
-			letter-spacing: px-to-em(2px)
-			font-size: px-to-em(12px,16px)
-			line-height: px-to-em(15px,12px)
-			span.total
-				font-weight: 600
-				color: $acqua
-				background-color: $purple
-				font-size: px-to-em(16px,12px)
-				padding: 4px 6px 1px 6px
-		li
-			+span-columns(2,6)
-		li.money
-			+span-columns(2 omega,6)
-			h3
-				margin-top: -5px
-		li.achieved
-			+span-columns(6,6)
-			margin-top: 20px
-			margin-bottom: 20px
-			.worm
-				position: absolute
-				z-index: -1
-				margin-top: 5px
-				+assign-sprite-background($assets)
-				+sprite($assets, "step_worm_horizontal", true)
-	ul#project-step
-		+span-columns(6,6)
-		font-size: px-to-em(12px,12px) 
-		line-height: px-to-em(12px,12px)
-		font-weight: 400
-		padding: 0
-		position: relative
-		li
-			&:last-child
-				+span-columns(2 omega,6)
-			+span-columns(2,6)
-			hr.step
-				width: 1px
-				height: 100px
-				border: none
-				margin: 0
-				$image: image-url("textures/hr_step_vertical.png")
-				background: $image repeat left top
-			.main-container
-				h4.number
-					position: absolute
-					margin: 0
-					color: $rose
-					font-weight: 600
-				.step-container
-					position: relative
-					+float-left
-					padding-left: 18px
-					h3.step
-						margin-bottom: 5px
-					h3.money
-						font-weight: 600
-						color: $acqua
-						background-color: $purple
-						padding: 4px 6px 1px 6px
-						letter-spacing: px-to-em(2px) !important
-						+float-left
-						position: relative
-						display: inline
-						font-size: px-to-em(16px,16px)
-						line-height: px-to-em(14px,16px)
 	.single-update
 		margin-top: 40px
 		margin-bottom: 20px
