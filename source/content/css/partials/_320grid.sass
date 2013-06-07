@@ -1493,7 +1493,16 @@ hr.spacer-projects
 			margin-top: -90px
 			z-index: -1
 
-#explanation
+hr.spacer-localactors
+	width: 100%
+	margin: 0
+	margin-bottom: 20px
+	height: 1px
+	border: none
+	$image: image-url("textures/hr_step.png")
+	background: $image repeat left top
+
+#explanation, #localactors
 	padding-top: 0
 	+span-columns(6,6)
 	ul.publisher-list
@@ -1546,6 +1555,9 @@ hr.spacer-projects
 			p
 				margin: 0
 				margin-top: 10px
+#localactors
+	ul.publisher-list
+		height: auto
 
 footer
 	clear: both
