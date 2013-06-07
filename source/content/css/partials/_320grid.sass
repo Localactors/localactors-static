@@ -282,7 +282,7 @@ ul#info-project
 			margin-top: 5px
 			+assign-sprite-background($assets)
 			+sprite($assets, "step_worm_horizontal", true)
-			
+
 ul#project-step
 	+span-columns(6,6)
 	font-size: px-to-em(12px,12px) 
@@ -622,6 +622,36 @@ ul#project-step
 
 
 
+#publisher-profile
+	+span-columns(6,6)
+	margin-bottom: 20px
+	.container-pic
+		+span-columns(2,6)
+		height: 235px
+		overflow: hidden
+	h1.publisher-name, p.info-publisher
+		+span-columns(3 omega,6)
+		+post(1)
+	h1.publisher-name 
+		font-family: "miso"
+		text-transform: uppercase
+		font-weight: 400
+		font-size: px-to-em(40px,16px)
+		line-height: px-to-em(30px,40px)
+		color: $purple
+		margin-top: 0
+		margin-bottom: 30px
+	p.info-publisher
+		text-indent: px-to-em(20px)
+		font-family: "source sans pro"
+		font-weight: 400
+		color: $purple
+		font-size: px-to-em(13px,16px)
+		line-height: px-to-em(19px,13px)
+		margin-top: 0
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
 
 
 
