@@ -22,6 +22,7 @@ page "/header.html", :layout => :html5
 page "/footer.html", :layout => :html5
 page "/localactors.html", :layout => :html5
 page "/project_update.html", :layout => :html5
+page "/project_in_list.html", :layout => :html5
 page "/project_details.html", :layout => :html5
 page "/publisher_profile.html", :layout => :html5
 page "/profile_bar.html", :layout => :html5
@@ -30,6 +31,13 @@ page "/how_to.html", :layout => :html5
 page "/update/project_update_tab.html", :layout => :html5
 page "/update/project_update_header.html", :layout => :html5
 page "/update/project_sidebar.html", :layout => :html5
+page "/update/project_update_body.html", :layout => :html5
+page "/update/update_block_qa.html", :layout => :html5
+page "/update/update_block_list.html", :layout => :html5
+page "/update/update_block_generic.html", :layout => :html5
+page "/update/update_block_photo.html", :layout => :html5
+page "/update/update_block_interview.html", :layout => :html5
+page "/update/update_block_quote.html", :layout => :html5
 page "/404.html", :layout => :html5
 
 

@@ -326,298 +326,298 @@ ul#project-step
 					line-height: px-to-em(14px,16px)
 #update-body
 	+span-columns(6,6)
-	.single-update
-		margin-top: 40px
-		margin-bottom: 20px
-		+span-columns(6,6)
-	.single-update-header
-		+span-columns(6,6)
-		margin-bottom: 10px
-		.date
-			+span-columns(4,6)
-			margin-bottom: 15px
-			h3
-				font-family: "miso"
-				color: $rose
-				text-transform: uppercase
-				font-weight: 400
-				margin: 0
-				font-size: px-to-em(27px,16px)
-			h3.month
-				border: 2px solid white
-				outline: 1px solid $rose
-				position: relative
-				+float-left
-				display: inline
-				$image: image-url("textures/dash_red.png")
-				background: $image repeat left top
-				background-color: white
-				height: 31px
-				padding: 10px 4px 0 4px
-				margin-top: -14px
-				margin-bottom: -11px
-			h3.day, h3.year
-				clear: both
-				position: relative
-				z-index: 2
-				padding-left: 4px
-		.comments-container
-			+span-columns(2 omega,6)
-			background-color: $acqua
-			position: relative
-			margin-top: 23px
-			top: -11px
-			left: -20px
-			.comments, .share
-				position: relative
-				line-height: px-to-em(14px,14px)
-				top: 11px
-				left: 20px
-			.arrow
-				+assign-sprite-background($assets)
-				+sprite($assets, "arrow_link", true)
-				position: absolute
-				margin-top: 5px
-			a
-				font-family: "miso"
-				padding-left: 16px
-				font-weight: 400
-				font-size: px-to-em(12px,16px)
-				line-height: px-to-em(14px,12px)
-				text-transform: uppercase
-				color: $rose
-				letter-spacing: px-to-em(2px)
-				&:hover
-					color: $blue
-		.update-headline-container
-			margin-top: 5px
-			+span-columns(6,6)
+.single-update
+	margin-top: 40px
+	margin-bottom: 20px
+	+span-columns(6,6)
+.single-update-header
+	+span-columns(6,6)
+	margin-bottom: 10px
+	.date
+		+span-columns(4,6)
+		margin-bottom: 15px
+		h3
 			font-family: "miso"
+			color: $rose
 			text-transform: uppercase
-			background-color: $acqua
+			font-weight: 400
+			margin: 0
+			font-size: px-to-em(27px,16px)
+		h3.month
+			border: 2px solid white
+			outline: 1px solid $rose
 			position: relative
-			z-index: -1
-			top: -40px
-			padding-bottom: 20px
-			.main-container
-				position: relative
-				top: 40px
-			p.info-project-track
-				letter-spacing: px-to-em(2px)
-				font-size: px-to-em(12px,16px)
-				line-height: px-to-em(12px,12px)
-				font-weight: 400
-				color: $acqua
-				background-color: $purple
-				position: relative
-				padding: 4px 6px 2px 6px
-				+float-left
-				display: inline
-				margin: 0
-				span.number
-					color: white
-			h1.title-update
-				font-weight: 400
-				color: $purple
-				margin: 0
-				font-size: px-to-em(50px,16px)
-				line-height: px-to-em(42px,50px)
-				margin-top: 10px
-		.intro-update-container
-			+span-columns(5,6)
-			background-color: $acqua
+			+float-left
+			display: inline
+			$image: image-url("textures/dash_red.png")
+			background: $image repeat left top
+			background-color: white
+			height: 31px
+			padding: 10px 4px 0 4px
+			margin-top: -14px
+			margin-bottom: -11px
+		h3.day, h3.year
+			clear: both
 			position: relative
-			z-index: -2
+			z-index: 2
+			padding-left: 4px
+	.comments-container
+		+span-columns(2 omega,6)
+		background-color: $acqua
+		position: relative
+		margin-top: 23px
+		top: -11px
+		left: -20px
+		.comments, .share
+			position: relative
+			line-height: px-to-em(14px,14px)
+			top: 11px
 			left: 20px
-			top: -38px
-			p.intro
-				padding-top: 35px
-				font-family: "source sans pro"
-				font-weight: 400
-				position: relative
-				margin: 0
-				font-size: px-to-em(16px,16px)
-				line-height: px-to-em(20px,16px)
-				color: $purple
-				left: -20px
-				top: 10px
-	.single-update-body
-		+span-columns(5,6)
-		.generic, .photo, .qa, .quote, ul.list, .interview
-			margin-bottom: 30px
-		.generic
-			+span-columns(5,5)
-			p
-				margin: 0
-				font-family: "source sans pro"
-				font-weight: 400
-				font-size: px-to-em(13px,16px)
-				line-height: px-to-em(19px,13px)
-				text-indent: px-to-em(20px)
-				margin-bottom: 10px
-				color: $purple
-				&:last-child
-					margin-bottom: 0
-		.interview
-			+span-columns(5,5)
+		.arrow
+			+assign-sprite-background($assets)
+			+sprite($assets, "arrow_link", true)
+			position: absolute
+			margin-top: 5px
+		a
+			font-family: "miso"
+			padding-left: 16px
+			font-weight: 400
+			font-size: px-to-em(12px,16px)
+			line-height: px-to-em(14px,12px)
+			text-transform: uppercase
+			color: $rose
+			letter-spacing: px-to-em(2px)
+			&:hover
+				color: $blue
+	.update-headline-container
+		margin-top: 5px
+		+span-columns(6,6)
+		font-family: "miso"
+		text-transform: uppercase
+		background-color: $acqua
+		position: relative
+		z-index: -1
+		top: -40px
+		padding-bottom: 20px
+		.main-container
 			position: relative
-			.question, .answer
-				position: relative
-				+clearfix
-				p
-					&:last-child
-						margin-bottom: 20px
-				.name
-					background-color: $acqua
-					position: relative
-					+float-left
-					width: 28px
-					height: 37px
-					h4
-						top: 7px
-						left: 17px
-						font-size: px-to-em(42px,16px)
-						font-family: "miso"
-						font-weight: 400
-						color: $purple
-						text-transform: uppercase
-						position: relative
-						+float-left
-						display: inline
-						margin-top: 0
-						margin-bottom: 0
+			top: 40px
+		p.info-project-track
+			letter-spacing: px-to-em(2px)
+			font-size: px-to-em(12px,16px)
+			line-height: px-to-em(12px,12px)
+			font-weight: 400
+			color: $acqua
+			background-color: $purple
+			position: relative
+			padding: 4px 6px 2px 6px
+			+float-left
+			display: inline
+			margin: 0
+			span.number
+				color: white
+		h1.title-update
+			font-weight: 400
+			color: $purple
+			margin: 0
+			font-size: px-to-em(50px,16px)
+			line-height: px-to-em(42px,50px)
+			margin-top: 10px
+	.intro-update-container
+		+span-columns(5,6)
+		background-color: $acqua
+		position: relative
+		z-index: -2
+		left: 20px
+		top: -38px
+		p.intro
+			padding-top: 35px
+			font-family: "source sans pro"
+			font-weight: 400
+			position: relative
+			margin: 0
+			font-size: px-to-em(16px,16px)
+			line-height: px-to-em(20px,16px)
+			color: $purple
+			left: -20px
+			top: 10px
+.single-update-body
+	+span-columns(5,6)
+	.generic, .photo, .qa, .quote, ul.list, .interview
+		margin-bottom: 30px
+	.generic
+		+span-columns(5,5)
+		p
+			margin: 0
+			font-family: "source sans pro"
+			font-weight: 400
+			font-size: px-to-em(13px,16px)
+			line-height: px-to-em(19px,13px)
+			text-indent: px-to-em(20px)
+			margin-bottom: 10px
+			color: $purple
+			&:last-child
+				margin-bottom: 0
+	.interview
+		+span-columns(5,5)
+		position: relative
+		.question, .answer
+			position: relative
+			+clearfix
 			p
-				+span-columns(4 omega,5)
-				position: relative
-				font-family: "source sans pro"
-				font-weight: 400
-				font-size: px-to-em(13px,16px)
-				line-height: px-to-em(19px,13px)
-				margin: 0
-				padding-bottom: 10px
-				padding-left: 10px
 				&:last-child
-					padding-bottom: 0
-			.question
-				p
-					color: $black
-					border-left: 1px solid $black
-			.answer
-				p
-					font-style: italic
-					color: $purple
-					border-left: 1px solid $purple
-		.photo
-			+span-columns(6,5)
-			img.photo-update
-				max-width: 100%
-				margin-bottom: -7px
-			.description
-				+span-columns(4,6)
-				margin-top: 10px
-				margin-bottom: 25px
-				.arrow
-					+assign-sprite-background($assets)
-					+sprite($assets, "arrow_link", true)
-					position: absolute
-					margin-top: 1px
-				p
+					margin-bottom: 20px
+			.name
+				background-color: $acqua
+				position: relative
+				+float-left
+				width: 28px
+				height: 37px
+				h4
+					top: 7px
+					left: 17px
+					font-size: px-to-em(42px,16px)
 					font-family: "miso"
-					font-size: px-to-em(12px,16px)
-					line-height: px-to-em(15px,12px)
 					font-weight: 400
 					color: $purple
-					letter-spacing: px-to-em(2px)
 					text-transform: uppercase
-					margin: 0
 					position: relative
 					+float-left
-					padding-left: 22px
-		.qa
-			+span-columns(5,5)
-			p
-				font-family: "source sans pro"
-				font-weight: 400
-				font-style: italic
-				font-size: px-to-em(13px,16px)
-				line-height: px-to-em(19px,13px)
-				color: $purple
-				margin: 0
-				margin-bottom: 15px
-				span.question
-					text-transform: uppercase
-					font-weight: 600
-					background-color: $acqua
-					color: $purple
-					font-style: normal
-					padding: 0 6px
-					margin-left: -6px
-		.quote
-			font-family: "miso"
-			text-transform: uppercase
-			+span-columns(5,5)
-			p.name
-				letter-spacing: px-to-em(2px)
-				font-weight: 400
-				color: $acqua
-				font-size: px-to-em(12px,16px)
-				line-height: px-to-em(12px,12px)
-				padding: 4px 6px 2px 6px
-				background-color: $purple
-				position: relative
-				+float-left
-				display: inline
-				margin-top: 0
-				margin-bottom: 10px
-			p.quote
-				+span-columns(5,5)
-				font-size: px-to-em(25px,16px)
-				line-height: px-to-em(30px,25px)
-				font-weight: 400
-				color: $purple
-				letter-spacing: px-to-em(2px)
-				margin-top: 0
-				margin-bottom: 0
-		ul.list
-			+span-columns(4,5)
-			margin-top: 0
-			+no-bullets
-			padding: 0
-			li
-				position: relative
-				+clearfix
-				margin-bottom: 15px
-				&:last-child
+					display: inline
+					margin-top: 0
 					margin-bottom: 0
+		p
+			+span-columns(4 omega,5)
+			position: relative
+			font-family: "source sans pro"
+			font-weight: 400
+			font-size: px-to-em(13px,16px)
+			line-height: px-to-em(19px,13px)
+			margin: 0
+			padding-bottom: 10px
+			padding-left: 10px
+			&:last-child
+				padding-bottom: 0
+		.question
+			p
+				color: $black
+				border-left: 1px solid $black
+		.answer
+			p
+				font-style: italic
+				color: $purple
+				border-left: 1px solid $purple
+	.photo
+		+span-columns(6,5)
+		img.photo-update
+			max-width: 100%
+			margin-bottom: -7px
+		.description
+			+span-columns(4,6)
+			margin-top: 10px
+			margin-bottom: 25px
 			.arrow
-				position: absolute
-				z-index: 2
 				+assign-sprite-background($assets)
 				+sprite($assets, "arrow_link", true)
-				margin-top: 8px
-			p, a
-				position: relative
-				+float-left
+				position: absolute
+				margin-top: 1px
+			p
 				font-family: "miso"
-				font-weight: 200
-				display: inline
+				font-size: px-to-em(12px,16px)
+				line-height: px-to-em(15px,12px)
+				font-weight: 400
+				color: $purple
+				letter-spacing: px-to-em(2px)
 				text-transform: uppercase
 				margin: 0
-				color: $black
-				padding-left: 20px
-				font-size: px-to-em(25px,16px)
-				line-height: px-to-em(25px,25px)
-			a
-				text-decoration: underline
-				padding-right: 20px
-				&:hover
-					background-color: $yellow
-	hr.update
-		+span-columns(6,6)
-		border: none
-		border-top: 1px solid $rose
+				position: relative
+				+float-left
+				padding-left: 22px
+	.qa
+		+span-columns(5,5)
+		p
+			font-family: "source sans pro"
+			font-weight: 400
+			font-style: italic
+			font-size: px-to-em(13px,16px)
+			line-height: px-to-em(19px,13px)
+			color: $purple
+			margin: 0
+			margin-bottom: 15px
+			span.question
+				text-transform: uppercase
+				font-weight: 600
+				background-color: $acqua
+				color: $purple
+				font-style: normal
+				padding: 0 6px
+				margin-left: -6px
+	.quote
+		font-family: "miso"
+		text-transform: uppercase
+		+span-columns(5,5)
+		p.name
+			letter-spacing: px-to-em(2px)
+			font-weight: 400
+			color: $acqua
+			font-size: px-to-em(12px,16px)
+			line-height: px-to-em(12px,12px)
+			padding: 4px 6px 2px 6px
+			background-color: $purple
+			position: relative
+			+float-left
+			display: inline
+			margin-top: 0
+			margin-bottom: 10px
+		p.quote
+			+span-columns(5,5)
+			font-size: px-to-em(25px,16px)
+			line-height: px-to-em(30px,25px)
+			font-weight: 400
+			color: $purple
+			letter-spacing: px-to-em(2px)
+			margin-top: 0
+			margin-bottom: 0
+	ul.list
+		+span-columns(4,5)
 		margin-top: 0
-		margin-bottom: 0
+		+no-bullets
+		padding: 0
+		li
+			position: relative
+			+clearfix
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		.arrow
+			position: absolute
+			z-index: 2
+			+assign-sprite-background($assets)
+			+sprite($assets, "arrow_link", true)
+			margin-top: 8px
+		p, a
+			position: relative
+			+float-left
+			font-family: "miso"
+			font-weight: 200
+			display: inline
+			text-transform: uppercase
+			margin: 0
+			color: $black
+			padding-left: 20px
+			font-size: px-to-em(25px,16px)
+			line-height: px-to-em(25px,25px)
+		a
+			text-decoration: underline
+			padding-right: 20px
+			&:hover
+				background-color: $yellow
+hr.update
+	+span-columns(6,6)
+	border: none
+	border-top: 1px solid $rose
+	margin-top: 0
+	margin-bottom: 0
 
 
 
