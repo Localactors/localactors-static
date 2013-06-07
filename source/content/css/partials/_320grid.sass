@@ -55,22 +55,25 @@ i
 	overflow: hidden
 	margin: 0
 #project-update-header
+	background-color: #FFFFD7
 	border-top: 1px solid $rose
 	+span-columns(6)
-	padding-top: 15px
 	margin-top: 35px
-	margin-bottom: 32px
+	margin-bottom: 0 !important
+	padding-bottom: 30px
 #support
 	font-family: "miso"
 	margin-bottom: 5px
 	+span-columns(6,6)
+	padding-top: 10px
+	.donate, .share
+		+span-columns(2,6)
+		+post(4)
 	.donate
-		+span-columns(2 omega,6)
 		.button_container
 			margin-top: 0
 			margin-bottom: 0
 	.share
-		+span-columns(2 omega,6)
 		margin-bottom: 10px
 		.facebook, .twitter, .googleplus
 			width: 33px
@@ -80,35 +83,39 @@ i
 			margin-right: 3px
 			+float-left
 #publisher-container
-	+span-columns(4,6)
-	min-height: 80px
-	img.photo-publisher
-		width: 80px
-		height: 80px
-		position: absolute
-	a.name
-		+span-columns(2,4)
-		margin-left: 90px
+	+span-columns(2,6)
+	position: relative
+	+clearfix
+	a.container-pic
+		+span-columns(2,2)
 		position: relative
-		+float-left
-		display: inline
-		font-weight: 200
-		text-decoration: underline
-		color: $black
-		font-size: px-to-em(18px,16px)
-		line-height: px-to-em(18px,18px)
-		letter-spacing: px-to-em(2px)
-		padding: 0 2px 2px 2px
+		height: 235px
+		overflow: hidden
 		&:hover
-			background-color: $yellow
-hr.spacer-donate
-	margin: 0
-	height: 0
-	border: none
-	$image: image-url("textures/hr_step.png")
-	background: $image repeat left top
+			opacity: 0.7
+		span.name
+			position: absolute
+			top: 208px
+			left: 0
+			display: inline-block
+			padding: 0 5px 0 2px
+			margin: 0
+			font-family: "miso"
+			font-weight: 200
+			font-size: px-to-em(14px,16px)
+			line-height: px-to-em(16px,14px)
+			color: black
+			text-decoration: underline
+			background: $yellow
+			@extend .hover !optional
+			cursor: pointer
+
+
+
+
+
 #project-headline
-	+span-columns(4,6)
+	+span-columns(4 omega,6)
 	font-family: "miso"
 	text-transform: uppercase
 	h1.title
@@ -128,43 +135,53 @@ hr.spacer-donate
 		color: $purple
 		font-weight: 400
 		margin: 0
+		margin-bottom: 20px
 		font-size: px-to-em(23px,16px)
 		line-height: px-to-em(19px,23px)
 		padding-left: 20px
-.tags-container
-	+span-columns(2 omega,6)
-	font-family: "miso"
-	text-transform: uppercase
-	h4
-		font-weight: 400
-		color: $rose
-		font-size: px-to-em(21px,16px)
-		line-height: px-to-em(21px,21px)
-		margin: 0
-	ul
-		padding: 0
-		list-style-type: none
-		+pretty-bullets("assets/bullet-tags.png")
-		margin: 0
-		margin-top: 5px
-		li
-			line-height: px-to-em(16px,16px) !important
-			margin-bottom: 0 !important
-			margin-left: -5px
-			&:hover
-				opacity: 0.6
-		a
-			letter-spacing: px-to-em(2px)
-			color: white
-			font-size: px-to-em(12px,16px)
-			background-color: $black
-			padding: 3px 5px 1px 3px
-			text-decoration: none
-			font-weight: 600
-			margin-left: -5px
-			position: relative
+	.tags-container
+		+span-columns(4,4)
+		font-family: "miso"
+		text-transform: uppercase
+		h4
+			font-weight: 400
+			color: $rose
+			font-size: px-to-em(21px,16px)
+			line-height: px-to-em(21px,21px)
+			margin: 0
+		ul
+			padding: 0
+			list-style-type: none
+			//+pretty-bullets("assets/bullet-tags.png")
+			+horizontal-list
+			margin: 0
+			margin-top: 5px
+			li
+				line-height: px-to-em(16px,16px) !important
+				margin-bottom: 0 !important
+				padding: 0
+				margin: 0
+				margin-right: 5px
+				&:hover
+					opacity: 0.6
+			.bullet
+				+assign-sprite-background($assets)
+				+sprite($assets, "bullet-tags", true)
+				position: relative
+				top: 1px
+				+float-left
+			a
+				letter-spacing: px-to-em(2px)
+				color: white
+				font-size: px-to-em(12px,16px)
+				background-color: $black
+				padding: 3px 5px 1px 3px
+				text-decoration: none
+				font-weight: 600
+				position: relative
 #project-update-tab
 	+span-columns(6,6)
+	background-color: #FFFFD7
 	hr.tab-line
 		+span-columns(6,6)
 		border: none
@@ -185,6 +202,7 @@ hr.spacer-donate
 		padding-left: 3px
 		li
 			position: relative
+			background-color: white
 			height: 15px
 			border: 1px solid $rose
 			line-height: px-to-em(14px) !important
@@ -1162,7 +1180,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	+susy-grid-background
+	//+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
@@ -1573,8 +1591,8 @@ footer
 			margin-top: 0
 			margin-bottom: 0
 			a
-				background-color: yellow
-				color: black
+				background-color: $yellow
+				color: $black
 				@extend .hover !optional
 			span.iubenda
 				position: relative
@@ -1622,8 +1640,8 @@ footer
 					margin: 0
 					margin-bottom: 10px
 				a
-					background-color: yellow
-					color: black
+					background-color: $yellow
+					color: $black
 					@extend .hover !optional
 
 

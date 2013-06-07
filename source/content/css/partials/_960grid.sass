@@ -1,7 +1,7 @@
 
 +at-breakpoint($break)
 	section.page
-		+susy-grid-background
+		//+susy-grid-background
 
 		
 
@@ -224,71 +224,47 @@
 		+span-columns(11,12)
 		+pre(1)
 	#project-update-header
-		padding-top: 30px
 		margin-top: 0
 		margin-bottom: 30px
 		+span-columns(12)
 		.clear
 			display: none		
 	#support
-		margin-top: 4px
-		position: relative
-		+span-columns(3,12)
-		.donate
-			+span-columns(3,3)
-			a
-				padding: 5px 39px 3px 39px
-		.share
-			+span-columns(3,3)
-			position: relative
-			margin-top: 7px
+		+span-columns(12,12)
+		margin-bottom: 20px
+		.donate, .share
+			+span-columns(2 omega,12)
+			+pre(10)
+
 	#publisher-container
-		+span-columns(3,3)
-		position: relative
-		+float-left
-		margin-bottom: 6px
-		img.photo-publisher
-			position: relative
-			width: auto
-			height: auto
-			+span-columns(2,3)
-		a.name
-			margin-top: 10px
-			+span-columns(2,3)
-			margin-left: 0
-			font-size: px-to-em(20px,16px)
-			line-height: px-to-em(21px,20px)
-	hr.spacer-donate
-		+span-columns(2,3)
-		height: 1px
-		margin-top: 10px
-		margin-bottom: 10px
+		+span-columns(2,12)
 	#project-headline		
-		+span-columns(6,12)
-		+pre(1)
+		+span-columns(8 omega,12)
+		.container-headline
+			+span-columns(6,8)
 		h1.title
 			font-size: px-to-em(67px,16px)
 			line-height: px-to-em(50px,67px)			
 			margin-bottom: 15px
 		.icon-where
-			margin-top: 5px
+			margin-top: 2px
 		h2.subtitle
 			font-size: px-to-em(36px,16px)
 			line-height: px-to-em(31px,36px)
-	.tags-container
-		position: relative
-		+span-columns(2 omega,12)
-		h4
-			font-size: px-to-em(27px,16px)
-			line-height: px-to-em(27px,27px)
-		ul
-			margin-top: 8px
-			li
-				line-height: px-to-em(16px,16px) !important
-			a
-				font-size: px-to-em(14px,16px)
-				top: 1px
-				padding: 3px 5px 0 3px
+		.tags-container
+			+span-columns(2 omega,8)
+			position: relative
+			h4
+				font-size: px-to-em(27px,16px)
+				line-height: px-to-em(27px,27px)
+			ul
+				margin-top: 8px
+				li
+					line-height: px-to-em(16px,16px) !important
+				a
+					font-size: px-to-em(14px,16px)
+					top: 1px
+					padding: 3px 5px 0 3px
 	#project-update-tab
 		+span-columns(12,12)
 		hr.tab-line
