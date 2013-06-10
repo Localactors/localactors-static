@@ -63,11 +63,11 @@
 #project-update-tab
 	%ul.tab
 		%li.active
-			%a{href: '/project_update.html'} Update
+			%a{href: '/project_update.html'} Update <span class="number">(15)</span>
 		%li
 			%a{href: '/project_details.html'} Project Details
 		%li
-			%a{href: '#'} Guestbook
+			%a{href: '/guestbook.html'} Guestbook <span class="number">(241)</span>
 		%li
 			%a{href: '#'} Ask a Question
 	%hr.tab-line
@@ -78,7 +78,7 @@
 			%h3
 				Days
 		%li
-			%h2
+			%a.donors{href: '/localactors.html'}
 				94.850
 			%h3
 				Supporters
@@ -130,17 +130,15 @@
 			.comments-container
 				.comments
 					.arrow
-					%a{href: '#'} 19 Comments
-				.share
-					.arrow
-					%a{href: '#'} Share
+					%a{href: '/single_update.html'} 19 Comments
 			.update-headline-container
 				.main-container
 					%p.info-project-track
 						<span class="number">-15</span> days / <span class="number">&#128; 9.752</span> raised of <span class="number">&#128; 15.000</span> pledged / <span class="number">450</span> supporters
 					.clear
 					%h1.title-update
-						Intervista a Umarik e Monique Korman
+						%a{href: '/single_update.html'}
+							Intervista a Umarik e Monique Korman
 			.intro-update-container
 				%p.intro
 					Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.
@@ -176,17 +174,15 @@
 			.comments-container
 				.comments
 					.arrow
-					%a{href: '#'} 05 Comments
-				.share
-					.arrow
-					%a{href: '#'} Share
+					%a{href: '/single_update.html'} 05 Comments
 			.update-headline-container
 				.main-container
 					%p.info-project-track
 						<span class="number">-37</span> days / <span class="number">&#128; 5.433</span> raised of <span class="number">&#128; 15.000</span> pledged / <span class="number">231</span> supporters
 					.clear
 					%h1.title-update
-						Short placeholder
+						%a{href: '/single_update.html'}
+							Short placeholder
 			.intro-update-container
 				%p.intro
 					The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.
@@ -221,17 +217,18 @@
 			.comments-container
 				.comments
 					.arrow
-					%a{href: '#'} 13 Comments
-				.share
-					.arrow
-					%a{href: '#'} Share
+					%a{href: '/single_update.html'} 13 Comments
+				/ .share
+				/ 	.arrow
+				/ 	%a{href: '#'} Share
 			.update-headline-container
 				.main-container
 					%p.info-project-track
 						<span class="number">-37</span> days / <span class="number">&#128; 5.433</span> raised of <span class="number">&#128; 15.000</span> pledged / <span class="number">231</span> supporters
 					.clear
 					%h1.title-update
-						Three line placeholder long title headline
+						%a{href: '/single_update.html'}
+							Three line placeholder long title headline
 		.single-update-body
 			.generic
 				%p

@@ -23,11 +23,15 @@ page "/footer.html", :layout => :html5
 page "/localactors.html", :layout => :html5
 
 page "/project_update.html", :layout => :html5
+page "/single_update.html", :layout => :html5
+page "/guestbook.html", :layout => :html5
+page "/ask_question.html", :layout => :html5
 page "/project_in_list.html", :layout => :html5
 page "/project_details.html", :layout => :html5
 page "/publisher_profile.html", :layout => :html5
 page "/profile_bar.html", :layout => :html5
 page "/profile_bar_open.html", :layout => :html5
+page "/profile_bar_stream_updates.html", :layout => :html5
 page "/how_to.html", :layout => :html5
 page "/update/project_update_tab.html", :layout => :html5
 page "/update/project_update_header.html", :layout => :html5

@@ -258,12 +258,15 @@ i
 			text-decoration: none
 			background-color: $yellow
 			padding: 2px 1px 0 1px
-			margin: 0 8px 0 8px
+			margin: 0 5px 0 5px
 			position: relative
 			top: 2px
 			&:hover
 				color: $purple
 				background-color: $acqua
+			span.number
+				font-weight: 600
+				color: $rose
 
 ul#info-project
 	margin-top: 40px
@@ -280,16 +283,19 @@ ul#info-project
 		height: 1px
 		$image: image-url("textures/hr_step.png")
 		background: $image repeat left top
-	h2, h3
+	h2, h3, a.donors
 		margin: 0
 		font-weight: 400
-	h2
+	h2, a.donors
 		color: #45FFC1
 		font-size: px-to-em(40px,16px)
 		line-height: px-to-em(40px,40px)
 		margin-bottom: 5px
 		span.euro
 			font-size: px-to-em(30px,40px)
+	a.donors
+		&:hover
+			color: $purple
 	h3
 		color: $purple
 		letter-spacing: px-to-em(2px)
@@ -371,6 +377,8 @@ ul#project-step
 	.date
 		+span-columns(4,6)
 		margin-bottom: 15px
+		position: relative
+		z-index: 3
 		h3
 			font-family: "miso"
 			color: $rose
@@ -400,13 +408,14 @@ ul#project-step
 		+span-columns(2 omega,6)
 		background-color: $acqua
 		position: relative
+		z-index: 3
 		margin-top: 23px
-		top: -11px
+		top: 6px
 		left: -20px
 		.comments, .share
 			position: relative
 			line-height: px-to-em(14px,14px)
-			top: 11px
+			top: 6px
 			left: 20px
 		.arrow
 			+assign-sprite-background($assets)
@@ -431,7 +440,7 @@ ul#project-step
 		text-transform: uppercase
 		background-color: $acqua
 		position: relative
-		z-index: -1
+		z-index: 2
 		top: -40px
 		padding-bottom: 20px
 		.main-container
@@ -458,11 +467,15 @@ ul#project-step
 			font-size: px-to-em(50px,16px)
 			line-height: px-to-em(42px,50px)
 			margin-top: 10px
+			a
+				color: $purple
+				&:hover
+					color: $rose
 	.intro-update-container
 		+span-columns(5,6)
 		background-color: $acqua
 		position: relative
-		z-index: -2
+		z-index: 1
 		left: 20px
 		top: -38px
 		p.intro
@@ -622,6 +635,7 @@ ul#project-step
 			position: relative
 			+clearfix
 			margin-bottom: 15px
+			padding: 0 !important
 			&:last-child
 				margin-bottom: 0
 		.arrow
@@ -841,6 +855,102 @@ hr.update
 				color: $purple
 				font-size: px-to-em(13px,16px)
 				line-height: px-to-em(19px,13px)
+#ask_question
+	margin-top: 30px
+	+span-columns(5,6)
+	h3
+		//+pre(1)
+		font-family: "miso"
+		text-transform: uppercase
+		font-weight: 400
+		font-size: px-to-em(45px,16px)
+		line-height: px-to-em(38px,45px)
+		letter-spacing: px-to-em(1px) !important
+		color: $rose
+		margin-top: 10px
+		margin-bottom: 0
+
+
+#guestbook
+	margin-top: 30px
+#comments
+	+span-columns(6,6)
+	h3.number-comments
+		+pre(1)
+		font-family: "miso"
+		text-transform: uppercase
+		font-weight: 400
+		font-size: px-to-em(20px,16px)
+		line-height: px-to-em(16px,20px)
+		letter-spacing: px-to-em(1px) !important
+		color: $rose
+		margin-top: 10px
+		margin-bottom: 0
+	ul
+		+clearfix
+		margin-top: 30px
+		padding: 0
+		+no-bullets
+		hr.spacer-comments
+			margin-top: 0
+			margin-bottom: 30px
+			height: 1px
+			border: none
+			$image: image-url("textures/hr_step.png")
+			background: $image repeat left top
+		hr.spacer-comments, li
+			+span-columns(5,6)
+		li
+			img.photo-comment
+				max-width: 100%
+			.container-photo-profile
+				+span-columns(1,5)
+				height: 117px
+				overflow: hidden
+				position: relative
+				+float-left
+				img.photo-profile
+					width: 170%
+					height: auto
+			h3.name
+				font-family: "miso"
+				text-transform: uppercase
+				font-weight: 400
+				font-size: px-to-em(45px,16px)
+				line-height: px-to-em(38px,45px)
+				color: $rose
+				margin: 0
+				margin-bottom: 2px
+			.content
+				+span-columns(4 omega,5)
+				margin-bottom: 30px
+				p
+					font-family: "source sans pro"
+					color: $purple
+					font-weight: 400
+					font-size: px-to-em(13px,16px)
+					line-height: px-to-em(19px,13px)
+					margin-top: 0
+					margin-bottom: 20px
+					text-indent: px-to-em(20px)
+					&:last-child
+						margin-bottom: 0
+			p.date
+				font-family: "miso"
+				margin-top: 0
+				margin-bottom: 25px
+				font-size: px-to-em(14px,16px)
+				line-height: px-to-em(16px,14px)
+				text-transform: uppercase
+				letter-spacing: px-to-em(1px)
+				color: $rose
+				span.slash
+					font-size: px-to-em(10px,14px)
+					padding-left: 5px
+					padding-right: 5px
+
+
+
 
 .last
 	//border-bottom: 1px dashed $blue
@@ -1025,22 +1135,15 @@ hr.update
 		max-width: 100%
 		margin: 0
 		margin-bottom: -60px
-	#description-details, #publisher-details
+	#description-details, #ngo-details
 		position: relative
 		z-index: 2
 		+span-columns(5,6)
 		background-color: white
 		padding-right: px-to-em(20px)
 		padding-top: px-to-em(20px)
-		.container-photo
-			+span-columns(1,5)
-			height: 117px
-			overflow: hidden
-			position: relative
-			+float-left
-			.photo-publisher
-				width: 170%
-				height: auto
+		.logo
+			margin-bottom: 20px
 		.publisher
 			+span-columns(4 omega,5)
 			position: relative
@@ -1091,6 +1194,18 @@ hr.update
 					margin-top: 35px
 				h2.subtitle
 					margin-bottom: 7px
+				a.link
+					font-family: "source sans pro"
+					color: $purple
+					text-decoration: underline
+					font-weight: 400
+					font-style: italic
+					font-size: px-to-em(13px,16px)
+					line-height: px-to-em(19px,13px)
+					margin: 0
+					margin-bottom: 5px
+					&:hover
+						color: $rose
 			li.cost
 				.total
 					color: $rose
@@ -1266,7 +1381,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	+susy-grid-background
+	//+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
