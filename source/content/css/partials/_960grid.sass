@@ -274,6 +274,33 @@
 		h3
 			+span-columns(7,7)
 
+
+	#container-404
+		$image: image-url("textures/404_texture.png")
+		background: $image repeat left top
+		.error404
+			+assign-sprite-background($assets)
+			+sprite($assets, "error404", true)
+		.title
+			margin-top: 106px
+			margin-left: 304px
+
+
+	#thankyou
+		+span-columns(7 omega,12)
+		+post(1)
+		margin-top: 80px
+		h2
+			font-size: px-to-em(86px,16px)
+			line-height: px-to-em(80px,86px)
+			margin-bottom: 20px
+		p.intro
+			font-size: px-to-em(22px,16px)
+			line-height: px-to-em(26px,22px)
+			margin-bottom: 30px
+
+
+
 	#guestbook
 		margin-top: 60px
 	#comments
