@@ -1,4 +1,4 @@
-%form{:action => "/Account/Subscribe", :method => "post"}
+%form.blue-form#register{:action => "/Account/Subscribe", :method => "post"}
   %div
     %div
       %label{:for => "Email"} Email
@@ -17,7 +17,7 @@
       %input#Newsletter{"data-val" => "true", "data-val-required" => "The Newsletter field is required.", :name => "Newsletter", :type => "checkbox", :value => "true"}/
       %input{:name => "Newsletter", :type => "hidden", :value => "false"}/
       %span.field-validation-valid{"data-valmsg-for" => "Newsletter", "data-valmsg-replace" => "true"}
-  %hr/
+  %hr.spacer/
   %div
     %p
       Dopo aver letto l'informativa

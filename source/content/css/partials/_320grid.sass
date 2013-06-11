@@ -886,9 +886,10 @@ hr.update
 			width: 0
 			height: 0
 	.title
-		margin-top: 175px
-		margin-left: 45px
+		margin-top: 81px
+		margin-left: 61px
 		position: relative
+		+clearfix
 	h1
 		font-family: "miso"
 		text-transform: uppercase
@@ -900,12 +901,78 @@ hr.update
 		position: relative
 		+float-left
 		display: inline
-		padding: 3px 15px 0 5px
+		padding: 1px 15px 1px 5px
 		clear: both
 		margin: 0
 		margin-bottom: 1px
 	h1.dx
 		margin-left: 20px
+
+
+
+.blue-form
+	// position: relative
+	// z-index: -1
+	background-color: $light-yellow
+	input
+		background-color: white !important
+		border: 2px solid $blue !important
+		outline: 1px solid white !important
+	input[type="radio"]
+		background-color: white !important
+		border: 2px solid $blue !important
+		outline: 1px solid white !important
+		+float-left
+		display: inline-block 
+	label
+		font-family: "miso"
+		color: $blue
+		font-weight: 400
+		text-transform: uppercase
+		font-size: px-to-em(14px,16px)
+		line-height: px-to-em(16px,14px)
+		letter-spacing: px-to-em(2px)
+	hr.spacer
+		margin: 0
+		width: 100%
+		height: 1px
+		border: none
+		$image: image-url("textures/hr_step.png")
+		background: $image repeat left top
+	p
+		font-family: "source sans pro"
+		font-weight: 400
+		color: $purple
+		font-size: px-to-em(13px,16px)
+		line-height: px-to-em(19px,13px)
+		font-style: italic
+		a
+			color: $purple
+			text-decoration: underline
+			&:hover
+				color: $black
+				background-color: $yellow
+#register
+	+span-columns(6,6)
+	padding-top: 30px
+	padding-bottom: 30px
+	label, p
+		+span-columns(4,6)
+		+pre(1)
+	hr.spacer
+		margin-top: 20px
+		margin-bottom: 20px
+	label
+		margin-bottom: 5px
+	input
+		padding: 0
+		position: relative
+		left: px-to-em(-2px)
+		margin-bottom: 20px
+	input[type="text"], input[type="submit"], input[type="password"]
+		+span-columns(4,6)
+		+pre(1)
+
 
 
 
