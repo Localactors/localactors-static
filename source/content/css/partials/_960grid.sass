@@ -281,6 +281,11 @@
 		.error404
 			+assign-sprite-background($assets)
 			+sprite($assets, "error404", true)
+			img.mobile
+				display: none
+			img.web
+				width: auto
+				height: auto
 		.title
 			margin-top: 106px
 			margin-left: 304px
@@ -1257,7 +1262,7 @@
 				+span-columns(10,10)
 				.container-title
 					+span-columns(7,10)
-					+pre(3,10)
+					+pre(3)
 					margin-bottom: 50px !important
 					.arrow
 						top: 11px !important
