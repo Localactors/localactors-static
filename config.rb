@@ -28,6 +28,7 @@ page "/single_update.html", :layout => :html5
 page "/guestbook.html", :layout => :html5
 page "/ask_question.html", :layout => :html5
 page "/project_in_list.html", :layout => :html5
+page "/update/project_sidebar.html", :layout => :html5
 page "/project_details.html", :layout => :html5
 page "/publisher_profile.html", :layout => :html5
 page "/profile_bar.html", :layout => :html5
