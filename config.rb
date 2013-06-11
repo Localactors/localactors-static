@@ -21,6 +21,7 @@ page "/projects.html", :layout => :html5
 page "/header.html", :layout => :html5
 page "/footer.html", :layout => :html5
 page "/localactors.html", :layout => :html5
+page "/thank_you.html", :layout => :html5
 
 page "/project_update.html", :layout => :html5
 page "/single_update.html", :layout => :html5
