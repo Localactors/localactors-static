@@ -24,6 +24,8 @@ page "/localactors.html", :layout => :html5
 page "/thank_you.html", :layout => :html5
 page "/error404.html", :layout => :html5
 page "/register_form.html", :layout => :html5
+page "/login_form.html", :layout => :html5
+page "/comment_form.html", :layout => :html5
 
 page "/project_update.html", :layout => :html5
 page "/single_update.html", :layout => :html5

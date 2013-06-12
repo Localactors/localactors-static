@@ -1,36 +1,52 @@
 %form.blue-form#register{:action => "/Account/Subscribe", :method => "post"}
-  %div
-    %div
+  .container-form
+    .mail
       %label{:for => "Email"} Email
       %input#Email{"data-val" => "true", "data-val-email" => "The Email field is not a valid e-mail address.", "data-val-required" => "The Email field is required.", :name => "Email", :type => "text", :value => ""}/
       %span.field-validation-valid{"data-valmsg-for" => "Email", "data-valmsg-replace" => "true"}
-    .clarfix
+    .password
       %label{:for => "Password"} Password
       %input#Password{"data-val" => "true", "data-val-required" => "The Password field is required.", :name => "Password", :type => "password"}/
       %span.field-validation-valid{"data-valmsg-for" => "Password", "data-valmsg-replace" => "true"}
-    %div
+    .confirm-password
       %label{:for => "Password"} Conferma Password
       %input#Confirm{"data-val" => "true", "data-val-equalto" => "&amp;#39;Confirm&amp;#39; and &amp;#39;Password&amp;#39; do not match.", "data-val-equalto-other" => "*.Password", "data-val-required" => "The Confirm field is required.", :name => "Confirm", :type => "password"}/
       %span.field-validation-valid{"data-valmsg-for" => "Confirm", "data-valmsg-replace" => "true"}
-    %div
-      %label{:for => "Newsletter"} Icriviti alla Newsletter
-      %input#Newsletter{"data-val" => "true", "data-val-required" => "The Newsletter field is required.", :name => "Newsletter", :type => "checkbox", :value => "true"}/
+    .newsletter
+      %input#newsletter{"data-val" => "true", "data-val-required" => "The Newsletter field is required.", :name => "Newsletter", :type => "checkbox", :value => "true"}/
+      %label.newsletter{:for => "newsletter"} <span></span> Iscriviti alla Newsletter
       %input{:name => "Newsletter", :type => "hidden", :value => "false"}/
       %span.field-validation-valid{"data-valmsg-for" => "Newsletter", "data-valmsg-replace" => "true"}
-  %hr.spacer/
-  %div
+  %hr.spacer.privacy/
+  .privacy
     %p
       Dopo aver letto l'informativa
       = succeed "," do
         %a{:href => "/Home/privacy", :target => "_blank"} Privacy
       acconsento al trattamento dei miei dati per finalit&agrave; di invio di mails a carattere promozionale
-    %div
-      %div
-        %label{:for => "Privacy0", :style => "text-align:right;"} Acconsento
+    .container-radio
+      / .radio
+      /   %label{:for => "Privacy0", :style => "text-align:right;"} Acconsento
+      /   %input#Privacy0{"data-val" => "true", "data-val-required" => "Il campo Privacy è obbligatorio.", :name => "Privacy", :type => "radio", :value => "Acconsento"}/
+      / .radio
+      /   %label{:for => "Privacy1", :style => "text-align:right;"} Non Acconsento
+      /   %input#Privacy1{"data-val" => "true", "data-val-required" => "Il campo Privacy è obbligatorio.", :name => "Privacy", :type => "radio", :value => "Non Acconsento"}/
+      / %span.field-validation-valid{"data-valmsg-for" => "Privacy", "data-valmsg-replace" => "true"}
+      .radio
         %input#Privacy0{"data-val" => "true", "data-val-required" => "Il campo Privacy è obbligatorio.", :name => "Privacy", :type => "radio", :value => "Acconsento"}/
-      %div
-        %label{:for => "Privacy1", :style => "text-align:right;"} Non Acconsento
+        %label.Privacy0{:for => "Privacy0", :style => "text-align:right;"} <span></span> Acconsento
+      .radio
         %input#Privacy1{"data-val" => "true", "data-val-required" => "Il campo Privacy è obbligatorio.", :name => "Privacy", :type => "radio", :value => "Non Acconsento"}/
+        %label.Privacy1{:for => "Privacy1", :style => "text-align:right;"} <span></span> Non Acconsento
       %span.field-validation-valid{"data-valmsg-for" => "Privacy", "data-valmsg-replace" => "true"}
   %br/
-  %input{:type => "submit", :value => "  Iscriviti  "}/
+  %hr.spacer.button/
+  / .button
+  /   %input{:type => "submit", :value => "  Iscriviti  "}/
+  .iscriviti
+    .clear-box
+    .button_container     
+      .corner_left
+      %h4.buttons.yellow_button
+        %input{:type => "submit", :value => "  Iscriviti  "}/
+      .corner_right

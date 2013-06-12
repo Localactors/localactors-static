@@ -907,23 +907,34 @@ hr.update
 		margin-bottom: 1px
 	h1.dx
 		margin-left: 20px
+#lasalvezza
+	position: relative
+	margin-top: 30px
+	margin-left: 145px
 
 
 
 .blue-form
-	// position: relative
+	position: relative
 	// z-index: -1
 	background-color: $light-yellow
 	input
 		background-color: white !important
 		border: 2px solid $blue !important
 		outline: 1px solid white !important
+		font-family: "source sans pro"
+		font-size: px-to-em(13px,16px)
+		line-height: px-to-em(15px,13px)
+		color: $blue
+		padding: 3px 5px
 	input[type="radio"]
 		background-color: white !important
 		border: 2px solid $blue !important
 		outline: 1px solid white !important
 		+float-left
-		display: inline-block 
+		display: inline-block
+	input[type="password"]
+		letter-spacing: px-to-em(3px)
 	label
 		font-family: "miso"
 		color: $blue
@@ -946,32 +957,176 @@ hr.update
 		font-size: px-to-em(13px,16px)
 		line-height: px-to-em(19px,13px)
 		font-style: italic
+		margin: 0
 		a
 			color: $purple
 			text-decoration: underline
 			&:hover
 				color: $black
 				background-color: $yellow
+
+
+
+.commentform
+	+span-columns(6,6)
+	padding-top: 30px
+	padding-bottom: 30px
+	.container-comment
+		+span-columns(4,6)
+		+pre(1)
+		.editor-label
+			font-family: "source sans pro"
+			text-transform: uppercase
+			color: $blue
+			font-weight: 600
+			font-size: px-to-em(16px,16px)
+			line-height: px-to-em(14px,16px)
+			margin: 0
+			margin-bottom: 10px
+		textarea#Text
+			min-width: 92%
+			max-width: 92%
+			min-height: 120px
+			background-color: white !important
+			border: 2px solid $blue !important
+			outline: 1px solid white !important
+			margin-bottom: 20px
+			font-family: "source sans pro"
+			font-size: px-to-em(13px,16px)
+			line-height: px-to-em(17px,13px)
+			color: $blue
+			padding: 10px
+		.create-comment
+			.button_container
+				margin-top: 0
+
+
+
+
+
+#loginform
+	+span-columns(6,6)
+	padding-top: 30px
+	padding-bottom: 30px
+	.container
+		+span-columns(4,6)
+		+pre(1)
+		position: relative
+		border: none
+		padding: 0
+		.mail, .password
+			+span-columns(4,4)
+			margin-bottom: 20px
+			input[type="password"], input[type="text"]
+				width: 95%
+			label
+				margin-bottom: 5px
+
+	a.remember
+		+span-columns(4,4)
+		font-family: "source sans pro"
+		color: $purple
+		text-decoration: underline
+		font-weight: 400
+		font-style: italic
+		font-size: px-to-em(12px,16px)
+		line-height: px-to-em(14px,12px)
+		text-align: right
+		margin-top: 6px
+		&:hover
+			color: $rose
+	.login
+		+span-columns(4,4)
+
+
 #register
 	+span-columns(6,6)
 	padding-top: 30px
 	padding-bottom: 30px
-	label, p
+	.container-form
+		+span-columns(6,6)
+	.mail, .password, .confirm-password, .newsletter
 		+span-columns(4,6)
 		+pre(1)
-	hr.spacer
+		margin-bottom: 20px
+		input[type="password"], input[type="text"]
+			width: 95%
+		label
+			margin-bottom: 5px
+	.newsletter
+		position: relative
+		margin-top: 10px
+		label
+			margin: 0
+			width: 100%
+			span
+				margin-right: 5px
+				position: relative
+				left: -3px
+		input[type="checkbox"]
+			display: none
+		input[type="checkbox"] ~ label span
+			vertical-align: middle
+			+assign-sprite-background($assets)
+			+sprite($assets, "checkbox-false", true)
+			cursor: pointer
+			display: inline-block
+		#newsletter:checked ~ label.newsletter span
+			+assign-sprite-background($assets)
+			+sprite($assets, "checkbox-true", true)
+			display: inline-block
+
+	hr.spacer.privacy
+		+span-columns(4,6)
+		+pre(1)
 		margin-top: 20px
 		margin-bottom: 20px
-	label
-		margin-bottom: 5px
-	input
-		padding: 0
-		position: relative
-		left: px-to-em(-2px)
-		margin-bottom: 20px
-	input[type="text"], input[type="submit"], input[type="password"]
+	.privacy
 		+span-columns(4,6)
 		+pre(1)
+		margin-bottom: 20px
+		p
+			margin-bottom: 30px
+		.container-radio
+			+span-columns(4,4)
+			margin-bottom: 5px
+			.radio
+				position: relative
+				+span-columns(4,4)
+				margin-bottom: 10px
+				label
+					margin: 0
+					width: 100%
+					span
+						margin-right: 5px
+						position: relative
+						left: -3px
+				input[type="radio"]
+					display: none
+				input[type="radio"] ~ label span
+					vertical-align: middle
+					+assign-sprite-background($assets)
+					+sprite($assets, "radio-false", true)
+					cursor: pointer
+					display: inline-block
+				#Privacy0:checked ~ label.Privacy0 span
+					+assign-sprite-background($assets)
+					+sprite($assets, "radio-true", true)
+					display: inline-block
+				#Privacy1:checked ~ label.Privacy1 span
+					+assign-sprite-background($assets)
+					+sprite($assets, "radio-true", true)
+					display: inline-block
+
+	hr.spacer.button
+		width: 0
+		height: 0
+	.iscriviti
+		+span-columns(4,6)
+		+pre(1)
+
+	
+
 
 
 
@@ -1393,12 +1548,12 @@ hr.update
 		float: left
 		top: 5px
 		left: 5px
-		a
+		a, input
 			position: relative
 			display: inline-block
-			background: $yellow
-			border: 1px solid white
-			outline: 2px solid $blue
+			background: $yellow !important
+			border: 1px solid white !important
+			outline: 2px solid $blue !important
 			color: $black
 			text-transform: uppercase !important
 			font-family: "miso"
@@ -1406,10 +1561,10 @@ hr.update
 			text-decoration: none
 			font-size: px-to-em(21px) !important
 			line-height: px-to-em(19px,21px) !important
-			padding: 5px 10px 3px 10px
+			padding: 5px 10px 3px 10px !important
 .button_container:hover
 	.yellow_button
-		a 
+		a, input
 			text-decoration: underline
 .button_container:active
 	.corner_left
@@ -1803,9 +1958,9 @@ hr.spacer-localactors
 			a
 				&:hover
 					opacity: 0.7
-				img.photo-publisher
-					+span-columns(2,2)
-					height: 235px				
+				img
+					height: 235px
+					margin-left: -50%		
 				span
 					position: relative
 					top: -40px				

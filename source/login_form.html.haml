@@ -1,0 +1,23 @@
+%form#loginform.blue-form{:action => "/Account/Login", :method => "post"}
+	%input#ReturnUrl{:name => "ReturnUrl", :type => "hidden", :value => ""}/
+	%fieldset.container
+		.mail
+			%label{:for => "username"}
+				Email:
+			%input#login{"data-val" => "true", "data-val-required" => "The Username field is required.", :name => "Username", :type => "text", :value => ""}/
+			%span.field-validation-valid{"data-valmsg-for" => "Username", "data-valmsg-replace" => "true"}
+		.password
+			%label{:for => "password"}
+				Password:
+			%input#password{"data-val" => "true", "data-val-required" => "The Password field is required.", :name => "Password", :type => "password"}/
+			%span.field-validation-valid{"data-valmsg-for" => "Password", "data-valmsg-replace" => "true"}
+			%a.remember{:href => "/Account/ResetPasswordRequest"} Ricorda password
+	
+		.login
+			.clear-box
+			.button_container			
+				.corner_left
+				%h4.buttons.yellow_button
+					%a#registrati{:href => "#", :onclick => "document.getElementById('loginform').submit();return false;"}
+						%span Login
+				.corner_right

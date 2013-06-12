@@ -136,6 +136,86 @@
 			a
 				&:hover
 					color: $rose
+
+
+	
+	.commentform
+		+span-columns(11,12)
+		+pre(1)
+		margin-top: 30px
+		.container-comment
+			+span-columns(7 omega,11)
+			+post(1)
+			.editor-label
+				margin-bottom: 10px
+			textarea#Text
+				min-width: 92%
+				max-width: 92%
+
+
+
+
+
+	#loginform
+		+span-columns(12,12)
+		.container
+			+span-columns(10,12)
+			+pre(1)
+			.mail, .password
+				+span-columns(4,10)
+		.login
+			position: absolute
+			right: 3px
+			top: 8px
+			width: auto
+			margin-right: 0
+			float: none
+
+
+
+
+	#register
+		+span-columns(10,12)
+		+pre(1)
+		.container-form
+			+span-columns(5,10)
+		.mail, .password, .confirm-password, .newsletter
+			+span-columns(4 omega,5)
+			+pre(0)
+			input[type="password"], input[type="text"]
+				width: 95%
+		hr.spacer.privacy
+			width: 1px
+			height: 260px
+			$image: image-url("textures/hr_step_vertical.png")
+			background: $image repeat left top
+			margin: 0
+			margin-top: 10px
+			margin-left: px-to-em(30px)
+			position: relative
+			+float-left
+		.privacy
+			margin-top: 17px
+			+span-columns(3 omega,10)
+			+post(1)
+			+pre(0)
+			.container-radio
+				+span-columns(3,3)
+				.radio
+					+span-columns(3,3)
+		hr.spacer.button
+			+span-columns(8,10)
+			+pre(1)
+			height: 1px
+			margin-top: 0
+		.iscriviti
+			margin-top: 30px
+			+span-columns(8,10)
+			+pre(1)
+
+
+
+
 	#stream_update
 		.name-project-update
 			+span-columns(3,12)
@@ -289,6 +369,9 @@
 		.title
 			margin-top: 106px
 			margin-left: 304px
+	#lasalvezza
+		margin-top: 92px
+		margin-left: 434px
 
 
 	#thankyou
