@@ -935,7 +935,7 @@ hr.update
 		display: inline-block
 	input[type="password"]
 		letter-spacing: px-to-em(3px)
-	label
+	label, span.field-validation-valid
 		font-family: "miso"
 		color: $blue
 		font-weight: 400
@@ -943,6 +943,15 @@ hr.update
 		font-size: px-to-em(14px,16px)
 		line-height: px-to-em(16px,14px)
 		letter-spacing: px-to-em(2px)
+	span.field-validation-valid
+		color: white
+		background-color: $rose
+		padding: 0 10px 0 5px
+		margin: 0
+		margin-top: 3px
+		position: relative
+		display: inline
+		+float-left
 	hr.spacer
 		margin: 0
 		width: 100%
@@ -977,6 +986,14 @@ hr.update
 		background: $image repeat left top
 
 
+#mainform, #settings-profile, .commentform
+	.text-cont, .picture-cont, .email.cont, .question-cont, .first-name-cont, .last-name-cont, .bio-cont, .country-cont, .avatar-cont, .blog-cont, .contact-mail-cont, .facebook-cont, .linkedin-cont, .skype-cont, .phone-cont, .twitter-cont, .website-cont, .askaquestion-cont
+		+clearfix
+		margin-bottom: 20px
+
+
+
+
 .commentform, #mainform, #settings-profile
 	+span-columns(6,6)
 	padding-top: 30px
@@ -995,13 +1012,12 @@ hr.update
 			margin: 0
 			margin-bottom: 5px
 		textarea#Text, textarea#Question_Question, textarea#Bio
-			min-width: 92%
-			max-width: 92%
+			min-width: 90%
+			max-width: 90%
 			min-height: 120px
 			background-color: white !important
 			border: 2px solid $blue !important
 			outline: 1px solid white !important
-			margin-bottom: 20px
 			font-family: "source sans pro"
 			font-size: px-to-em(13px,16px)
 			line-height: px-to-em(17px,13px)
@@ -1020,10 +1036,8 @@ hr.update
 		line-height: px-to-em(16px,14px)
 		letter-spacing: px-to-em(2px)
 	input
-		width: 96%
-		margin-bottom: 20px
-	.upload-pic
-		margin-bottom: 20px
+		width: 94%
+		//margin-bottom: 20px
 	input#Picture, input#avatar-pic
 		background: none !important
 		border: none !important

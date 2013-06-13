@@ -3,12 +3,13 @@
     %input{:name => "UserID", :type => "hidden", :value => "CustomIdentity"}/
     %input{:name => "Date", :type => "hidden", :value => "12/06/2013"}/
     .container-comment
-        .editor-label
-            Ask a question:
-        .editor-field
-        %textarea#Text{:cols => "30", :name => "Text", :rows => "2"}
-            :preserve
-        %span.field-validation-valid{"data-valmsg-for" => "Text", "data-valmsg-replace" => "true"}
+        .askaquestion-cont
+            .editor-label
+                Ask a question:
+            .editor-field
+            %textarea#Text{:cols => "30", :name => "Text", :rows => "2"}
+                :preserve
+            %span.field-validation-valid{"data-valmsg-for" => "Text", "data-valmsg-replace" => "true"} notifica placeholder
         .create-comment
             .clear-box
             .button_container           

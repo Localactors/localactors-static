@@ -3,20 +3,20 @@
     .mail
       %label{:for => "Email"} Email
       %input#Email{"data-val" => "true", "data-val-email" => "The Email field is not a valid e-mail address.", "data-val-required" => "The Email field is required.", :name => "Email", :type => "text", :value => ""}/
-      %span.field-validation-valid{"data-valmsg-for" => "Email", "data-valmsg-replace" => "true"}
+      %span.field-validation-valid{"data-valmsg-for" => "Email", "data-valmsg-replace" => "true"} notifica placeholder
     .password
       %label{:for => "Password"} Password
       %input#Password{"data-val" => "true", "data-val-required" => "The Password field is required.", :name => "Password", :type => "password"}/
-      %span.field-validation-valid{"data-valmsg-for" => "Password", "data-valmsg-replace" => "true"}
+      %span.field-validation-valid{"data-valmsg-for" => "Password", "data-valmsg-replace" => "true"} notifica placeholder
     .confirm-password
       %label{:for => "Password"} Conferma Password
       %input#Confirm{"data-val" => "true", "data-val-equalto" => "&amp;#39;Confirm&amp;#39; and &amp;#39;Password&amp;#39; do not match.", "data-val-equalto-other" => "*.Password", "data-val-required" => "The Confirm field is required.", :name => "Confirm", :type => "password"}/
-      %span.field-validation-valid{"data-valmsg-for" => "Confirm", "data-valmsg-replace" => "true"}
+      %span.field-validation-valid{"data-valmsg-for" => "Confirm", "data-valmsg-replace" => "true"} notifica placeholder
     .newsletter
       %input#newsletter{"data-val" => "true", "data-val-required" => "The Newsletter field is required.", :name => "Newsletter", :type => "checkbox", :value => "true"}/
       %label.newsletter{:for => "newsletter"} <span></span> Iscriviti alla Newsletter
       %input{:name => "Newsletter", :type => "hidden", :value => "false"}/
-      %span.field-validation-valid{"data-valmsg-for" => "Newsletter", "data-valmsg-replace" => "true"}
+      %span.field-validation-valid{"data-valmsg-for" => "Newsletter", "data-valmsg-replace" => "true"} notifica placeholder
   %hr.spacer.privacy/
   .privacy
     %p
@@ -38,8 +38,7 @@
       .radio
         %input#Privacy1{"data-val" => "true", "data-val-required" => "Il campo Privacy è obbligatorio.", :name => "Privacy", :type => "radio", :value => "Non Acconsento"}/
         %label.Privacy1{:for => "Privacy1", :style => "text-align:right;"} <span></span> Non Acconsento
-      %span.field-validation-valid{"data-valmsg-for" => "Privacy", "data-valmsg-replace" => "true"}
-  %br/
+      %span.field-validation-valid{"data-valmsg-for" => "Privacy", "data-valmsg-replace" => "true"} notifica placeholder
   %hr.spacer.button/
   / .button
   /   %input{:type => "submit", :value => "  Iscriviti  "}/
