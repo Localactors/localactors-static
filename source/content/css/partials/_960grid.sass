@@ -139,7 +139,7 @@
 
 
 	
-	.commentform
+	.commentform, #mainform
 		+span-columns(11,12)
 		+pre(1)
 		margin-top: 30px
@@ -148,9 +148,33 @@
 			+post(1)
 			.editor-label
 				margin-bottom: 10px
-			textarea#Text
+			textarea#Text, textarea#Bio, textarea#Question_Question
 				min-width: 92%
 				max-width: 92%
+
+	#settings-profile
+		+span-columns(11,12)
+		+pre(1)
+		.container-comment
+			+span-columns(9,11)
+			+pre(1)
+			textarea#Bio
+				min-height: 206px
+		#user-info
+			+span-columns(4,9)
+		#user-contacts
+			+span-columns(4 omega,9)
+		hr.spacer
+			width: 1px
+			height: 598px
+			$image: image-url("textures/hr_step_vertical.png")
+			background: $image repeat left top
+			margin: 0
+			margin-top: 10px
+			margin-left: px-to-em(30px)
+			position: relative
+			+float-left
+
 
 
 

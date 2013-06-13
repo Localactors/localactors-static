@@ -966,8 +966,18 @@ hr.update
 				background-color: $yellow
 
 
+#settings-profile
+	hr.spacer-update
+		margin: 0
+		margin-bottom: 20px
+		width: 100%
+		height: 1px
+		border: none
+		$image: image-url("textures/hr_step.png")
+		background: $image repeat left top
 
-.commentform
+
+.commentform, #mainform, #settings-profile
 	+span-columns(6,6)
 	padding-top: 30px
 	padding-bottom: 30px
@@ -975,15 +985,16 @@ hr.update
 		+span-columns(4,6)
 		+pre(1)
 		.editor-label
-			font-family: "source sans pro"
-			text-transform: uppercase
+			font-family: "miso"
 			color: $blue
-			font-weight: 600
-			font-size: px-to-em(16px,16px)
-			line-height: px-to-em(14px,16px)
+			font-weight: 400
+			text-transform: uppercase
+			font-size: px-to-em(14px,16px)
+			line-height: px-to-em(16px,14px)
+			letter-spacing: px-to-em(2px)
 			margin: 0
-			margin-bottom: 10px
-		textarea#Text
+			margin-bottom: 5px
+		textarea#Text, textarea#Question_Question, textarea#Bio
 			min-width: 92%
 			max-width: 92%
 			min-height: 120px
@@ -999,6 +1010,28 @@ hr.update
 		.create-comment
 			.button_container
 				margin-top: 0
+#mainform, #settings-profile
+	label
+		font-family: "miso"
+		color: $blue
+		font-weight: 400
+		text-transform: uppercase
+		font-size: px-to-em(14px,14px)
+		line-height: px-to-em(16px,14px)
+		letter-spacing: px-to-em(2px)
+	input
+		width: 96%
+		margin-bottom: 20px
+	.upload-pic
+		margin-bottom: 20px
+	input#Picture, input#avatar-pic
+		background: none !important
+		border: none !important
+	hr.spacer
+		margin-bottom: 20px
+	#CountryID
+		width: 100%
+		margin-bottom: 20px
 
 
 

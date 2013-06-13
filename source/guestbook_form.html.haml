@@ -1,0 +1,23 @@
+%form#mainform.blue-form{:action => "/Projects/GuestbookCreate", :enctype => "multipart/form-data", :method => "post"}
+	.container-comment
+		%input{:name => "ProjectID", :type => "hidden", :value => "23"}/
+		%input{:name => "UserID", :type => "hidden", :value => "CustomIdentity"}/
+		%input{:name => "Date", :type => "hidden", :value => "13/06/2013"}/
+		.editor-label
+			Text
+		.editor-field
+			%textarea#Text{:cols => "20", :name => "Text", :rows => "2"}
+				:preserve
+			%span.field-validation-valid{"data-valmsg-for" => "Text", "data-valmsg-replace" => "true"}
+		.editor-label
+			Picture
+		.editor-field.upload-pic
+			%input#Picture.imageupload{:name => "Picture", :type => "file"}/
+			%span.field-validation-valid{"data-valmsg-for" => "Picture", "data-valmsg-replace" => "true"}
+		.create-comment
+			.clear-box
+			.button_container
+				.corner_left
+				%h4.buttons.yellow_button
+					%input.btn{:type => "submit", :value => "Create"}/
+				.corner_right

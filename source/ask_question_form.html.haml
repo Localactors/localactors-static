@@ -1,0 +1,24 @@
+%form#mainform.blue-form{:action => "/Projects/Ask/23", :enctype => "multipart/form-data", :method => "post"}
+	.container-comment
+		%input#Question_ProjectID{"data-val" => "true", "data-val-number" => "Il campo ProjectID deve essere un numero.", "data-val-required" => "The ProjectID field is required.", :name => "Question.ProjectID", :type => "hidden", :value => "23"}/
+		%input#Question_ProjectName{:name => "Question.ProjectName", :type => "hidden", :value => "Volunteers for school year 2013-14"}/
+		%input#Question_UserName{:name => "Question.UserName", :type => "hidden", :value => "admin"}/
+		.editor-label
+			%label{:for => "Question_Email"} Email
+		.editor-field
+			%input#Question_Email.text-box.single-line{"data-val" => "true", "data-val-required" => "The Email field is required.", :name => "Question.Email", :type => "text", :value => ""}/
+			%span.field-validation-valid{"data-valmsg-for" => "Question.Email", "data-valmsg-replace" => "true"}
+		.editor-label
+			%label{:for => "Question_Question"} Question
+		.editor-field
+			%textarea#Question_Question{:cols => "20", "data-val" => "true", "data-val-required" => "The Question field is required.", :name => "Question.Question", :rows => "2"}
+				:preserve
+			%span.field-validation-valid{"data-valmsg-for" => "Question.Question", "data-valmsg-replace" => "true"}
+			.create-comment
+				.clear-box
+				.button_container
+					.corner_left
+					%h4.buttons.yellow_button
+						%input.btn{:type => "submit", :value => "Ask"}/
+					.corner_right
+

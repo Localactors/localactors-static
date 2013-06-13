@@ -1,0 +1,332 @@
+%form#settings-profile.blue-form{:action => "/Profile/Settings", :enctype => "multipart/form-data", :method => "post"}
+	.container-comment
+		#user-info
+			%input#UserID{"data-val" => "true", "data-val-number" => "Il campo UserID deve essere un numero.", "data-val-required" => "The UserID field is required.", :name => "UserID", :type => "hidden", :value => "1"}/
+			%input#UserName{:name => "UserName", :type => "hidden", :value => "admin"}/
+			.editor-label
+				First Name
+			.editor-field
+				%input#Name.text-box.single-line{:name => "Name", :type => "text", :value => "admin"}/
+				%span.field-validation-valid{"data-valmsg-for" => "Name", "data-valmsg-replace" => "true"}
+			.editor-label
+				Last Name
+			.editor-field
+				%input#Lastname.text-box.single-line{:name => "Lastname", :type => "text", :value => "admin"}/
+				%span.field-validation-valid{"data-valmsg-for" => "Lastname", "data-valmsg-replace" => "true"}
+			.editor-label
+				Your Details
+			.editor-field
+				%textarea#Bio{:cols => "20", :name => "Bio", :rows => "2"}
+					:preserve
+				
+						the admin    %span.field-validation-valid{"data-valmsg-for" => "Bio", "data-valmsg-replace" => "true"}
+			.editor-label
+				Country
+			.editor-field
+				%select#CountryID{:name => "CountryID"}
+					%option{:value => ""}
+					%option{:value => "1"} Afghanistan
+					%option{:value => "2"} Åland Islands
+					%option{:value => "3"} Albania
+					%option{:value => "4"} Algeria
+					%option{:value => "5"} American Samoa
+					%option{:value => "6"} Andorra
+					%option{:value => "7"} Angola
+					%option{:value => "8"} Anguilla
+					%option{:value => "9"} Antarctica
+					%option{:value => "10"} Antigua and Barbuda
+					%option{:value => "11"} Argentina
+					%option{:value => "12"} Armenia
+					%option{:value => "13"} Aruba
+					%option{:value => "14"} Australia
+					%option{:value => "15"} Austria
+					%option{:value => "16"} Azerbaijan
+					%option{:value => "17"} Bahamas
+					%option{:value => "18"} Bahrain
+					%option{:value => "19"} Bangladesh
+					%option{:value => "20"} Barbados
+					%option{:value => "21"} Belarus
+					%option{:value => "22"} Belgium
+					%option{:value => "23"} Belize
+					%option{:value => "24"} Benin
+					%option{:value => "25"} Bermuda
+					%option{:value => "26"} Bhutan
+					%option{:value => "27"} Bolivia
+					%option{:value => "28"} Bosnia and Herzegovina
+					%option{:value => "29"} Botswana
+					%option{:value => "30"} Bouvet Island
+					%option{:value => "31"} Brazil
+					%option{:value => "32"} British Indian Ocean Territory
+					%option{:value => "33"} Brunei Darussalam
+					%option{:value => "34"} Bulgaria
+					%option{:value => "35"} Burkina Faso
+					%option{:value => "36"} Burundi
+					%option{:value => "37"} Cambodia
+					%option{:value => "38"} Cameroon
+					%option{:value => "39"} Canada
+					%option{:value => "40"} Cape Verde
+					%option{:value => "41"} Cayman Islands
+					%option{:value => "42"} Central African Republic
+					%option{:value => "43"} Chad
+					%option{:value => "44"} Chile
+					%option{:value => "45"} China
+					%option{:value => "46"} Christmas Island
+					%option{:value => "47"} Cocos (Keeling) Islands
+					%option{:value => "48"} Colombia
+					%option{:value => "49"} Comoros
+					%option{:value => "50"} Congo
+					%option{:value => "51"} Congo, The Democratic Republic of the
+					%option{:value => "52"} Cook Islands
+					%option{:value => "53"} Costa Rica
+					%option{:value => "54"} Côte D'Ivoire
+					%option{:value => "55"} Croatia
+					%option{:value => "56"} Cuba
+					%option{:value => "57"} Cyprus
+					%option{:value => "58"} Czech Republic
+					%option{:value => "59"} Denmark
+					%option{:value => "60"} Djibouti
+					%option{:value => "61"} Dominica
+					%option{:value => "62"} Dominican Republic
+					%option{:value => "63"} Ecuador
+					%option{:value => "64"} Egypt
+					%option{:value => "65"} El Salvador
+					%option{:value => "66"} Equatorial Guinea
+					%option{:value => "67"} Eritrea
+					%option{:value => "68"} Estonia
+					%option{:value => "69"} Ethiopia
+					%option{:value => "70"} Falkland Islands (Malvinas)
+					%option{:value => "71"} Faroe Islands
+					%option{:value => "72"} Fiji
+					%option{:value => "73"} Finland
+					%option{:value => "74"} France
+					%option{:value => "75"} French Guiana
+					%option{:value => "76"} French Polynesia
+					%option{:value => "77"} French Southern Territories
+					%option{:value => "78"} Gabon
+					%option{:value => "79"} Gambia
+					%option{:value => "80"} Georgia
+					%option{:value => "81"} Germany
+					%option{:value => "82"} Ghana
+					%option{:value => "83"} Gibraltar
+					%option{:value => "84"} Greece
+					%option{:value => "85"} Greenland
+					%option{:value => "86"} Grenada
+					%option{:value => "87"} Guadeloupe
+					%option{:value => "88"} Guam
+					%option{:value => "89"} Guatemala
+					%option{:value => "90"} Guernsey
+					%option{:value => "91"} Guinea
+					%option{:value => "92"} Guinea-Bissau
+					%option{:value => "93"} Guyana
+					%option{:value => "94"} Haiti
+					%option{:value => "95"} Heard Island and McDonald Islands
+					%option{:value => "96"} Holy See (Vatican City State)
+					%option{:value => "97"} Honduras
+					%option{:value => "98"} Hong Kong
+					%option{:value => "99"} Hungary
+					%option{:value => "100"} Iceland
+					%option{:value => "101"} India
+					%option{:value => "102"} Indonesia
+					%option{:value => "103"} Iran, Islamic Republic of
+					%option{:value => "104"} Iraq
+					%option{:value => "105"} Ireland
+					%option{:value => "106"} Isle of Man
+					%option{:value => "107"} Israel
+					%option{:selected => "selected", :value => "108"} Italy
+					%option{:value => "109"} Jamaica
+					%option{:value => "110"} Japan
+					%option{:value => "111"} Jersey
+					%option{:value => "112"} Jordan
+					%option{:value => "113"} Kazakhstan
+					%option{:value => "114"} Kenya
+					%option{:value => "115"} Kiribati
+					%option{:value => "116"} Korea, Democratic People's Republic of
+					%option{:value => "117"} Korea, Republic of
+					%option{:value => "118"} Kuwait
+					%option{:value => "119"} Kyrgyzstan
+					%option{:value => "120"} Lao People's Democratic Republic
+					%option{:value => "121"} Latvia
+					%option{:value => "122"} Lebanon
+					%option{:value => "123"} Lesotho
+					%option{:value => "124"} Liberia
+					%option{:value => "125"} Libyan Arab Jamahiriya
+					%option{:value => "126"} Liechtenstein
+					%option{:value => "127"} Lithuania
+					%option{:value => "128"} Luxembourg
+					%option{:value => "129"} Macao
+					%option{:value => "130"} Macedonia, The Former Yugoslav Republic of
+					%option{:value => "131"} Madagascar
+					%option{:value => "132"} Malawi
+					%option{:value => "133"} Malaysia
+					%option{:value => "134"} Maldives
+					%option{:value => "135"} Mali
+					%option{:value => "136"} Malta
+					%option{:value => "137"} Marshall Islands
+					%option{:value => "138"} Martinique
+					%option{:value => "139"} Mauritania
+					%option{:value => "140"} Mauritius
+					%option{:value => "141"} Mayotte
+					%option{:value => "142"} Mexico
+					%option{:value => "143"} Micronesia, Federated States of
+					%option{:value => "144"} Moldova, Republic of
+					%option{:value => "145"} Monaco
+					%option{:value => "146"} Mongolia
+					%option{:value => "147"} Montenegro
+					%option{:value => "148"} Montserrat
+					%option{:value => "149"} Morocco
+					%option{:value => "150"} Mozambique
+					%option{:value => "151"} Myanmar
+					%option{:value => "152"} Namibia
+					%option{:value => "153"} Nauru
+					%option{:value => "154"} Nepal
+					%option{:value => "155"} Netherlands
+					%option{:value => "156"} Netherlands Antilles
+					%option{:value => "157"} New Caledonia
+					%option{:value => "158"} New Zealand
+					%option{:value => "159"} Nicaragua
+					%option{:value => "160"} Niger
+					%option{:value => "161"} Nigeria
+					%option{:value => "162"} Niue
+					%option{:value => "163"} Norfolk Island
+					%option{:value => "164"} Northern Mariana Islands
+					%option{:value => "165"} Norway
+					%option{:value => "166"} Oman
+					%option{:value => "167"} Pakistan
+					%option{:value => "168"} Palau
+					%option{:value => "169"} Palestinian Territory, Occupied
+					%option{:value => "170"} Panama
+					%option{:value => "171"} Papua New Guinea
+					%option{:value => "172"} Paraguay
+					%option{:value => "173"} Peru
+					%option{:value => "174"} Philippines
+					%option{:value => "175"} Pitcairn
+					%option{:value => "176"} Poland
+					%option{:value => "177"} Portugal
+					%option{:value => "178"} Puerto Rico
+					%option{:value => "179"} Qatar
+					%option{:value => "180"} Reunion
+					%option{:value => "181"} Romania
+					%option{:value => "182"} Russian Federation
+					%option{:value => "183"} Rwanda
+					%option{:value => "184"} Saint Barthélemy
+					%option{:value => "185"} Saint Helena
+					%option{:value => "186"} Saint Kitts and Nevis
+					%option{:value => "187"} Saint Lucia
+					%option{:value => "188"} Saint Martin
+					%option{:value => "189"} Saint Pierre and Miquelon
+					%option{:value => "190"} Saint Vincent and the Grenadines
+					%option{:value => "191"} Samoa
+					%option{:value => "192"} San Marino
+					%option{:value => "193"} Sao Tome and Principe
+					%option{:value => "194"} Saudi Arabia
+					%option{:value => "195"} Senegal
+					%option{:value => "196"} Serbia
+					%option{:value => "197"} Seychelles
+					%option{:value => "198"} Sierra Leone
+					%option{:value => "199"} Singapore
+					%option{:value => "200"} Slovakia
+					%option{:value => "201"} Slovenia
+					%option{:value => "202"} Solomon Islands
+					%option{:value => "203"} Somalia
+					%option{:value => "204"} South Africa
+					%option{:value => "205"} South Georgia and the South Sandwich Islands
+					%option{:value => "206"} Spain
+					%option{:value => "207"} Sri Lanka
+					%option{:value => "208"} Sudan
+					%option{:value => "209"} Suriname
+					%option{:value => "210"} Svalbard and Jan Mayen
+					%option{:value => "211"} Swaziland
+					%option{:value => "212"} Sweden
+					%option{:value => "213"} Switzerland
+					%option{:value => "214"} Syrian Arab Republic
+					%option{:value => "215"} Taiwan, Province Of China
+					%option{:value => "216"} Tajikistan
+					%option{:value => "217"} Tanzania, United Republic of
+					%option{:value => "218"} Thailand
+					%option{:value => "219"} Timor-Leste
+					%option{:value => "220"} Togo
+					%option{:value => "221"} Tokelau
+					%option{:value => "222"} Tonga
+					%option{:value => "223"} Trinidad and Tobago
+					%option{:value => "224"} Tunisia
+					%option{:value => "225"} Turkey
+					%option{:value => "226"} Turkmenistan
+					%option{:value => "227"} Turks and Caicos Islands
+					%option{:value => "228"} Tuvalu
+					%option{:value => "229"} Uganda
+					%option{:value => "230"} Ukraine
+					%option{:value => "231"} United Arab Emirates
+					%option{:value => "232"} United Kingdom
+					%option{:value => "233"} United States
+					%option{:value => "234"} United States Minor Outlying Islands
+					%option{:value => "235"} Uruguay
+					%option{:value => "236"} Uzbekistan
+					%option{:value => "237"} Vanuatu
+					%option{:value => "238"} Venezuela
+					%option{:value => "239"} Viet Nam
+					%option{:value => "240"} Virgin Islands, British
+					%option{:value => "241"} Virgin Islands, U.S.
+					%option{:value => "242"} Wallis And Futuna
+					%option{:value => "243"} Western Sahara
+					%option{:value => "244"} Yemen
+					%option{:value => "245"} Zambia
+					%option{:value => "246"} Zimbabwe
+				%span.field-validation-valid{"data-valmsg-for" => "CountryID", "data-valmsg-replace" => "true"}
+			.editor-label
+				Avatar
+			.editor-field
+				%input#Image.text-box.single-line{:name => "Image", :type => "text", :value => "0"}/
+				%input#Image#avatar-pic.imageupload{:name => "Image", :type => "file"}/
+				%span.field-validation-valid{"data-valmsg-for" => "Image", "data-valmsg-replace" => "true"}
+				%span.field-validation-valid{"data-valmsg-for" => "Image", "data-valmsg-replace" => "true"}
+				%img.imagepreview{:alt => "", :src => "0?v=635067164689694259"}/
+		%hr.spacer/
+		#user-contacts
+			.editor-label
+				%label{:for => "Contact_Blog"} Blog Url
+			.editor-field
+				%input#Contact_Blog.text-box.single-line{:name => "Contact_Blog", :type => "text", :value => ""}/
+				%span.field-validation-valid{"data-valmsg-for" => "Contact_Blog", "data-valmsg-replace" => "true"}
+			.editor-label
+				%label{:for => "Contact_Email"} Contact Email
+			.editor-field
+				%input#Contact_Email.text-box.single-line{:name => "Contact_Email", :type => "text", :value => ""}/
+				%span.field-validation-valid{"data-valmsg-for" => "Contact_Email", "data-valmsg-replace" => "true"}
+			.editor-label
+				%label{:for => "Contact_Facebook"} Facebook
+			.editor-field
+				%input#Contact_Facebook.text-box.single-line{:name => "Contact_Facebook", :type => "text", :value => ""}/
+				%span.field-validation-valid{"data-valmsg-for" => "Contact_Facebook", "data-valmsg-replace" => "true"}
+			.editor-label
+				%label{:for => "Contact_Linkedin"} Linkedin
+			.editor-field
+				%input#Contact_Linkedin.text-box.single-line{:name => "Contact_Linkedin", :type => "text", :value => ""}/
+				%span.field-validation-valid{"data-valmsg-for" => "Contact_Linkedin", "data-valmsg-replace" => "true"}
+			.editor-label
+				%label{:for => "Contact_Skype"} Skype Name
+			.editor-field
+				%input#Contact_Skype.text-box.single-line{:name => "Contact_Skype", :type => "text", :value => ""}/
+				%span.field-validation-valid{"data-valmsg-for" => "Contact_Skype", "data-valmsg-replace" => "true"}
+			.editor-label
+				%label{:for => "Contact_Tel"} Contact Telephone
+			.editor-field
+				%input#Contact_Tel.text-box.single-line{:name => "Contact_Tel", :type => "text", :value => ""}/
+				%span.field-validation-valid{"data-valmsg-for" => "Contact_Tel", "data-valmsg-replace" => "true"}
+			.editor-label
+				%label{:for => "Contact_Twitter"} Twitter
+			.editor-field
+				%input#Contact_Twitter.text-box.single-line{:name => "Contact_Twitter", :type => "text", :value => ""}/
+				%span.field-validation-valid{"data-valmsg-for" => "Contact_Twitter", "data-valmsg-replace" => "true"}
+			.editor-label
+				%label{:for => "Contact_Web"} Website
+			.editor-field
+				%input#Contact_Web.text-box.single-line{:name => "Contact_Web", :type => "text", :value => ""}/
+				%span.field-validation-valid{"data-valmsg-for" => "Contact_Web", "data-valmsg-replace" => "true"}
+		%hr.spacer-update
+		.update
+			.clear-box
+			.button_container
+				.corner_left
+				%h4.buttons.yellow_button
+					%input{:type => "submit", :value => "Update"}/
+				.corner_right
