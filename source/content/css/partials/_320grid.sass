@@ -2011,7 +2011,7 @@ hr.spacer-localactors
 #explanation, #localactors
 	padding-top: 0
 	+span-columns(6,6)
-	ul.publisher-list
+	ul.publisher-list, ul.supporter-list
 		@include clearfix
 		+span-columns(6,6)
 		height: 505px
@@ -2019,12 +2019,13 @@ hr.spacer-localactors
 		margin-bottom: 80px
 		padding: 0
 		list-style-type: none
-		li.publisher
+		li.publisher, li.supporter
 			margin-top: 0
 			margin-bottom: 30px
 			+span-columns(2,6)
 			height: 235px
 			overflow: hidden
+			position: relative
 			a
 				&:hover
 					opacity: 0.7
@@ -2032,8 +2033,9 @@ hr.spacer-localactors
 					height: 235px
 					margin-left: -50%		
 				span
-					position: relative
-					top: -40px				
+					position: absolute
+					top: 200px
+					left: 0			
 					display: inline-block
 					padding: 0 5px 0 2px
 					margin: 0
@@ -2062,9 +2064,22 @@ hr.spacer-localactors
 				margin: 0
 				margin-top: 10px
 #localactors
-	ul.publisher-list
+	ul.publisher-list, ul.supporter-list
 		height: auto
-
+	.red, .purple, .green
+		margin: auto
+		width: auto
+		height: 219px
+		display: block
+		border: 31px solid $blue
+		+assign-sprite-background($assets)
+		+sprite($assets, "placeholder_smile", true)
+	.red
+		background-color: $rose
+	.purple
+		background-color: $purple
+	.green
+		background-color: #00FF80
 #footer
 	clear: both
 
