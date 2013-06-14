@@ -68,6 +68,7 @@ set :images_dir, 'content/images'
 set :fonts_dir, 'content/fonts'
 
 
+
 configure :development do
   activate :google_analytics do |ga|
     ga.tracking_id = false
@@ -91,15 +92,19 @@ configure :build do
   # activate :minify_html
   
   # # Use relative URLs
-  # # activate :relative_assets
+  activate :relative_assets
 
   # activate :smusher
 
    
-activate :google_analytics do |ga|
-  ga.tracking_id = 'UA-6201025-1'
-end
+  activate :google_analytics do |ga|
+    ga.tracking_id = 'UA-6201025-1'
+  end
+  compass_config do |config|
+    config.http_images_path = "https://s3-eu-west-1.amazonaws.com/localactors-webapp/"
+  end
+  
   
   # Or use a different image path
-  # set :http_path, "/Content/images/"
+  set :http_path, "https://s3-eu-west-1.amazonaws.com/localactors-webapp/"
 end
