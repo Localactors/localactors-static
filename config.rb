@@ -29,6 +29,7 @@ page "/comment_form.html", :layout => :html5
 page "/ask_question_form.html", :layout => :html5
 page "/settings_form.html", :layout => :html5
 page "/guestbook_form.html", :layout => :html5
+page "/donation.html", :layout => :html5
 
 page "/project_update.html", :layout => :html5
 page "/single_update.html", :layout => :html5
