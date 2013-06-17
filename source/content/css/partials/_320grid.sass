@@ -1313,18 +1313,18 @@ hr.update
 	.icon-arrow-down
 		margin-top: 8px
 .guidelines-container
-	+span-columns(12,6)
+	+span-columns(6,6)
 	border-top: 1px dashed $blue
 	background: $light-yellow
-	.first
-		height: 151px
+	.content-top
+		margin-top: 10px
 	h3
 		font-family: "source sans pro"
 		font-weight: 800
 		color: $blue
 		font-size: px-to-em(20px)
 		line-height: px-to-em(18px,20px)
-		margin-top: 8px
+		margin-top: 0
 		margin-bottom: 10px
 		text-transform: uppercase
 	.icon-arrow-down
@@ -1333,19 +1333,20 @@ hr.update
 		+assign-sprite-background($assets)
 		+sprite($assets, "arrow_down-mobile", true)
 		margin-bottom: 20px
-	.container-left, .container-right
+	.container-example, .container-guide
 		.content
 			margin-top: 10px
 			+span-columns(5,6)
-	.container-left
+	.container-example
 		background: white
-		+span-columns(6,12)
+		+span-columns(6,6)
 		position: relative
 		float: left
 		z-index: 3
 		padding-right: 10px
 		margin-right: 10px
 		border-right: 1px dashed $blue
+		padding-top: 20px
 		img.project
 			max-width: columns(6,6)
 			margin: 0
@@ -1433,11 +1434,10 @@ hr.update
 				margin-top: 8px
 			&:last-child
 				margin-bottom: 20px
-	.container-right
+	.container-guide
 		margin-left: -12px
 		padding-left: 10px
-
-		+span-columns(6 omega,12)
+		+span-columns(6,6)
 		position: relative
 		z-index: 2
 		float: left
@@ -1448,7 +1448,7 @@ hr.update
 			color: $blue
 			font-size: px-to-em(20px)
 			line-height: px-to-em(18px,20px)
-			margin-top: 8px
+			margin-top: 0
 			margin-bottom: 10px
 			text-transform: uppercase
 			span
@@ -1456,6 +1456,7 @@ hr.update
 		h4
 			color: $rose
 			text-transform: none
+			margin-top: 25px
 		p, ul
 			font-family: "source sans pro"
 			font-weight: 400
@@ -1745,7 +1746,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	//+susy-grid-background
+	+susy-grid-background
 	+container($total-columns, $break)
 	overflow: hidden
 	#description

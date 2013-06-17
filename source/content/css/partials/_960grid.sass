@@ -1,6 +1,6 @@
 +at-breakpoint($break)
 	section.page
-		//+susy-grid-background
+		+susy-grid-background
 
 		
 
@@ -929,7 +929,6 @@
 			color: $blue
 			font-size: px-to-em(20px)
 			line-height: px-to-em(18px,20px)
-			margin-top: 8px
 			margin-bottom: 10px
 			text-transform: uppercase
 		.icon-arrow-down
@@ -938,21 +937,25 @@
 			+assign-sprite-background($assets)
 			+sprite($assets, "arrow_down", true)
 			margin-bottom: 25px
-		.container-left, .container-right
+		.container-example, .container-guide
 			.content
 				+span-columns(6,7)
-		.container-left
+		.container-example
 			background: white
 			+span-columns(7,11)
 			position: relative
-			+float-left
+			+float-right
 			z-index: 3
-			padding-right: 10px
-			margin-right: 10px
-			border-right: 1px dashed $blue
+			padding-right: 0
+			margin-right: 0
+			border-right: none
+			padding-left: 10px
+			margin-left: -10px
+			border-left: 1px dashed $blue
+			padding-top: 0
 			.container-photo
 				+span-columns(1,7)
-				margin-top: 16px
+				margin-top: 7px
 			.container-name
 				+span-columns(5 omega,6)
 			img.project
@@ -968,7 +971,6 @@
 				text-transform: uppercase
 				font-weight: 400
 			h1.title
-				margin-top: 10px
 				margin-bottom: 8px
 				font-size: px-to-em(60px)
 				line-height: px-to-em(52px,60px)
@@ -1019,25 +1021,26 @@
 				font-size: px-to-em(15px)
 				line-height: px-to-em(20px,15px)
 				margin: 0
-				margin-top: 8px
+				margin-top: 0 !important
 				margin-bottom: 13px
 				&:last-child
 					margin-bottom: 25px
-		.container-right
-			margin-left: -12px
-			padding-left: 10px
+		.container-guide
+			margin-left: 0
+			margin-right: -12px
+			border-left: none
+			padding-left: 0
+			padding-right: 10px
 			+span-columns(4 omega,11)
 			position: relative
 			z-index: 2
 			float: left
-			border-left: 1px dashed $blue
 			h3,h4
 				font-family: "source sans pro"
 				font-weight: 800
 				color: $blue
 				font-size: px-to-em(20px)
 				line-height: px-to-em(18px,20px)
-				margin-top: 8px
 				margin-bottom: 10px
 				text-transform: uppercase
 				span

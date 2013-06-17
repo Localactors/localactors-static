@@ -31,15 +31,11 @@
 			%li Is there anything about the project (pictures, videos, articles) that you would like to share with us?
 			
 .guidelines-container
-	%h3 example
-	.icon-arrow-down		
+	.content-top
+		%h3 example
+		.icon-arrow-down		
 .guidelines-container
-	.container-left.first
-		.content
-			%h1.title Rosella Lombok pride
-			.icon-where
-			%h2.subtitle Indonesia/Lombok Island
-	.container-right
+	.container-guide
 		.content		
 			%h3
 				Title / 
@@ -48,8 +44,32 @@
 				Give your project a name that identifies what it is about. This will make it easier for us and your supporters to recognize and remember you.
 			%p
 				Your location will get you on the LocalActors.org map so anybody wishing to support your area will easily find you, knowing immediately the context in which the project is moving.
+	.container-example.first
+		.content
+			%h1.title Rosella Lombok pride
+			.icon-where
+			%h2.subtitle Indonesia/Lombok Island
+	
 .guidelines-container
-	.container-left
+	.container-guide
+		.content		
+			%h3
+				Project description / 
+				%span problems, objectives, how
+			%ul
+				%li
+					%span 1.
+					Tell us about the context in which your project is inscribed.
+				%li
+					%span 2.
+					Explain what sort of problematics you found and what kind of objectives you would like to achieve through your project in order to solve them.
+				%li
+					%span 3.
+					Tell us how the project is going to unfold along time. It's better to have a general plan step by step to help us and the future supporters envision how you are going to act, how long it will take and how much money is needed according to the different parts of the project.
+				%li
+					%span 4.
+					While putting down all this information imagine you are directly talking to you future supporters, they need to understand as better as possible the whole project.
+	.container-example
 		.content
 			%p
 				In May 2010 we would like to launch a project of starting a new production of organic Rosella tea on Lombok. Lombok is an island in Indonesia, situated next to Bali. In order to support jobs and create sustainable future for local families in the area of Ketara we need to kick-start production. We work closely with the University of Mataram and the Agricultural School in Bogor (Java) to make sure cultivation of a new plant in the area will work and the farmers are given specific training. The output of the production of organic Rosella tea - its distribution to primarily non-residential customers - will establish a small visitor's centre at the organic farm. By its "single commodity" system this will stimulate Eco Tourism on the island, where a new international airport just opened;  this is the real outcome we strive to achieve.
@@ -100,30 +120,9 @@
 				The foundation is putting in-kind resources of the members time and work and also resources covering their travelling from Netherlands to Lombok, including basic accommodation costs (3600 EUR for 3 Foundation representatives); in kind resources of local experts incl. university experts is also another contribution.	
 			
 			
-	.container-right
-		.content		
-			%h3
-				Project description / 
-				%span problems, objectives, how
-			%ul
-				%li
-					%span 1.
-					Tell us about the context in which your project is inscribed.
-				%li
-					%span 2.
-					Explain what sort of problematics you found and what kind of objectives you would like to achieve through your project in order to solve them.
-				%li
-					%span 3.
-					Tell us how the project is going to unfold along time. It's better to have a general plan step by step to help us and the future supporters envision how you are going to act, how long it will take and how much money is needed according to the different parts of the project.
-				%li
-					%span 4.
-					While putting down all this information imagine you are directly talking to you future supporters, they need to understand as better as possible the whole project.
+	
 .guidelines-container
-	.container-left
-		%img.project{:alt=>"Rosella01", :src=>"content/images/rosella01.jpg"}
-		%img.project{:alt=>"Rosella02", :src=>"content/images/rosella02.jpg"}
-		%img.project{:alt=>"Rosella04", :src=>"content/images/rosella04.jpg"}
-	.container-right
+	.container-guide
 		.content		
 			%h3
 				Add photos and video
@@ -139,19 +138,12 @@
 				Make sure the files you are trying to upload are not too heavy (we suggest max ##K)
 			%p
 				Make sure the content you're submitting is yours and not taken from some others' website, unless you're including pictures and videos made by others about you and your project (articles, tv reports, etc.)
+	.container-example
+		%img.project{:alt=>"Rosella01", :src=>"content/images/rosella01.jpg"}
+		%img.project{:alt=>"Rosella02", :src=>"content/images/rosella02.jpg"}
+		%img.project{:alt=>"Rosella04", :src=>"content/images/rosella04.jpg"}
 .guidelines-container
-	.container-left
-		.content
-			.container-photo
-				%img.photo-publisher{:alt=>"", :src=>"content/images/publisher_placeholder2.png"}
-			.container-name
-				%h1.title.publisher AKKE M. DRAIJER-DE JONG
-				%h2.subtitle.publisher foundation kebon sepatu
-			%p
-				The Foundation Kebon Sepatu is based in Netherlands and in Indonesia. It has launched already a second major project on Lombok, an island near to Bali. The families of the founders come from Lombok and the foundation is established on close work together with Indonesian and Lombok residents. Kebon Sepatu has currently twenty-seven members including voluntary staff, many of which are residents and some Board Members from the Netherlands spend several weeks a year on the island.
-			%p
-				The aim of Foundation Kebon Sepatu is to assist those who, through no fault of their own, but mainly through lack of choice and circumstances - have to deal with great disadvantages in educational, social, cultural, academic and economic aspects of life. The foundation is devoting its work to establishing better living condition for people on Lombok through sustainable local employment and training projects.
-	.container-right
+	.container-guide
 		.content		
 			%h3
 				Tell us your story
@@ -167,9 +159,22 @@
 				%li
 					%span 3.
 					Let your supporters know previous experiences and projects that you or your organization did as a local actor.
+	.container-example
+		.content
+			.container-photo
+				%img.photo-publisher{:alt=>"", :src=>"content/images/publisher_placeholder2.png"}
+			.container-name
+				%h1.title.publisher AKKE M. DRAIJER-DE JONG
+				%h2.subtitle.publisher foundation kebon sepatu
+			%p
+				The Foundation Kebon Sepatu is based in Netherlands and in Indonesia. It has launched already a second major project on Lombok, an island near to Bali. The families of the founders come from Lombok and the foundation is established on close work together with Indonesian and Lombok residents. Kebon Sepatu has currently twenty-seven members including voluntary staff, many of which are residents and some Board Members from the Netherlands spend several weeks a year on the island.
+			%p
+				The aim of Foundation Kebon Sepatu is to assist those who, through no fault of their own, but mainly through lack of choice and circumstances - have to deal with great disadvantages in educational, social, cultural, academic and economic aspects of life. The foundation is devoting its work to establishing better living condition for people on Lombok through sustainable local employment and training projects.
+	
 				
 .guidelines-container.last
-	.icon-arrow-down	
+	.content-top
+		.icon-arrow-down	
 
 .call
 	.button_container			
