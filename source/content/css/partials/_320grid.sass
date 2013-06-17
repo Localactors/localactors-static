@@ -49,11 +49,149 @@ i
 
 
 
-#profile-bar
+// #profile-bar
+// 	width: 0
+// 	height: 0
+// 	overflow: hidden
+// 	margin: 0
+#header-profile
 	width: 0
 	height: 0
 	overflow: hidden
-	margin: 0
+#profile-bar
+	+span-columns(6,6)
+	height: auto
+	overflow: visible
+#stream_update
+	.name-project-update
+		+span-columns(3,6)
+		margin-top: 10px
+		a, h3
+			font-family: "miso"
+			text-transform: uppercase
+		h3
+			font-weight: 400
+			font-size: px-to-em(14px,16px)
+			line-height: px-to-em(16px,14px)
+			color: $purple
+			margin: 0
+			margin-bottom: 2px
+			text-indent: px-to-em(5px)
+		a
+			font-weight: 400
+			font-size: px-to-em(27px,16px)
+			line-height: px-to-em(25px,27px)
+			color: $purple
+			text-decoration: underline
+			&:hover
+				color: $rose
+ul#supported_list, #stream_update
+	+span-columns(6,6)
+	position: relative
+	+no-bullets
+	padding-left: 0
+	margin-top: 0
+	margin-bottom: 0
+	background-color: $light-yellow
+	a.close
+		position: absolute
+		right: 13px
+		top: 1px
+		margin: 0
+		margin-top: 10px
+		font-family: "miso"
+		font-size: px-to-em(14px,16px)
+		line-height: px-to-em(17px,14px)
+		color: black
+		text-decoration: underline
+		background-color: $yellow
+		padding: 3px 3px 2px 3px
+		letter-spacing: px-to-em(2px)
+		text-transform: uppercase
+		&:hover
+			color: $purple
+			background-color: $acqua
+	hr.spacer-projects, hr.spacer-projects-top
+		+span-columns(6,6)
+		height: 1px
+		border: none
+		margin: 0
+		margin-bottom: 20px
+		$image: image-url("textures/hr_step.png")
+		background: $image repeat left top
+	hr.spacer-projects-top
+		margin-bottom: 60px
+	li
+		+span-columns(6,6)
+		padding-top: 20px
+		&:last-child
+			padding-bottom: 20px
+		img.photo-project
+			max-width: 100%
+		.container-title
+			margin-top: 10px
+			margin-bottom: 50px
+			a, h2
+				font-family: "miso"
+				text-transform: uppercase
+				font-weight: 400
+				margin: 0
+			a
+				font-size: px-to-em(45px,16px)
+				line-height: px-to-em(38px,45px)
+				color: $rose
+				text-decoration: underline
+				&:hover
+					color: $purple
+			.icon-where
+				+assign-sprite-background($assets)
+				+sprite($assets, "small_icon_where", true)
+				margin-top: 0
+				position: absolute
+			h2
+				font-size: px-to-em(30px,16px)
+				line-height: px-to-em(25px,30px)
+				color: $purple
+				padding-left: 20px
+			.location
+				margin: 0
+				margin-top: 15px
+		.donation-money
+			h2, h3.date
+				font-family: "miso"
+				text-transform: uppercase
+			h2
+				font-weight: 400
+				color: $purple
+				margin: 0
+				margin-bottom: 2px
+				font-size: px-to-em(30px,16px)
+				line-height: px-to-em(25px,30px)
+				span.number
+					font-weight: 600
+			h3.date
+				font-weight: 400
+				font-size: px-to-em(14px,16px)
+				line-height: px-to-em(17px,14px)
+				margin: 0
+				margin-bottom: 15px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #project-update-header
 	background-color: $light-yellow
 	border-top: 1px solid $rose
