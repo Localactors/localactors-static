@@ -2027,12 +2027,13 @@ hr.spacer-localactors
 			height: 235px
 			overflow: hidden
 			position: relative
-			a
+			a, a.purple,a.red,a.green
 				&:hover
 					opacity: 0.7
 				img
 					height: 235px
-					margin-left: -50%		
+					margin-left: -50%
+					margin-top: -31px		
 				span
 					position: absolute
 					top: 200px
@@ -2068,11 +2069,13 @@ hr.spacer-localactors
 	ul.publisher-list, ul.supporter-list
 		height: auto
 	.red, .purple, .green
+		+box-sizing(border-box)
 		margin: auto
 		width: auto
-		height: 173px
+		height: 235px
 		display: block
 		border: 31px solid $blue
+
 	.red
 		background-color: $rose
 	.purple
