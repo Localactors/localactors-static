@@ -1742,93 +1742,6 @@ section.page
 	overflow: hidden
 	#description
 		+hyphenation
-	
-	header
-		@include clearfix
-		margin-top: $grid-padding
-		+span-columns(6,6)
-		.banner-container
-			display: none
-		#logo
-			margin-bottom: 12px
-			position: absolute
-			@include logo($assets,"mobile")
-			.logo_text
-				margin: 0 !important
-		#number
-			height: 50px
-			width: 75px
-			background-color: $blue
-			@include float-left
-			margin: 10px
-		nav.navigation
-			margin-top: 19px
-			padding: 0
-			clear: both
-			display: block
-			+span-columns(2 omega,6)
-			ul
-				list-style-type: none
-				position: relative
-				float: left
-				margin: 0
-				padding: 0
-				li
-					line-height: px-to-em(13px)
-					margin-bottom: 5px
-					a
-						margin: 0
-						padding: 0
-						vertical-align: top
-						@extend .hover !optional
-						display: inline-block
-						font-family: "miso"
-						color: $black
-						background-color: $yellow
-						font-size: px-to-em(12px)
-						line-height: px-to-em(13px,12px)
-						letter-spacing: px-to-em(2px)
-						text-transform: uppercase
-						font-weight: 400
-		#paper
-			display: none
-			margin-top: 10px
-			@include pre(1)
-			@include float-left
-			span
-				&.pdf_icon
-					@include assign-sprite-background($assets)
-					@include replace-with-sprite($assets,"pdf_icon")
-					@include float-left
-			a
-				@extend .hover !optional
-				@include float-left
-				font-family: "miso"
-				color: $black
-				background-color: $yellow
-				font-size: 14px
-				text-transform: uppercase
-				font-weight: 400
-				margin-left: 10px
-				
-		#social
-			@include float-left
-			@include clearfix
-			.facebook
-				width: 20px
-				height: 20px
-				margin: 10px
-				@include float-left  
-				background-color: $yellow
-			.twitter
-				width: 20px
-				height: 20px
-				margin: 10px
-				@include float-left
-				background-color: $yellow
-		
-			
-
 	h1.vision
 		+leader(1)
 		font-family: "miso"
@@ -1838,6 +1751,94 @@ section.page
 		font-weight: 400
 		letter-spacing: px-to-em(1.6px)
 		margin: 20px 0
+	
+#header
+	@include clearfix
+	margin-top: $grid-padding
+	+span-columns(6,6)
+	.banner-container
+		display: none
+	#logo
+		margin-bottom: 12px
+		position: absolute
+		@include logo($assets,"mobile")
+		.logo_text
+			margin: 0 !important
+	#number
+		height: 50px
+		width: 75px
+		background-color: $blue
+		@include float-left
+		margin: 10px
+	nav.navigation
+		margin-top: 19px
+		padding: 0
+		clear: both
+		display: block
+		+span-columns(2 omega,6)
+		ul
+			list-style-type: none
+			position: relative
+			float: left
+			margin: 0
+			padding: 0
+			li
+				line-height: px-to-em(13px)
+				margin-bottom: 5px
+				a
+					margin: 0
+					padding: 0
+					vertical-align: top
+					@extend .hover !optional
+					display: inline-block
+					font-family: "miso"
+					color: $black
+					background-color: $yellow
+					font-size: px-to-em(12px)
+					line-height: px-to-em(13px,12px)
+					letter-spacing: px-to-em(2px)
+					text-transform: uppercase
+					font-weight: 400
+	#paper
+		display: none
+		margin-top: 10px
+		@include pre(1)
+		@include float-left
+		span
+			&.pdf_icon
+				@include assign-sprite-background($assets)
+				@include replace-with-sprite($assets,"pdf_icon")
+				@include float-left
+		a
+			@extend .hover !optional
+			@include float-left
+			font-family: "miso"
+			color: $black
+			background-color: $yellow
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 400
+			margin-left: 10px
+			
+	#social
+		@include float-left
+		@include clearfix
+		.facebook
+			width: 20px
+			height: 20px
+			margin: 10px
+			@include float-left  
+			background-color: $yellow
+		.twitter
+			width: 20px
+			height: 20px
+			margin: 10px
+			@include float-left
+			background-color: $yellow
+		
+			
+
+
 
 #map
 	+span-columns(6,6)

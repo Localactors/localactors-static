@@ -1071,132 +1071,118 @@
 	
 	
 		
-	section.page
+	
+
+	#header
+		overflow: visible
+		//+span-columns(12,12)
 		
-		.buttons
-			text-align: left
-			display: block
-			clear: both
-			a
-				padding: 4px 10px
-
-			
-			a:hover
-				background-color: yellow !important
-				color: black !important
-				
-		+pre(0)
-
-		header
-			overflow: visible
-			//+span-columns(12,12)
-			
-			#logo
-				+logo($assets,"web")
-				+span-columns(4,12)
-				position: relative
-				margin-top: 18px
-			nav.navigation
-				clear: none
-				margin-top: 52px
-				display: inline
-				+span-columns(3,12)
-				position: relative
-				ul
-					float: none
-					+span-columns(3 omega,3)
-					li
-						background: none
-						padding: 0
-						float: left
-						position: relative
-						clear: both
-						margin-bottom: 2px
-						line-height: px-to-em(17px)
-						a
-							+span-columns(3 omega,3)
-							display: inline-block
-							font-size: px-to-em(14px)
-							line-height: px-to-em(17px,14px)
-							margin: 0 0 6px 0
-							padding: 2px 1px 0 1px
-						a.call-for-projects
-							display: none
-							
-			#paper
-				display: block
-				margin-top: 0
-			.banner-container
-				display: block
-				+span-columns(5 omega,12)
-				position: relative
-				left: -16px
-				margin-top: 5px
-				.banner-call
+		#logo
+			+logo($assets,"web")
+			+span-columns(4,12)
+			position: relative
+			margin-top: 18px
+		nav.navigation
+			clear: none
+			margin-top: 52px
+			display: inline
+			+span-columns(3,12)
+			position: relative
+			ul
+				float: none
+				+span-columns(3 omega,3)
+				li
+					background: none
+					padding: 0
+					float: left
 					position: relative
-					padding: 16px
-					margin-top: 40px
-					+span-columns(5,5)
-					margin-left: 20px
-					display: inline
-					.border1, .border2
-						width: 370px
-						height: 130px
-						border: 2px solid $blue
-						background: white
-						position: absolute
-					.border1
-						top: -3px
-						left: -3px
-					.border2
-						top: 0
-						left: 0
-					.bg-dash
-						width: 340px
-						height: 140px
-						$image: image-url("textures/dash_blue.png")
-						background: $image repeat left top
-						position: absolute
-						top: -20px
-						left: -20px
-					.bg-white
-						width: 330px
-						height: 95px
-						background: white
-						position: absolute
-						top: 10px
-						left: 10px
-					.icon
-						width: 101px
-						height: 67px
-						+assign-sprite-background($assets)
-						+sprite($assets, "icon_call4projects", true)
-						position: absolute
-						z-index: 12
-						top: -31px
-						left: 255px
-					ul
-						+no-bullets
-						li
-							padding-top: 0 !important
-							padding-left: 0 !important
+					clear: both
+					margin-bottom: 2px
+					line-height: px-to-em(17px)
 					a
-						+span-columns(3,5)
-						font-family: "miso"
-						color: $black
-						background-color: $yellow
-						font-size: px-to-em(30px)
-						line-height: px-to-em(32px,30px)
-						letter-spacing: px-to-em(2px)
-						text-transform: uppercase
-						font-weight: 200
-						white-space: normal
-						text-decoration: underline
-						z-index: 9
-						position: relative
-					a:hover
-						color: $purple
-						background-color: $acqua
+						+span-columns(3 omega,3)
+						display: inline-block
+						font-size: px-to-em(14px)
+						line-height: px-to-em(17px,14px)
+						margin: 0 0 6px 0
+						padding: 2px 1px 0 1px
+					a.call-for-projects
+						display: none
+						
+		#paper
+			display: block
+			margin-top: 0
+		.banner-container
+			display: block
+			+span-columns(5 omega,12)
+			position: relative
+			left: -16px
+			margin-top: 5px
+			.banner-call
+				position: relative
+				padding: 16px
+				margin-top: 40px
+				+span-columns(5,5)
+				margin-left: 20px
+				display: inline
+				.border1, .border2
+					width: 370px
+					height: 130px
+					border: 2px solid $blue
+					background: white
+					position: absolute
+				.border1
+					top: -3px
+					left: -3px
+				.border2
+					top: 0
+					left: 0
+				.bg-dash
+					width: 340px
+					height: 140px
+					$image: image-url("textures/dash_blue.png")
+					background: $image repeat left top
+					position: absolute
+					top: -20px
+					left: -20px
+				.bg-white
+					width: 330px
+					height: 95px
+					background: white
+					position: absolute
+					top: 10px
+					left: 10px
+				.icon
+					width: 101px
+					height: 67px
+					+assign-sprite-background($assets)
+					+sprite($assets, "icon_call4projects", true)
+					position: absolute
+					z-index: 12
+					top: -31px
+					left: 255px
+				ul
+					+no-bullets
+					li
+						padding-top: 0 !important
+						padding-left: 0 !important
+				a
+					+span-columns(3,5)
+					font-family: "miso"
+					color: $black
+					background-color: $yellow
+					font-size: px-to-em(30px)
+					line-height: px-to-em(32px,30px)
+					letter-spacing: px-to-em(2px)
+					text-transform: uppercase
+					font-weight: 200
+					white-space: normal
+					text-decoration: underline
+					z-index: 9
+					position: relative
+				a:hover
+					color: $purple
+					background-color: $acqua
 
 
 
@@ -1241,7 +1227,7 @@
 			+span-columns(10,12)
 			+pre(1)
 
-			
+		
 		
 		.blue
 			+span-columns(12,12)
@@ -1266,6 +1252,21 @@
 					+span-columns(4,4)
 					+pre(0)
 
+	section.page
+		
+		.buttons
+			text-align: left
+			display: block
+			clear: both
+			a
+				padding: 4px 10px
+
+			
+			a:hover
+				background-color: yellow !important
+				color: black !important
+				
+		+pre(0)
 
 		hr.spacer-home
 			margin-top: 30px
