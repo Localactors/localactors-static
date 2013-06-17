@@ -114,40 +114,58 @@ i
 
 #filtered-by-tag
 	+span-columns(3,6)
-	h3
-		font-family: "source sans pro"
-		text-transform: uppercase
-		font-size: px-to-em(20px,16px)
-		line-height: px-to-em(18px,20px)
-		color: $blue
-		font-weight: 800
+	font-family: "miso"
+	text-transform: uppercase
+	h4
+		font-weight: 400
+		color: $rose
+		font-size: px-to-em(21px,16px)
+		line-height: px-to-em(21px,21px)
 		margin: 0
-		margin-bottom: 10px
-	.tag
-		font-family: "miso"
-		text-transform: uppercase
-		line-height: px-to-em(16px,16px) !important
-		margin-bottom: 0 !important
+	ul
 		padding: 0
+		list-style-type: none
+		+horizontal-list
 		margin: 0
-		margin-right: 5px
-		&:hover
-			opacity: 0.6
+		margin-top: 5px
+		li
+			line-height: px-to-em(12px,16px) !important
+			margin-bottom: 2px !important
+			padding: 0
+			margin: 0
+			margin-right: 5px
+			position: relative
+			+clearfix
+			&:hover
+				opacity: 0.6
 		.bullet
 			+assign-sprite-background($assets)
 			+sprite($assets, "bullet-tags", true)
 			position: relative
-			top: 1px
 			+float-left
+			top: 0
 		a
 			letter-spacing: px-to-em(2px)
 			color: white
 			font-size: px-to-em(12px,16px)
 			background-color: $black
-			padding: 3px 5px 1px 3px
+			padding: 1px 5px 1px 3px
 			text-decoration: none
 			font-weight: 600
 			position: relative
+			top: 0
+
+
+		
+
+
+
+
+
+
+
+
+
 
 #project-headline
 	+span-columns(4 omega,6)
@@ -187,33 +205,35 @@ i
 		ul
 			padding: 0
 			list-style-type: none
-			//+pretty-bullets("assets/bullet-tags.png")
 			+horizontal-list
 			margin: 0
 			margin-top: 5px
 			li
-				line-height: px-to-em(16px,16px) !important
-				margin-bottom: 0 !important
+				line-height: px-to-em(12px,16px) !important
+				margin-bottom: 2px !important
 				padding: 0
 				margin: 0
 				margin-right: 5px
+				position: relative
+				+clearfix
 				&:hover
 					opacity: 0.6
 			.bullet
 				+assign-sprite-background($assets)
 				+sprite($assets, "bullet-tags", true)
 				position: relative
-				top: 1px
 				+float-left
+				top: 0
 			a
 				letter-spacing: px-to-em(2px)
 				color: white
 				font-size: px-to-em(12px,16px)
 				background-color: $black
-				padding: 3px 5px 1px 3px
+				padding: 1px 5px 1px 3px
 				text-decoration: none
 				font-weight: 600
 				position: relative
+				top: 0
 #project-update-tab
 	+span-columns(6,6)
 	background-color: $light-yellow
