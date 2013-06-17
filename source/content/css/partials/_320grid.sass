@@ -1333,6 +1333,10 @@ hr.update
 		+assign-sprite-background($assets)
 		+sprite($assets, "arrow_down-mobile", true)
 		margin-bottom: 20px
+	.container-left, .container-right
+		.content
+			margin-top: 10px
+			+span-columns(5,6)
 	.container-left
 		background: white
 		+span-columns(6,12)
@@ -1351,13 +1355,17 @@ hr.update
 				margin-bottom: 20px
 		.container-photo
 			+span-columns(1,6)
-			height: 117px
+			margin-top: 4px
+			height: 70px
 			overflow: hidden
 			position: relative
 			+float-left
 			.photo-publisher
 				width: 170%
 				height: auto
+		.container-name
+			+span-columns(4 omega,6)
+			+post(1)
 		.publisher
 			position: relative
 			float: left

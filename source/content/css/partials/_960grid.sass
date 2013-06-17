@@ -165,7 +165,7 @@
 			+span-columns(4 omega,9)
 		hr.spacer
 			width: 1px
-			height: 598px
+			height: 710px
 			$image: image-url("textures/hr_step_vertical.png")
 			background: $image repeat left top
 			margin: 0
@@ -922,7 +922,7 @@
 		border-top: 1px dashed $blue
 		background: $light-yellow
 		.first
-			height: 171px
+			height: 181px
 		h3
 			font-family: "source sans pro"
 			font-weight: 800
@@ -938,6 +938,9 @@
 			+assign-sprite-background($assets)
 			+sprite($assets, "arrow_down", true)
 			margin-bottom: 25px
+		.container-left, .container-right
+			.content
+				+span-columns(6,7)
 		.container-left
 			background: white
 			+span-columns(7,11)
@@ -949,7 +952,9 @@
 			border-right: 1px dashed $blue
 			.container-photo
 				+span-columns(1,7)
-				margin-top: 10px
+				margin-top: 16px
+			.container-name
+				+span-columns(5 omega,6)
 			img.project
 				max-width: columns(7,7)
 				margin: 0
@@ -958,7 +963,6 @@
 				&:last-child
 					margin-bottom: 25px
 			h1.title, h2.subtitle
-				+span-columns(6,7)
 				margin: 0
 				font-family: "miso"
 				text-transform: uppercase
@@ -990,8 +994,6 @@
 				+clearfix
 				&:last-child
 					margin-bottom: 25px
-				li
-					+span-columns(6,7)
 				li 
 					h2.subtitle
 						margin-bottom: 7px
@@ -1011,7 +1013,6 @@
 				float: none !important
 				
 			p
-				+span-columns(6,7)
 				font-family: "source sans pro"
 				font-weight: 400
 				color: $purple
