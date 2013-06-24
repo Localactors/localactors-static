@@ -41,6 +41,8 @@ page "/update/project_sidebar.html", :layout => :html5
 page "/project_details.html", :layout => :html5
 page "/publisher_profile.html", :layout => :html5
 page "/profile_bar.html", :layout => :html5
+page "/profile_bar_loggedout.html", :layout => :html5
+
 page "/profile_bar_open.html", :layout => :html5
 page "/profile_bar_stream_updates.html", :layout => :html5
 page "/how_to.html", :layout => :html5
@@ -80,23 +82,23 @@ end
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
   
   # # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
   
   # # Create favicon/touch icon set from source/favicon_base.png
-  # activate :favicon_maker
+  activate :favicon_maker
   
   # # Enable cache buster
-  # activate :cache_buster
+ activate :cache_buster
 
   # activate :minify_html
   
   # # Use relative URLs
   activate :relative_assets
 
-  # activate :smusher
+  activate :smusher
 
    
   activate :google_analytics do |ga|
