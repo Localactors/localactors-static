@@ -73,12 +73,6 @@ set :fonts_dir, 'content/fonts'
 
 
 
-configure :development do
-  activate :google_analytics do |ga|
-    ga.tracking_id = false
-  end
-end
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -98,12 +92,9 @@ configure :build do
   # # Use relative URLs
   activate :relative_assets
 
-  activate :smusher
+  #activate :smusher
 
-   
-  activate :google_analytics do |ga|
-    ga.tracking_id = 'UA-6201025-1'
-  end
+
   compass_config do |config|
     config.http_images_path = "https://s3-eu-west-1.amazonaws.com/localactors-webapp/"
   end
