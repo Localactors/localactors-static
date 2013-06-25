@@ -1100,7 +1100,7 @@ hr.update
 		display: inline-block
 	input[type="password"]
 		letter-spacing: px-to-em(3px)
-	label, span.field-validation-valid
+	label, span.field-validation-valid, span.field-validation-error
 		font-family: "miso"
 		color: $blue
 		font-weight: 400
@@ -1108,7 +1108,7 @@ hr.update
 		font-size: px-to-em(14px,16px)
 		line-height: px-to-em(16px,14px)
 		letter-spacing: px-to-em(2px)
-	span.field-validation-valid
+	span.field-validation-valid, span.field-validation-error
 		color: white
 		background-color: $rose
 		padding: 0 10px 0 5px
@@ -1117,6 +1117,7 @@ hr.update
 		position: relative
 		display: inline
 		+float-left
+		min-width: 30px
 	hr.spacer
 		margin: 0
 		width: 100%
