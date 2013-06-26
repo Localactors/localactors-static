@@ -31,6 +31,7 @@ page "/settings_form.html", :layout => :html5
 page "/forgot_password_form.html", :layout => :html5
 page "/guestbook_form.html", :layout => :html5
 page "/donation.html", :layout => :html5
+page "/tos.html", :layout => :html5
 
 page "/project_update.html", :layout => :html5
 page "/single_update.html", :layout => :html5
