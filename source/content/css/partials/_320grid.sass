@@ -480,6 +480,7 @@ ul#info-project
 			margin-top: -5px
 	li.achieved
 		+span-columns(6,6)
+		display: none
 		margin-top: 20px
 		margin-bottom: 20px
 		.worm
@@ -654,7 +655,7 @@ ul#project-step
 			color: $purple
 			left: -20px
 			top: 10px
-.single-update-body
+.single-update-body, #description-details
 	+span-columns(5,6)
 	.generic, .photo, .qa, .quote, ul.list, .interview
 		margin-bottom: 30px
@@ -1307,7 +1308,7 @@ hr.update
 			+sprite($assets, "checkbox-false", true)
 			cursor: pointer
 			display: inline-block
-		#newsletter:checked ~ label.newsletter span
+		#Newsletter:checked ~ label.newsletter span
 			+assign-sprite-background($assets)
 			+sprite($assets, "checkbox-true", true)
 			display: inline-block
@@ -1350,6 +1351,14 @@ hr.update
 					+sprite($assets, "radio-true", true)
 					display: inline-block
 				#Privacy1:checked ~ label.Privacy1 span
+					+assign-sprite-background($assets)
+					+sprite($assets, "radio-true", true)
+					display: inline-block
+				#Terms0:checked ~ label.Terms0 span
+					+assign-sprite-background($assets)
+					+sprite($assets, "radio-true", true)
+					display: inline-block
+				#Terms1:checked ~ label.Terms1 span
 					+assign-sprite-background($assets)
 					+sprite($assets, "radio-true", true)
 					display: inline-block
@@ -1912,7 +1921,7 @@ div.notice
 				@include replace-with-sprite($assets,"exclamation-mobile")
 
 section.page
-	+susy-grid-background
+	
 	+container($total-columns, $break)
 	overflow: hidden
 	#description
@@ -2145,7 +2154,7 @@ hr.spacer-projects
 		line-height: px-to-em(25px,30px)
 		padding-left: 20px
 		margin-bottom: 20px
-	p.intro
+	div.intro
 		font-family: "source sans pro"
 		font-weight: 400
 		position: relative

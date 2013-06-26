@@ -46,18 +46,9 @@
 	%body
 		/[if lt IE 9] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
 		#fb-root
-		%script
-			(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=217698528368134";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
 		%section.page
 			= yield
 		
 		%hr.footer
-		= google_analytics_tag
 		= javascript_include_tag 'vendor/yepnope','vendor/enquire/dist/enquire.min' , 'application'#, :cache => true
 	
