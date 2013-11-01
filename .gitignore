@@ -7,3 +7,4 @@ build/
 /.sass-cache
 .sass-cache
 /.bundle/config
+/.idea
