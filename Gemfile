@@ -1,42 +1,44 @@
 source 'https://rubygems.org'
 
 gem "middleman"
-gem "middleman-favicon-maker"
-gem "middleman-livereload"
+#gem "middleman-favicon-maker"
+#gem "middleman-livereload"
 gem "middleman-deploy"
 gem "middleman-smusher"
-gem "middleman-minify-html"
+#gem "middleman-minify-html"
 
 
 gem "susy"
 gem "redcarpet"
 gem 'compass-h5bp'
 gem 'middleman-google-analytics'
-gem 'oily_png'
+gem 'wdm'
+#gem 'oily_png'
 #gem 'coffee-filter' # Coffeescript filter for HAML
-gem 'mini_magick'
+#gem 'mini_magick','3.6.0'
+
 
 gem 'rspec'
-gem 'cucumber'
+#gem 'cucumber'
 # gem 'angry-pickle'
 gem 'rspec-expectations'
 
 
 
-gem 'spork'
+#gem 'spork'
 # gem 'guard-rspec'
-gem 'guard-spork'
-gem 'guard-cucumber'
-gem 'guard-bundler'
-gem 'terminal-notifier-guard'
+#gem 'guard-spork'
+#gem 'guard-cucumber'
+#gem 'guard-bundler'
+#gem 'terminal-notifier-guard'
 
-gem 'colored'
+#gem 'colored'
 
-gem 'capybara'
-gem 'rb-fsevent'
+#gem 'capybara'
+#gem 'rb-fsevent'
 
-gem 'capybara-webkit'
+#gem 'capybara-webkit'
 
-gem 'awesome_print'
-gem 'better_errors'
-gem 'binding_of_caller'
+#gem 'awesome_print'
+#gem 'better_errors'
+#gem 'binding_of_caller'
